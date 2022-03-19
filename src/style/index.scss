@@ -1,0 +1,285 @@
+$body-bg: #f6efe8;
+$light: #f6efe8;
+$danger: #ff4557;
+$info: #2f6eba;
+
+$font-family-avenir: "AvenirNextLTPro";
+$font-family-torus: "Torus Notched SemiBold";
+$font-family-montserrat: "Montserrat";
+
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../font/AvenirNextLTPro-Regular.otf");
+}
+
+// $body-color: #111;
+
+// Bootstrap and its default variables
+@import "node_modules/bootstrap/scss/bootstrap";
+
+body {
+  background: #f6efe8;
+  min-height: 100vh;
+}
+
+.typography-1 {
+  font-family: $font-family-torus;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 50px;
+
+  color: #000000;
+}
+
+.typography-2 {
+  font-family: $font-family-avenir;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+
+  color: #000000;
+}
+.typography-3 {
+  font-family: $font-family-avenir;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.typography-4 {
+  font-family: $font-family-montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  color: #2f6eba;
+}
+
+.typography-5 {
+  font-family: $font-family-torus;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+
+  color: #000000;
+}
+
+.typography-6 {
+  font-family: $font-family-avenir;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33px;
+
+  color: #000000;
+}
+
+
+.typography-7 {
+  font-family: $font-family-avenir;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 66px;
+
+  color: #000000;
+}
+
+.typography-8 {
+  font-family: $font-family-avenir;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 34px;
+}
+
+.typography-9 {
+  font-family: $font-family-avenir;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 26px;
+
+  color: #000000;
+}
+
+.typography-10 {
+  font-family: $font-family-torus;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 23px;
+  color: #ffffff;
+}
+
+.typography-11 {
+  font-family: $font-family-avenir;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 49px;
+
+  color: #000000;
+}
+.typography-12 {
+  font-family: $font-family-torus;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+  
+  
+  color: #000000;
+}
+
+.download-now {
+  height: 60px;
+}
+
+.gap1 {
+  gap: 1rem;
+}
+.gap2 {
+  gap: 2rem;
+}
+
+.navigation-outline {
+  border: 2px solid #2f6eba;
+  border-radius: 10px;
+}
+
+.home-page {
+  // height: 100vh;
+  // overflow: scroll;
+  // scroll-snap-type: y mandatory;
+
+  .home-item {
+    // height: 100vh;
+    // min-height: 884px;
+    padding-bottom: 50px;
+    background: #f6efe8;
+    // scroll-snap-align: start;
+    padding-top: 80px;
+  }
+  .home-item:nth-child(even) {
+    background: #ffffff;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.blink-link > div:nth-child(1) {
+  width: 30%;
+}
+
+.blink-link > div:nth-child(2) {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+
+  ul {
+    list-style: none;
+  }
+}
+
+.blink-link > div:nth-child(3) {
+  width: 30%;
+}
+
+footer {
+  height: 100px;
+}
+
+.footer-items li {
+  border-left: 2px solid white;
+  padding-left: 1rem;
+}
+
+// Solution
+
+.solutions-page {
+  // height: 100vh;
+  // overflow-y: scroll;
+  // scroll-snap-type: y mandatory;
+
+  .solutions-page-item {
+    // height: 100vh;
+    padding-bottom: 50px;
+    background: #f6efe8;
+    // scroll-snap-align: start;
+    padding-top: 80px;
+  }
+  .solutions-page-item:nth-child(even) {
+    background: #ffffff;
+  }
+}
+
+.social-image{
+  width: 637px;
+height: 432px;
+}
+.shadow {
+  box-shadow: 0px 1px 24px rgb(0 0 0 / 15%) !important;
+}
+
+// Enterprise
+
+.enterprise-page {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+
+  .enterprise-page-item {
+    height: 100vh;
+    padding-bottom: 50px;
+    background: #F0FAFF;
+    scroll-snap-align: start;
+    padding-top: 80px;
+  }
+  .enterprise-page-item:nth-child(even) {
+    background: #ffffff;
+  }
+}
+
+.features-page {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+
+  .features-page-item {
+    height: 100vh;
+    padding-bottom: 50px;
+    background: #f6efe8;
+    scroll-snap-align: start;
+    padding-top: 80px;
+  }
+  .features-page-item:nth-child(even) {
+    background: #ffffff;
+  }
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-family: $font-family-avenir;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33px;
+
+  color: #000000;
+}
