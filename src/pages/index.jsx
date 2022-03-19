@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="home-page">
       <div className="home-item">
-        <div className="container align-items-center d-flex justify-content-between h-100">
+        <div className="container align-items-center d-flex justify-content-between default-page-height">
           <div className="d-flex flex-column gap1">
             <span className="typography-1">
               Where the future <span className="text-danger">Influences</span>
@@ -121,7 +121,7 @@ export default function Home() {
           </div>
           <div className="w-50">
           <Image
-            src="/images/marketing.png"
+            src="/images/marketingInfluence.png"
             alt="Influence"
             width={629}
             height={634}

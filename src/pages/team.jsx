@@ -11,7 +11,7 @@ export default function Team() {
     <>
       <div className="enterprise-page">
         <div className="enterprise-page-item">
-          <div className="container align-items-center d-flex justify-content-between h-100">
+          <div className="container align-items-center d-flex justify-content-between default-page-height">
             <div className="d-flex flex-column gap1">
               <span className="typography-7">
                 The Team behind <br />

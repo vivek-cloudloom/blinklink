@@ -7,7 +7,7 @@ export default function Solutions() {
     <>
       <div className="solutions-page">
         <div className="solutions-page-item">
-          <div className="container align-items-center d-flex justify-content-center flex-column h-100">
+          <div className="container align-items-center d-flex justify-content-center flex-column default-page-height">
             <h6 className="typography-6">We Believe</h6>
             <h4 className="typography-7">
               You are the <span className="text-danger">Platform</span>
@@ -31,7 +31,7 @@ export default function Solutions() {
               imageUrl={link.imageUrl}
               width={link.width}
               height={link.height}
-              className="solutions-page-item"
+              className="solutions-page-item h-885"
             />
           );
         })}

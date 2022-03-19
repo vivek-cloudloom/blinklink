@@ -6,7 +6,7 @@ export default function EnterPrise() {
     <>
       <div className="enterprise-page">
         <div className="enterprise-page-item">
-          <div className="container align-items-center d-flex justify-content-center flex-column h-100">
+          <div className="container align-items-center d-flex justify-content-center flex-column default-page-height">
             <h6 className="typography-6">The Turn-key</h6>
             <h4 className="typography-7">
               The Operating System for{" "}

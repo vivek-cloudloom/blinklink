@@ -164,24 +164,17 @@ body {
 }
 
 .home-page {
-  // height: 100vh;
-  // overflow: scroll;
-  // scroll-snap-type: y mandatory;
-
   .home-item {
-    // height: 100vh;
-    // min-height: 884px;
-    padding-bottom: 50px;
+    padding: 3rem 0;
     background: #f6efe8;
-    // scroll-snap-align: start;
-    padding-top: 80px;
+  }
+  .home-item:first-child {
+    padding: 0;
   }
   .home-item:nth-child(even) {
     background: #ffffff;
   }
 }
-
-
 
 .blink-link > div:nth-child(1) {
   width: 30%;
@@ -222,10 +215,16 @@ footer {
   .solutions-page-item {
     // height: 100vh;
     // margin-top: 50px;
+    padding: 3rem 0;
     background: #f6efe8;
     // scroll-snap-align: start;
     // padding-top: 80px;
   }
+  .solutions-page-item:first-child {
+    padding: 0;
+  }
+
+  
   .solutions-page-item:nth-child(even) {
     background: #ffffff;
   }
@@ -242,16 +241,16 @@ footer {
 // Enterprise
 
 .enterprise-page {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+  // height: 100vh;
+  // overflow-y: scroll;
+  // scroll-snap-type: y mandatory;
 
   .enterprise-page-item {
     height: 100vh;
-    padding-bottom: 50px;
+    // padding-bottom: 50px;
     background: #f0faff;
-    scroll-snap-align: start;
-    padding-top: 80px;
+    // scroll-snap-align: start;
+    // padding-top: 80px;
   }
   .enterprise-page-item:nth-child(even) {
     background: #ffffff;
@@ -259,16 +258,16 @@ footer {
 }
 
 .features-page {
-  height: 100vh;
-  overflow-y: scroll;
+  // height: 100vh;
+  // overflow-y: scroll;
   scroll-snap-type: y mandatory;
 
   .features-page-item {
     height: 100vh;
-    padding-bottom: 50px;
+    // padding-bottom: 50px;
     background: #f6efe8;
     scroll-snap-align: start;
-    padding-top: 80px;
+    // padding-top: 80px;
   }
   .features-page-item:nth-child(even) {
     background: #ffffff;
@@ -285,19 +284,27 @@ footer {
   color: #000000;
 }
 
-
-.w-40{
-width: 40%;
+.w-40 {
+  width: 40%;
 }
 
-.w-60{
+.w-60 {
   width: 60%;
 }
 
-.w-30{
+.w-30 {
   width: 30%;
 }
 
-.w-70{
+.w-70 {
   width: 70%;
+}
+
+
+.h-885{
+  height: 884px;
+}
+
+.default-page-height{
+  height: 884px;
 }

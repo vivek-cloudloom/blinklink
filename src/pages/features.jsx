@@ -9,7 +9,7 @@ export default function Features() {
     <>
       <div className="solutions-page">
         <div className="solutions-page-item">
-          <div className="container align-items-center d-flex justify-content-center flex-column vh-100">
+          <div className="container align-items-center d-flex justify-content-center flex-column default-page-height">
             <h4 className="typography-11">The power of attention, </h4>
             <h4 className="typography-7  text-danger">
               In the palm of your hand
