@@ -5,7 +5,7 @@ import Teams from "../components/team/Team";
 import enterprise from "../data/enterprise";
 import features from "../data/features";
 import teamData from "../data/teams";
-
+import Image from "next/image";
 export default function Team() {
   return (
     <>
@@ -14,11 +14,16 @@ export default function Team() {
           <div className="container align-items-center d-flex justify-content-between h-100">
             <div className="d-flex flex-column gap1">
               <span className="typography-7">
-                The Team behind{" "}<br/>
+                The Team behind <br />
                 <span className="text-danger">Influence 2.0</span>
               </span>
             </div>
-            <img src="/images/teams/BlinkLink-logo.png" />
+            <Image
+              src="/images/teams/BlinkLink-logo.png"
+              alt="BlinkLink logo"
+              width={356}
+              height={377}
+            />
           </div>
         </div>
 
@@ -34,9 +39,6 @@ export default function Team() {
           );
         })}
       </div>
-      
-
-      
     </>
   );
 }

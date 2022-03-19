@@ -1,8 +1,6 @@
-import Head from "next/head";
-import { Container, Row, Card, Button, Form } from "react-bootstrap";
+import Image from "next/image";
 
 export default function Home() {
- 
   return (
     <div className="home-page">
       <div className="home-item">
@@ -20,14 +18,27 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <img src="/images/home.png" />
+          <Image
+            src="/images/home.png"
+            alt="The power of attention, in the palm of your hand"
+            width={675}
+            height={448}
+          />
         </div>
       </div>
       <div className="home-item">
         <div className="container align-items-center d-flex flex-column justify-content-between h-100">
           <div className="align-items-center d-flex">
-            <img src="/images/revolution.png" />
-            <div className="p-5">
+            <div className="w-50">
+              <Image
+                src="/images/revolution.png"
+                alt="Influence"
+                width={465}
+                height={334}
+              />
+            </div>
+
+            <div className="p-5 w-50">
               <h4 className="typography-5">
                 Unlocking the{" "}
                 <span className="text-danger">Creator Economy</span> through
@@ -42,7 +53,7 @@ export default function Home() {
           </div>
 
           <div className="align-items-center d-flex">
-            <div className="p-5">
+            <div className="p-5 w-50">
               <h4 className="typography-5">
                 A Revolution in Influencer Income.
               </h4>
@@ -53,15 +64,29 @@ export default function Home() {
               </p>
               <a className="text-danger">Explore BlinkLink Solutions</a>
             </div>
-            <img src="/images/revolution.png" />
+            <div className="w-50">
+              <Image
+                src="/images/revolution.png"
+                alt="Influence"
+                width={556}
+                height={453}
+              />
+            </div>
           </div>
         </div>
       </div>
 
       <div className="home-item">
         <div className="container align-items-center d-flex justify-content-between h-100">
-          <img src="/images/idea.png" />
-          <div className="d-flex flex-column gap1">
+        <div className="w-50">
+          <Image
+            src="/images/idea.png"
+            alt="Influence"
+            width={703}
+            height={501}
+          />
+          </div>
+          <div className="w-50 d-flex flex-column gap1">
             <span className="typography-1">
               Focus your time only on new ideas and Content Creation.
             </span>
@@ -80,7 +105,7 @@ export default function Home() {
 
       <div className="home-item">
         <div className="container align-items-center d-flex justify-content-between h-100">
-          <div className="d-flex flex-column gap1">
+          <div className="d-flex flex-column gap1 w-50">
             <span className="typography-7">
               The Operating System for{" "}
               <span className="text-info">Marketing</span>
@@ -94,19 +119,28 @@ export default function Home() {
               <a className="text-info">Talk to the Enterprise Team</a>
             </div>
           </div>
-          <img src="/images/marketing.png" />
+          <div className="w-50">
+          <Image
+            src="/images/marketing.png"
+            alt="Influence"
+            width={629}
+            height={634}
+          />
+          </div>
         </div>
       </div>
 
       <div className="home-item">
         <div className="container align-items-center d-flex justify-content-between h-100">
-          <div className="d-flex flex-column gap1">
+          <div className="d-flex flex-column gap1 w-60">
             <span className="typography-5 text-danger">
               Join the Influence Revolution
             </span>
             <p className="typography-6">
               If you're a problem solver with incurable passions, find your
               second home at BlinkLink where innovation never goes unrewarded.
+            </p>
+            <p className="typography-6">
               We’re a young team and growing rapidly. Join us and together, lets
               make a difference
             </p>
@@ -116,11 +150,16 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <img src="/images/career.png" />
+          <div className="w-40">
+          <Image
+            src="/images/career.png"
+            alt="Influence"
+            width={371}
+            height={393}
+          />
+          </div>
         </div>
       </div>
-
-    
     </div>
   );
 }

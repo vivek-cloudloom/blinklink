@@ -1,5 +1,4 @@
-import Head from "next/head";
-import { Container, Row, Card, Button, Form } from "react-bootstrap";
+import Image from "next/image";
 import Solution from "../components/Solutions/Solution";
 import solutions from "../data/solutions";
 
@@ -13,7 +12,12 @@ export default function Solutions() {
             <h4 className="typography-7">
               You are the <span className="text-danger">Platform</span>
             </h4>
-            <img src="/images/solutions/platform.png" />
+            <Image
+              src="/images/solutions/platform.png"
+              alt="Platform"
+              width={257}
+              height={244}
+            />
             <h5 className="typography-11">These are your Traction Channels</h5>
           </div>
         </div>
@@ -25,6 +29,8 @@ export default function Solutions() {
               title={link.title}
               description={link.description}
               imageUrl={link.imageUrl}
+              width={link.width}
+              height={link.height}
               className="solutions-page-item"
             />
           );
@@ -33,8 +39,16 @@ export default function Solutions() {
         <div className="solutions-page-item">
           <div className="container align-items-center d-flex justify-content-center flex-column h-100">
             <div className="align-items-center d-flex">
-              <img src="/images/solutions/future.png" />
-              <div className="p-5">
+              <div className="w-40">
+                <Image
+                  src="/images/solutions/future.png"
+                  alt="future"
+                  width={433}
+                  height={499}
+                />
+              </div>
+
+              <div className="p-5 w-60">
                 <h4 className="typography-5">
                   Explore the future of your Influence, today!
                 </h4>

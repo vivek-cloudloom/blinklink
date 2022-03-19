@@ -1,5 +1,5 @@
 import { Form } from "react-bootstrap";
-
+import Image from "next/image";
 export default function Footer() {
   const links = [
     { title: "Home", link: "Home" },
@@ -12,9 +12,17 @@ export default function Footer() {
   ];
   return (
     <>
-      <div className="container align-items-center d-flex justify-content-between h-100 blink-link">
+      <div className="container align-items-center d-flex justify-content-between h-100 blink-link pt-5 pb-5">
         <div>
-          <img src="/images/BlinkLink-logo.png" className="mb-4" />
+          <div className="mb-4">
+            <Image
+              src="/images/BlinkLink-logo.png"
+              alt="BlinkLink logo"
+              width={307}
+              height={64}
+            />
+          </div>
+
           <p className="typography-2">
             At BlinkLink, our mission is to accelerate the advent of the
             influencer-controlled advertisement economy.

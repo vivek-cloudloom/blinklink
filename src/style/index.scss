@@ -3,13 +3,18 @@ $light: #f6efe8;
 $danger: #ff4557;
 $info: #2f6eba;
 
-$font-family-avenir: "AvenirNextLTPro";
-$font-family-torus: "Torus Notched SemiBold";
+$font-family-avenir: "Avenir Next";
+$font-family-torus: "Torus Notched Regular";
 $font-family-montserrat: "Montserrat";
 
 @font-face {
-  font-family: "AvenirNextLTPro";
-  src: url("../font/AvenirNextLTPro-Regular.otf");
+  font-family: "Avenir Next";
+  src: url("../font/Avenir Next Font.ttf");
+}
+
+@font-face {
+  font-family: "Torus Notched Regular";
+  src: url("../font/Torus Notched Regular.ttf");
 }
 
 // $body-color: #111;
@@ -85,7 +90,6 @@ body {
   color: #000000;
 }
 
-
 .typography-7 {
   font-family: $font-family-avenir;
   font-style: normal;
@@ -139,8 +143,7 @@ body {
   font-size: 24px;
   line-height: 29px;
   /* identical to box height */
-  
-  
+
   color: #000000;
 }
 
@@ -178,9 +181,7 @@ body {
   }
 }
 
-img {
-  max-width: 100%;
-}
+
 
 .blink-link > div:nth-child(1) {
   width: 30%;
@@ -220,20 +221,20 @@ footer {
 
   .solutions-page-item {
     // height: 100vh;
-    padding-bottom: 50px;
+    // margin-top: 50px;
     background: #f6efe8;
     // scroll-snap-align: start;
-    padding-top: 80px;
+    // padding-top: 80px;
   }
   .solutions-page-item:nth-child(even) {
     background: #ffffff;
   }
 }
 
-.social-image{
-  width: 637px;
-height: 432px;
-}
+// .social-image {
+//   width: 637px;
+//   height: 432px;
+// }
 .shadow {
   box-shadow: 0px 1px 24px rgb(0 0 0 / 15%) !important;
 }
@@ -248,7 +249,7 @@ height: 432px;
   .enterprise-page-item {
     height: 100vh;
     padding-bottom: 50px;
-    background: #F0FAFF;
+    background: #f0faff;
     scroll-snap-align: start;
     padding-top: 80px;
   }
@@ -282,4 +283,21 @@ height: 432px;
   line-height: 33px;
 
   color: #000000;
+}
+
+
+.w-40{
+width: 40%;
+}
+
+.w-60{
+  width: 60%;
+}
+
+.w-30{
+  width: 30%;
+}
+
+.w-70{
+  width: 70%;
 }
