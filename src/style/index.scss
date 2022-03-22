@@ -54,7 +54,7 @@ body {
   line-height: 25px;
   /* identical to box height */
 
-  text-align: center;
+  // text-align: center;
 
   color: #ffffff;
 }
@@ -147,6 +147,17 @@ body {
   color: #000000;
 }
 
+.typography-13{
+  font-family: $font-family-torus;
+font-style: normal;
+font-weight: 400;
+font-size: 64px;
+line-height: 77px;
+
+
+color: #FF4557;
+}
+
 .download-now {
   height: 60px;
 }
@@ -197,7 +208,7 @@ body {
 }
 
 footer {
-  height: 100px;
+  min-height: 100px;
 }
 
 .footer-items li {
@@ -307,4 +318,25 @@ footer {
 
 .default-page-height{
   height: 884px;
+}
+
+
+.profile-wrapper{
+
+
+  .profile{
+    background: #f6efe8;
+  }
+
+  .profile:nth-child(even) {
+    background: #F0FAFF;
+  }
+
+}
+
+
+.floating-header{
+  background: white !important;
+    border-radius: 96px;
+    box-shadow: 0px 1px 24px rgb(0 0 0 / 15%);
 }

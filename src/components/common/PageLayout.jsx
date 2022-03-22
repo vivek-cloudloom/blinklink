@@ -2,8 +2,22 @@ import Link from "next/link";
 import Image from "next/image";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import Footer from "./Footer";
+import { useEffect, useState } from "react";
 
 export default function PageLayout({ children }) {
+  const [headerClass, toggleClass] = useState("");
+
+  const listenScrollEvent = (e) => {
+    if (window.scrollY > 100) {
+      toggleClass("floating-header");
+    } else {
+      toggleClass("");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+  }, []);
   const navItems = [
     {
       title: "Product",
@@ -14,11 +28,15 @@ export default function PageLayout({ children }) {
           link: "/features",
         },
         {
-          title: "Menu 2",
+          title: "VALUING INFLUENCE",
           link: "/submenu2",
         },
         {
-          title: "Menu 3",
+          title: "INTEGRATIONS",
+          link: "/submenu3",
+        },
+        {
+          title: "DOWNLOAD THE APP",
           link: "/submenu3",
         },
       ],
@@ -31,7 +49,7 @@ export default function PageLayout({ children }) {
   return (
     // <Container fluid>
     <>
-      <Navbar bg="light" expand="lg" fixed="top">
+      <Navbar bg="light" expand="lg" fixed="top" className={headerClass}>
         <Container>
           <Navbar.Brand href="/">
             <Image
@@ -82,7 +100,7 @@ export default function PageLayout({ children }) {
             <Nav>
               <Nav.Link
                 eventKey={2}
-                href="#memes"
+                href="/sales"
                 className="btn btn-outline-primary navigation-outline"
               >
                 <span className="typography-4">Enterprise Team</span>

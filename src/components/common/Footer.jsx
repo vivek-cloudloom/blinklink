@@ -52,11 +52,11 @@ export default function Footer() {
           </Form.Group>
         </div>
       </div>
-      <footer className="align-items-center bg-danger d-flex gap2 justify-content-center">
+      <footer className="align-items-center bg-danger d-flex flex-wrap gap2 justify-content-center py-1">
         <div className="typography-10">
           @BlinkLink 2021. All Rights Reserved
         </div>
-        <ul className="footer-items align-items-center d-flex gap2 list-unstyled m-0 typography-10">
+        <ul className="footer-items align-items-center d-flex gap2 flex-wrap  list-unstyled m-0 typography-10">
           <li>Privacy Policy</li>
           <li>Terms & Conditions</li>
           <li>Subsciption & Online Policy</li>
