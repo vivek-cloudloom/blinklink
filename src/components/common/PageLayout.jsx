@@ -2,9 +2,25 @@ import Link from "next/link";
 import Image from "next/image";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import Footer from "./Footer";
-import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { useEffect, useState  } from "react";
 
 export default function PageLayout({ children }) {
+
+  const router = useRouter();
+
+  let logo = "/images/logo.png";
+  let headerBg = "bg-secondary";
+  let width = 214;
+  let height=51;
+  if(router.pathname === "/enterprise" || router.pathname === "/sales"){
+    logo = "/images/logo-blue.png";
+    headerBg= "blue-theme-bg";
+    width = 199;
+    height=38;
+  }
+
+
   const [headerClass, toggleClass] = useState("");
 
   const listenScrollEvent = (e) => {
@@ -49,14 +65,14 @@ export default function PageLayout({ children }) {
   return (
     // <Container fluid>
     <>
-      <Navbar bg="light" expand="lg" fixed="top" className={headerClass}>
+      <Navbar expand="lg" fixed="top" className={`${headerClass} ${headerBg}`}>
         <Container>
           <Navbar.Brand href="/">
             <Image
-              src="/images/logo.png"
+              src={logo}
               alt="Blinklink logo"
-              width={307}
-              height={64}
+              width={width}
+              height={height}
               className="mr-3 h-6 sm:h-10"
             />
           </Navbar.Brand>
@@ -101,9 +117,9 @@ export default function PageLayout({ children }) {
               <Nav.Link
                 eventKey={2}
                 href="/sales"
-                className="btn btn-outline-primary navigation-outline"
+                className="btn btn-outline-info navigation-outline"
               >
-                <span className="typography-4">Enterprise Team</span>
+                <span className="typography-variant-5 text-info">Enterprise Team</span>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

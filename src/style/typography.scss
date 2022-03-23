@@ -1,0 +1,117 @@
+$fontSizes: (
+  13,
+  14,
+  18,
+  18,
+  18,
+  19,
+  19,
+  20,
+  24,
+  24,
+  24,
+  25,
+  36,
+  36,
+  36,
+  36,
+  48,
+  48,
+  48,
+  48,
+  48,
+  48,
+  48,
+  52,
+  52,
+  64,
+  64,
+  24
+);
+$lineHeights: (
+  17,
+  19,
+  25,
+  25,
+  22,
+  26,
+  23,
+  27,
+  33,
+  33,
+  29,
+  34,
+  49,
+  49,
+  49,
+  43,
+  66,
+  50,
+  58,
+  58,
+  50,
+  58,
+  66,
+  54,
+  62,
+  77,
+  58,
+  33
+);
+$fontWeights: (
+  400,
+  400,
+  600,
+  400,
+  600,
+  400,
+  400,
+  400,
+  400,
+  600,
+  400,
+  700,
+  400,
+  500,
+  600,
+  400,
+  500,
+  500,
+  500,
+  600,
+  400,
+  400,
+  400,
+  400,
+  400,
+  400,
+  400,
+  500
+);
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../font/Avenir Next Font.ttf");
+}
+
+@font-face {
+  font-family: "Torus Notched Regular";
+  src: url("../font/Torus Notched Regular.ttf");
+}
+
+$i: 0;
+@each $display, $size in $fontSizes {
+  $i: $i + 1;
+  .typography-variant-#{$i} {
+    font-size: $display + px;
+    line-height: nth($lineHeights, $i) + px;
+    font-weight: nth($fontWeights, $i);
+  }
+}
+
+.torus-font {
+  font-family: $font-family-torus;
+}
+.montserrat-font {
+  font-family: $font-family-montserrat;
+}

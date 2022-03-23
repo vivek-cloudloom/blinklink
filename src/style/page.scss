@@ -1,0 +1,53 @@
+.home-page {
+  .home-item {
+    padding: 3rem 0;
+    //   background: #f6efe8;
+  }
+
+  &.blue-theme .home-item{
+    background: #f0faff;
+  }
+
+  .home-item:first-child {
+    padding: 0;
+  }
+  .home-item:nth-child(even) {
+    background: #ffffff;
+  }
+}
+
+.default-page-height {
+  height: 884px;
+}
+
+footer {
+  min-height: 100px;
+
+ 
+
+}
+
+.blue-theme-bg{
+  background-color: #F0FAFF;
+}
+
+.sales-wrapper{
+  padding-top: 300px;
+}
+.sales-form{
+  margin-top: -620px;
+
+  .form-label{
+    font-size: 24px;
+    line-height: 33px;
+    font-weight: 600;
+    color: $warning;
+  }
+
+  .form-control{
+    font-weight: 500;
+font-size: 24px;
+line-height: 33px;
+height: 72px;
+  }
+}

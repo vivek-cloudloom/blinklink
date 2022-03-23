@@ -1,23 +1,63 @@
 import Solution from "../components/Solutions/Solution";
 import enterprise from "../data/enterprise";
 import Image from "next/image";
+import Title from "../components/common/Title";
+import { Button } from "react-bootstrap";
 export default function EnterPrise() {
+  const features = [
+    "Deeplinking",
+    "Spendtracking",
+    "SKU-Level ROI",
+    "Attribution",
+  ];
+  const subFeatures = [
+    "Influencer Marketplace",
+    "Content Management",
+    "Community Level Ads",
+  ];
   return (
     <>
-      <div className="enterprise-page">
-        <div className="enterprise-page-item">
+      <div className="home-page blue-theme">
+        <div className="home-item">
           <div className="container align-items-center d-flex justify-content-center flex-column default-page-height">
-            <h6 className="typography-6">The Turn-key</h6>
-            <h4 className="typography-7">
+            <span className="typography-variant-28">The Turn-key</span>
+            <Title isDefaultFont={true}>
               The Operating System for{" "}
-              <span className="text-info">Marketing</span>
-            </h4>
+              <span className="typography-variant-22 torus-font text-info">
+                Marketing
+              </span>
+            </Title>
             <Image
               src="/images/enterprise/marketing.png"
               alt="marketing"
               width={256}
               height={287}
             />
+            <ul className="d-flex gap-5 typography-variant-9 text-info">
+              {features.map((feature, index) => {
+                return (
+                  <li
+                    key={feature}
+                    className={`ps-4${index === 0 ? " list-unstyled" : ""}`}
+                  >
+                    {feature}
+                  </li>
+                );
+              })}
+            </ul>
+
+            <ul className="d-flex gap-5 typography-variant-9">
+              {subFeatures.map((feature, index) => {
+                return (
+                  <li
+                    key={feature}
+                    className={`ps-4${index === 0 ? " list-unstyled" : ""}`}
+                  >
+                    {feature}
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
 
@@ -32,12 +72,13 @@ export default function EnterPrise() {
               height={link.width}
               leftWidth="w-70"
               rightWidth="w-30"
-              className="enterprise-page-item"
+              type="info"
+              className="home-item default-page-height"
             />
           );
         })}
 
-        <div className="enterprise-page-item">
+        <div className="home-item">
           <div className="container align-items-center d-flex justify-content-center flex-column h-100">
             <div className="align-items-center d-flex">
               <Image
@@ -47,15 +88,13 @@ export default function EnterPrise() {
                 height={422}
               />
               <div className="p-5">
-                <h4 className="typography-5">
-                  Explore the future of your Influence, today!
-                </h4>
+                <Title>Explore the future of your Influence, today!</Title>
                 <div>
-                  <button type="button" className="btn btn-info download-now">
-                    <span className="typography-4 text-light">
+                  <Button variant="info" className="btn-height">
+                    <span className="text-light typography-variant-5 montserrat-font">
                       ENTERPRISE TEAM
                     </span>
-                  </button>
+                  </Button>
                 </div>
               </div>
             </div>

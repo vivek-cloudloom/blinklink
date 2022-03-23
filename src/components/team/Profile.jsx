@@ -11,13 +11,10 @@ export default function Profile({ data }) {
             height={230}
           />
         </div>
-        <div className="w-70 d-flex flex-column gap1">
-          <h5 className="typography-7">{data.name}</h5>
-          <h5 className="typography-5">{data.designation}</h5>
-          {data.organizaition ? (
-            <h6 className="typography-5">{data.organizaition}</h6>
-          ) : null}
-          <p className="typography-6">{data.bio}</p>
+        <div className="w-70 d-flex flex-column">
+          <h5 className="typography-variant-13">{data.name}</h5>
+          <h5 className="typography-variant-15">{data.designation}</h5>
+          <p className="typography-variant-1">{data.bio}</p>
         </div>
       </div>
     </div>

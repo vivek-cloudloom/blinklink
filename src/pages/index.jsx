@@ -1,4 +1,8 @@
+import { Button } from "react-bootstrap";
 import Image from "next/image";
+import ArrowLink from "../components/common/ArrowLink";
+import Title from "../components/common/Title";
+import Paragraph from "../components/common/Paragraph";
 
 export default function Home() {
   return (
@@ -6,16 +10,22 @@ export default function Home() {
       <div className="home-item">
         <div className="container align-items-center d-flex justify-content-between default-page-height">
           <div className="d-flex flex-column gap1">
-            <span className="typography-1">
-              Where the future <span className="text-danger">Influences</span>
+            <span className="typography-variant-18">
+              Where the future{" "}
+              <span className="text-danger torus-font typography-variant-27">
+                Influences
+              </span>
             </span>
-            <span className="typography-2">
-              The power of attention, in the palm of your hand
-            </span>
+            <p className="typography-variant-8">
+              The power of attention,
+              <br /> in the palm of your hand
+            </p>
             <div>
-              <button type="button" className="btn btn-danger download-now">
-                <span className="typography-3">Download Now</span>
-              </button>
+              <Button variant="danger" className="btn-height">
+                <span className="text-light typography-variant-4">
+                  Download Now
+                </span>
+              </Button>
             </div>
           </div>
           <Image
@@ -39,30 +49,29 @@ export default function Home() {
             </div>
 
             <div className="p-5 w-50">
-              <h4 className="typography-5">
+              <Title>
                 Unlocking the{" "}
                 <span className="text-danger">Creator Economy</span> through
                 Influence
-              </h4>
-              <p className="typography-6">
+              </Title>
+
+              <Paragraph>
                 We have seen the future of Marketing. Watch this video to learn
                 about how it belongs to you.
-              </p>
-              <a className="text-danger">Play Video</a>
+              </Paragraph>
+              <ArrowLink label="Play Video" />
             </div>
           </div>
 
           <div className="align-items-center d-flex">
             <div className="p-5 w-50">
-              <h4 className="typography-5">
-                A Revolution in Influencer Income.
-              </h4>
-              <p className="typography-6">
+              <Title>A Revolution in Influencer Income.</Title>
+              <Paragraph>
                 Demand the market value of your Audience. Advertise your
                 influence across platforms. No more intermediaries between you
                 and marketers.
-              </p>
-              <a className="text-danger">Explore BlinkLink Solutions</a>
+              </Paragraph>
+              <ArrowLink label="Explore BlinkLink Solutions" />
             </div>
             <div className="w-50">
               <Image
@@ -78,26 +87,26 @@ export default function Home() {
 
       <div className="home-item">
         <div className="container align-items-center d-flex justify-content-between h-100">
-        <div className="w-50">
-          <Image
-            src="/images/idea.png"
-            alt="Influence"
-            width={703}
-            height={501}
-          />
+          <div className="w-50">
+            <Image
+              src="/images/idea.png"
+              alt="Influence"
+              width={703}
+              height={501}
+            />
           </div>
           <div className="w-50 d-flex flex-column gap1">
-            <span className="typography-1">
+            <Title>
               Focus your time only on new ideas and Content Creation.
-            </span>
-            <p className="typography-6">
+            </Title>
+            <Paragraph>
               "Omni-platform Deploy" is a powerful tool that automatically
               optimises your content for different platforms. Along with
               integrations like Canva, we help you schedule posts and interact
               with your audience across the platforms you are on.
-            </p>
+            </Paragraph>
             <div>
-              <a className="text-danger">Explore BlinkLink Solutions</a>
+              <ArrowLink label="Explore BlinkLink Features" />
             </div>
           </div>
         </div>
@@ -106,26 +115,28 @@ export default function Home() {
       <div className="home-item">
         <div className="container align-items-center d-flex justify-content-between h-100">
           <div className="d-flex flex-column gap1 w-50">
-            <span className="typography-7">
+            <Title isDefaultFont={true}>
               The Operating System for{" "}
-              <span className="text-info">Marketing</span>
-            </span>
-            <p className="typography-6">
+              <span className="typography-variant-22 torus-font text-info">
+                Marketing
+              </span>
+            </Title>
+            <Paragraph>
               Influencer Marketplace combined with the best in Deeplinking,
               Attribution and Spend Tracking. All you need, in a simple and
               streamlined interface.
-            </p>
+            </Paragraph>
             <div>
-              <a className="text-info">Talk to the Enterprise Team</a>
+              <ArrowLink type="info" label="Talk to the Enterprise Team" />
             </div>
           </div>
           <div className="w-50">
-          <Image
-            src="/images/marketingInfluence.png"
-            alt="Influence"
-            width={629}
-            height={634}
-          />
+            <Image
+              src="/images/marketingInfluence.png"
+              alt="Influence"
+              width={629}
+              height={634}
+            />
           </div>
         </div>
       </div>
@@ -133,30 +144,32 @@ export default function Home() {
       <div className="home-item">
         <div className="container align-items-center d-flex justify-content-between h-100">
           <div className="d-flex flex-column gap1 w-60">
-            <span className="typography-5 text-danger">
+            <Title className="text-danger">
               Join the Influence Revolution
-            </span>
-            <p className="typography-6">
+            </Title>
+            <Paragraph>
               If you're a problem solver with incurable passions, find your
               second home at BlinkLink where innovation never goes unrewarded.
-            </p>
-            <p className="typography-6">
+            </Paragraph>
+            <Paragraph>
               We’re a young team and growing rapidly. Join us and together, lets
               make a difference
-            </p>
+            </Paragraph>
             <div>
-              <button type="button" className="btn btn-danger download-now">
-                <span className="typography-3">BlinkLink Careers</span>
-              </button>
+              <Button variant="danger" className="btn-height">
+                <span className="text-light typography-variant-4">
+                  BlinkLink Careers
+                </span>
+              </Button>
             </div>
           </div>
           <div className="w-40">
-          <Image
-            src="/images/career.png"
-            alt="Influence"
-            width={371}
-            height={393}
-          />
+            <Image
+              src="/images/career.png"
+              alt="Influence"
+              width={371}
+              height={393}
+            />
           </div>
         </div>
       </div>

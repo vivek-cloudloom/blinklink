@@ -1,24 +1,36 @@
 import Image from "next/image";
+import Title from "../components/common/Title";
 import Solution from "../components/Solutions/Solution";
 import solutions from "../data/solutions";
-
+import Traction from "../components/Solutions/Traction";
+import { Button } from "react-bootstrap";
 export default function Solutions() {
   return (
     <>
-      <div className="solutions-page">
-        <div className="solutions-page-item">
+      <div className="home-page">
+        <div className="home-item">
           <div className="container align-items-center d-flex justify-content-center flex-column default-page-height">
-            <h6 className="typography-6">We Believe</h6>
-            <h4 className="typography-7">
-              You are the <span className="text-danger">Platform</span>
-            </h4>
+            <h6 className="typography-variant-28">We Believe</h6>
+            <Title isDefaultFont={true}>
+              You are the{" "}
+              <span className="typography-variant-22 torus-font text-danger">
+                Platform
+              </span>
+            </Title>
+
             <Image
               src="/images/solutions/platform.png"
               alt="Platform"
               width={257}
               height={244}
             />
-            <h5 className="typography-11">These are your Traction Channels</h5>
+            <Traction />
+            <h5 className="typography-variant-14">
+              These are your{" "}
+              <span className="typography-variant-16 torus-font text-danger">
+                Traction Channels
+              </span>
+            </h5>
           </div>
         </div>
 
@@ -31,12 +43,12 @@ export default function Solutions() {
               imageUrl={link.imageUrl}
               width={link.width}
               height={link.height}
-              className="solutions-page-item h-885"
+              className="home-item default-page-height"
             />
           );
         })}
 
-        <div className="solutions-page-item">
+        <div className="home-item">
           <div className="container align-items-center d-flex justify-content-center flex-column h-100">
             <div className="align-items-center d-flex">
               <div className="w-40">
@@ -49,13 +61,13 @@ export default function Solutions() {
               </div>
 
               <div className="p-5 w-60">
-                <h4 className="typography-5">
-                  Explore the future of your Influence, today!
-                </h4>
+                <Title>Explore the future of your Influence, today!</Title>
                 <div>
-                  <button type="button" className="btn btn-danger download-now">
-                    <span className="typography-3">Download Now</span>
-                  </button>
+                  <Button variant="danger" className="btn-height">
+                    <span className="text-light typography-variant-9">
+                      Download Now
+                    </span>
+                  </Button>
                 </div>
               </div>
             </div>

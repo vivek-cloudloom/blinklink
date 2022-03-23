@@ -1,0 +1,30 @@
+.btn-height {
+  height: 60px;
+  border-radius: 10px !important;
+}
+
+.download-now {
+  height: 60px;
+}
+
+.arrow-link {
+  &.text-info {
+    svg {
+      fill: $info;
+    }
+  }
+  &.text-danger {
+    svg {
+      fill: $danger;
+    }
+  }
+  &.text-dark {
+    svg {
+      fill: $dark;
+    }
+  }
+}
+
+.underline-border {
+  border-color: rgba(164, 164, 164, 0.5);
+}
