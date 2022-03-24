@@ -29,7 +29,7 @@ export default function Features() {
                   <Row>
                     <Col>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Name</Form.Label>
+                        <Form.Label>NAME</Form.Label>
                         <Form.Control type="text" placeholder="Your Name" />
                       </Form.Group>
                     </Col>

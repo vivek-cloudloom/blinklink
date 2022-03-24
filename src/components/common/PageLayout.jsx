@@ -40,7 +40,7 @@ export default function PageLayout({ children }) {
       link: "/product",
       children: [
         {
-          title: "Features",
+          title: "FEATURES",
           link: "/features",
         },
         {

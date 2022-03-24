@@ -56,7 +56,7 @@ export default function Features() {
               </h3>
               <Form>
                 <Form.Control
-                  type="password"
+                  type="search"
                   id="inputPassword5"
                   aria-describedby="passwordHelpBlock"
                   className="my-2"
