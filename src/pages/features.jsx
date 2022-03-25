@@ -41,6 +41,7 @@ export default function Features() {
                   alt="social"
                   width={637}
                   height={432}
+                  quality={100}
                 />
               </div>
             </div>
@@ -61,6 +62,7 @@ export default function Features() {
                           alt="Publish"
                           width={26}
                           height={26}
+                          quality={100}
                         />
                         <span className="typography-variant-11 torus-font">
                           Publish
@@ -86,6 +88,7 @@ export default function Features() {
                               alt="Engage"
                               width={26}
                               height={26}
+                              quality={100}
                             />
                             <span className="typography-variant-11 torus-font">
                               Engage
@@ -110,6 +113,7 @@ export default function Features() {
                                 alt="Monitor"
                                 width={26}
                                 height={26}
+                                quality={100}
                               />
                               <span className="typography-variant-11 torus-font">
                                 Monitor
@@ -134,6 +138,7 @@ export default function Features() {
                                 alt="Advertise"
                                 width={26}
                                 height={26}
+                                quality={100}
                               />
                               <span className="typography-variant-11 torus-font">
                                 Advertise
@@ -158,6 +163,7 @@ export default function Features() {
                           alt="Analyze"
                           width={26}
                           height={26}
+                          quality={100}
                         />
                         <span className="typography-variant-11 torus-font">
                           Analyze
@@ -210,6 +216,7 @@ export default function Features() {
                   alt="influence"
                   width={174}
                   height={200}
+                  quality={100}
                 />
               </div>
             </div>

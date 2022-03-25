@@ -23,6 +23,7 @@ export default function Solutions() {
               alt="Platform"
               width={257}
               height={244}
+              quality={100}
             />
             <Traction />
             <h5 className="typography-variant-14">
@@ -45,7 +46,7 @@ export default function Solutions() {
               height={link.height}
               leftClass={link.leftClass}
               rightClass={link.rightClass}
-              className="home-item default-page-height"
+              className="home-item"
             />
           );
         })}
@@ -60,6 +61,7 @@ export default function Solutions() {
                   alt="future"
                   width={433}
                   height={499}
+                  quality={100}
                 />
               </div>
               <div className="col-12 col-lg-7 offset-lg-1">

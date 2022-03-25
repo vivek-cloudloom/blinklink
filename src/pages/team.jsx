@@ -27,6 +27,7 @@ export default function Team() {
                   alt="BlinkLink logo"
                   width={356}
                   height={377}
+                  quality={100}
                 />
               </div>
             </div>
@@ -82,6 +83,7 @@ export default function Team() {
                   alt="BlinkLink logo"
                   width={228}
                   height={230}
+                  quality={100}
                 />
               </div>
               <div className="col-12 col-lg-8">

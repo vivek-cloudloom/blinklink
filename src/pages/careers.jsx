@@ -45,6 +45,7 @@ export default function Features() {
                 alt="The power of attention, in the palm of your hand"
                 width={475}
                 height={499}
+                quality={100}
               />
             </div>
           </div>

@@ -11,6 +11,7 @@ export default function JobList({ job }) {
                 alt="BlinkLink logo"
                 width={52}
                 height={52}
+                quality={100}
               />
             </div>
             <div>

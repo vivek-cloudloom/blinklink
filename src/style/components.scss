@@ -30,5 +30,9 @@
 }
 
 .dropdown-menu {
-  background-color: $body-bg !important;
+  // background-color: $body-bg ;
+  box-shadow: $box-shadow-sm;
+  border: none !important;
+  background: rgba(246, 239, 232, 0.5) !important;
+  border-radius: 15px !important;
 }

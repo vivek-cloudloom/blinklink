@@ -44,7 +44,7 @@ export default function Traction({}) {
     <div className="d-flex flex-wrap gap-5 m-3">
       {icons.map((icon) => {
         return (
-          <Image layout="fixed" key={icon.name} src={icon.image} alt={icon.name} width={36} height={36} />
+          <Image layout="fixed" key={icon.name} src={icon.image} alt={icon.name} width={36} height={36} quality={100} />
         );
       })}
     </div>

@@ -18,6 +18,7 @@ export default function Teams({ title, description, imageUrl, className }) {
               alt="BlinkLink logo"
               width={250}
               height={237}
+              quality={100}
             />
           </div>
         </div>

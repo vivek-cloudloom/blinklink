@@ -10,6 +10,7 @@ export default function Profile({ data }) {
               alt="BlinkLink logo"
               width={228}
               height={230}
+              quality={100}
             />
           </div>
           <div className="col-12 col-lg-8">

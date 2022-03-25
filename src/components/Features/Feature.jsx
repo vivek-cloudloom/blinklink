@@ -20,7 +20,7 @@ export default function Feature({ features, imageUrl, className }) {
               })}
             </div>
             <div className="align-items-center col-12 col-lg-1 d-flex justify-content-center"><ArrowLink label="" /></div>
-            <div className="col-12 col-lg-4"><Image src={imageUrl} alt="social" width={420} height={504} /></div>
+            <div className="col-12 col-lg-4"><Image src={imageUrl} alt="social" width={420} height={504} quality={100} /></div>
           </div>
          
         </div>

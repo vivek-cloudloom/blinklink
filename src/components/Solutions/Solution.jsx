@@ -16,8 +16,7 @@ export default function Solution({
 }) {
   return (
     <div className={className}>
-      {/* <div className="container align-items-center d-flex justify-content-center flex-column h-100"> */}
-      <div className="container d-flex justify-content-between h-100">
+      <div className="container d-flex justify-content-between default-page-height">
         <div className="row align-items-center">
           <div className={`col-12 ${leftClass} offset-lg-1`}>
             <div className={`d-flex flex-column gap1`}>
@@ -27,11 +26,10 @@ export default function Solution({
             </div>
           </div>
           <div className={`col-12 ${rightClass}`}>
-            <Image src={imageUrl} alt={title} width={width} height={height} />
+            <Image src={imageUrl} alt={title} width={width} height={height} quality={100} />
           </div>
         </div>
       </div>
-      {/* </div> */}
     </div>
   );
 }

@@ -38,6 +38,7 @@ export default function Footer() {
                 alt="BlinkLink logo"
                 width={307}
                 height={64}
+                quality={100}
               />
             </div>
 

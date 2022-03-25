@@ -37,6 +37,7 @@ export default function Home() {
                 alt="The power of attention, in the palm of your hand"
                 width={675}
                 height={448}
+                quality={100}
               />
             </div>
           </div>
@@ -51,6 +52,7 @@ export default function Home() {
                 alt="Influence"
                 width={465}
                 height={334}
+                quality={100}
               />
             </div>
             <div className="col-12 col-lg-5 col-xxl-4">
@@ -83,6 +85,7 @@ export default function Home() {
                 alt="Influence"
                 width={556}
                 height={453}
+                quality={100}
               />
             </div>
           </div>
@@ -98,6 +101,7 @@ export default function Home() {
                 alt="Influence"
                 width={703}
                 height={501}
+                quality={100}
               />
             </div>
             <div className="col-12 col-lg-6">
@@ -145,6 +149,7 @@ export default function Home() {
                 alt="Influence"
                 width={629}
                 height={634}
+                quality={100}
               />
             </div>
           </div>
@@ -183,6 +188,7 @@ export default function Home() {
                 alt="Influence"
                 width={371}
                 height={393}
+                quality={100}
               />
             </div>
           </div>

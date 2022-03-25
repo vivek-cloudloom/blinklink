@@ -31,8 +31,10 @@ export default function EnterPrise() {
               src="/images/enterprise/marketing.png"
               alt="marketing"
               width={256}
+              quality={100}
               height={287}
             />
+
             <ul className="d-flex gap-5 typography-variant-9 text-info flex-wrap">
               {features.map((feature, index) => {
                 return (
@@ -69,7 +71,7 @@ export default function EnterPrise() {
               description={link.description}
               imageUrl={link.imageUrl}
               width={link.width}
-              height={link.width}
+              height={link.height}
               leftClass={link.leftClass}
               rightClass={link.rightClass}
               type="info"
@@ -87,6 +89,7 @@ export default function EnterPrise() {
                   alt="future"
                   width={451}
                   height={422}
+                  quality={100}
                 />
               </div>
               <div className="col-12 col-lg-7 offset-lg-1">

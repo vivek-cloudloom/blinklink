@@ -67,7 +67,7 @@ export default function PageLayout({ children }) {
     // <Container fluid>
     <>
     {/* <Container> */}
-      <Navbar expand="lg" fixed="top" className={`${headerClass} ${headerBg} container`}>
+      <Navbar expand="lg" fixed="top"  className={`${headerClass} ${headerBg} container-fluid container-xl`}>
         
           <Navbar.Brand href="/">
             <Image
@@ -75,15 +75,16 @@ export default function PageLayout({ children }) {
               alt="Blinklink logo"
               width={width}
               height={height}
+              quality={100}
               className="mr-3 h-6 sm:h-10"
             />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
             id="basic-navbar-nav"
-            className="justify-content-between"
+            className="justify-content-between mx-3"
           >
-            <Nav className="me-auto">
+            <Nav className="mx-auto">
               {navItems.map((item) => {
                 return item.children ? (
                   <NavDropdown
@@ -121,7 +122,7 @@ export default function PageLayout({ children }) {
                 href="/sales"
                 className="btn btn-outline-info navigation-outline"
               >
-                <span className="typography-variant-5 text-info">Enterprise Team</span>
+                <span className="typography-variant-5 text-info px-lg-1 px-xl-4">Enterprise Team</span>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
