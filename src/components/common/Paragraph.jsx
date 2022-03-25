@@ -1,16 +1,22 @@
-export default function Paragraph({ children , variant }) {
+export default function Paragraph({ children , variant , className }) {
 
-  const className = []
+  const classNames = []
   if(variant === "footer"){
-    className.push('typography-variant-8');
+    classNames.push('typography-variant-8');
   }else if(variant = "lg"){
-    className.push('typography-variant-9');
+    classNames.push('typography-variant-9');
   }else if(variant = "xl"){
-    className.push('typography-variant-8');
+    classNames.push('typography-variant-8');
   }else{
-    className.push('typography-variant-9');
+    classNames.push('typography-variant-9');
   }
+
+  if(className){
+    classNames.push(className)
+  }
+
+
   return (
-    <p className={className.join(" ")}>{children}</p>
+    <p className={classNames.join(" ")}>{children}</p>
   );
 }

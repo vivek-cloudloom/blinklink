@@ -13,7 +13,7 @@ export default function PageLayout({ children }) {
   let headerBg = "bg-secondary";
   let width = 214;
   let height=51;
-  if(router.pathname === "/enterprise" || router.pathname === "/sales"){
+  if(router.pathname === "/enterprise" || router.pathname === "/sales" || router.pathname === "/team"){
     logo = "/images/logo-blue.png";
     headerBg= "blue-theme-bg";
     width = 199;
@@ -24,10 +24,11 @@ export default function PageLayout({ children }) {
   const [headerClass, toggleClass] = useState("");
 
   const listenScrollEvent = (e) => {
+    console.log("window.scrollY" , window.scrollY)
     if (window.scrollY > 100) {
       toggleClass("floating-header");
     } else {
-      toggleClass("");
+      toggleClass("fixed-blinklink-header");
     }
   };
 
@@ -65,8 +66,9 @@ export default function PageLayout({ children }) {
   return (
     // <Container fluid>
     <>
-      <Navbar expand="lg" fixed="top" className={`${headerClass} ${headerBg}`}>
-        <Container>
+    {/* <Container> */}
+      <Navbar expand="lg" fixed="top" className={`${headerClass} ${headerBg} container`}>
+        
           <Navbar.Brand href="/">
             <Image
               src={logo}
@@ -123,8 +125,9 @@ export default function PageLayout({ children }) {
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
-        </Container>
+        
       </Navbar>
+      {/* </Container> */}
       <div>{children}</div>
       <Footer />
     </>

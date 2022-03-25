@@ -28,20 +28,25 @@ export default function Features() {
 
         <div className="home-item">
           <div className="container">
-            <div className="justify-content-center d-flex flex-column h-100 pt-5 w-60">
-              <Title>Manage your Social Media</Title>
-              <Paragraph>
-                You are the platform. Social Medias are you distrubition
-                channels. Manage and grow your audiences from BlinkLink.
-              </Paragraph>
+            <div className="row">
+              <div className="col-12 col-lg-7">
+                <Title>Manage your Social Media</Title>
+                <Paragraph>
+                  You are the platform. Social Medias are you distrubition
+                  channels. Manage and grow your audiences from BlinkLink.
+                </Paragraph>
 
-              <Image
-                src="/images/features/social.png"
-                alt="social"
-                width={637}
-                height={432}
-              />
+                <Image
+                  src="/images/features/social.png"
+                  alt="social"
+                  width={637}
+                  height={432}
+                />
+              </div>
             </div>
+            {/* <div className="justify-content-center d-flex flex-column h-100 pt-5 w-60">
+              
+            </div> */}
             <div
               className="justify-content-center d-flex flex-column h-100 position-relative"
               style={{ top: "-160px" }}
@@ -178,32 +183,35 @@ export default function Features() {
               key={`feature${index}`}
               features={link.items}
               imageUrl={link.imageUrl}
-              className="home-item default-page-height"
+              className="home-item"
             />
           );
         })}
 
         <div className="home-item">
           <div className="container align-items-center d-flex justify-content-center flex-column h-100">
-            <div className="align-items-center d-flex">
-              <div className="p-5 w-70">
-                <Title>Lets take your Influence to the next level{" "}<span className="text-danger">♥️</span></Title>
-                <div>
-                <Button variant="danger" className="btn-height">
-                <span className="text-light typography-variant-4">
-                  Download Now
-                </span>
-              </Button>
+            <div className="row align-items-center">
+              <div className="col-12 col-lg-6 offset-lg-1">
+                <Title>
+                  Lets take your Influence to the next level{" "}
+                  <span className="text-danger">♥️</span>
+                </Title>
+                <div className="mt-4">
+                  <Button variant="danger" className="btn-height">
+                    <span className="text-light typography-variant-4">
+                      Download Now
+                    </span>
+                  </Button>
                 </div>
               </div>
-              
-              <Image
-                src="/images/features/influence.png"
-                alt="influence"
-                width={174}
-                height={200}
-              />
-             
+              <div className="col-12 col-lg-5 text-center">
+                <Image
+                  src="/images/features/influence.png"
+                  alt="influence"
+                  width={174}
+                  height={200}
+                />
+              </div>
             </div>
           </div>
         </div>

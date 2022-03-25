@@ -33,7 +33,7 @@ export default function EnterPrise() {
               width={256}
               height={287}
             />
-            <ul className="d-flex gap-5 typography-variant-9 text-info">
+            <ul className="d-flex gap-5 typography-variant-9 text-info flex-wrap">
               {features.map((feature, index) => {
                 return (
                   <li
@@ -46,7 +46,7 @@ export default function EnterPrise() {
               })}
             </ul>
 
-            <ul className="d-flex gap-5 typography-variant-9">
+            <ul className="d-flex gap-5 typography-variant-9 flex-wrap">
               {subFeatures.map((feature, index) => {
                 return (
                   <li
@@ -70,8 +70,8 @@ export default function EnterPrise() {
               imageUrl={link.imageUrl}
               width={link.width}
               height={link.width}
-              leftWidth="w-70"
-              rightWidth="w-30"
+              leftClass={link.leftClass}
+              rightClass={link.rightClass}
               type="info"
               className="home-item default-page-height"
             />
@@ -80,16 +80,18 @@ export default function EnterPrise() {
 
         <div className="home-item">
           <div className="container align-items-center d-flex justify-content-center flex-column h-100">
-            <div className="align-items-center d-flex">
-              <Image
-                src="/images/enterprise/future.png"
-                alt="future"
-                width={451}
-                height={422}
-              />
-              <div className="p-5">
+            <div className="row align-items-center">
+              <div className="col-12 col-lg-4">
+                <Image
+                  src="/images/enterprise/future.png"
+                  alt="future"
+                  width={451}
+                  height={422}
+                />
+              </div>
+              <div className="col-12 col-lg-7 offset-lg-1">
                 <Title>Explore the future of your Influence, today!</Title>
-                <div>
+                <div className="mt-4">
                   <Button variant="info" className="btn-height">
                     <span className="text-light typography-variant-5 montserrat-font">
                       ENTERPRISE TEAM

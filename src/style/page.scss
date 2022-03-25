@@ -4,7 +4,7 @@
     //   background: #f6efe8;
   }
 
-  &.blue-theme .home-item{
+  &.blue-theme .home-item {
     background: #f0faff;
   }
 
@@ -17,37 +17,48 @@
 }
 
 .default-page-height {
-  height: 884px;
+  min-height: 884px;
 }
 
 footer {
   min-height: 100px;
-
- 
-
 }
 
-.blue-theme-bg{
-  background-color: #F0FAFF;
+.blue-theme-bg {
+  background-color: #f0faff;
 }
 
-.sales-wrapper{
+.sales-wrapper {
   padding-top: 300px;
 }
-.sales-form{
-  margin-top: -620px;
 
-  .form-label{
+
+
+.sales-form {
+  margin-top: 0;
+
+  .form-label {
     font-size: 24px;
     line-height: 33px;
     font-weight: 600;
     color: $warning;
   }
 
-  .form-control{
+  .form-control {
     font-weight: 500;
-font-size: 24px;
-line-height: 33px;
-height: 72px;
+    font-size: 24px;
+    line-height: 33px;
+    height: 72px;
   }
+}
+
+@media only screen and (min-width: 992px) {
+  .sales-form {
+    margin-top: -620px;
+  }
+}
+
+.py-150 {
+  padding-top: 15vh;
+  padding-bottom: 15vh;
 }

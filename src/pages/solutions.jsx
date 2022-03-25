@@ -43,15 +43,18 @@ export default function Solutions() {
               imageUrl={link.imageUrl}
               width={link.width}
               height={link.height}
+              leftClass={link.leftClass}
+              rightClass={link.rightClass}
               className="home-item default-page-height"
             />
           );
         })}
 
         <div className="home-item">
-          <div className="container align-items-center d-flex justify-content-center flex-column h-100">
-            <div className="align-items-center d-flex">
-              <div className="w-40">
+          <div className="container d-flex justify-content-center flex-column h-100">
+            <div className="row align-items-center">
+              <div className="col-12 col-lg-4">
+                {" "}
                 <Image
                   src="/images/solutions/future.png"
                   alt="future"
@@ -59,10 +62,9 @@ export default function Solutions() {
                   height={499}
                 />
               </div>
-
-              <div className="p-5 w-60">
+              <div className="col-12 col-lg-7 offset-lg-1">
                 <Title>Explore the future of your Influence, today!</Title>
-                <div>
+                <div className="mt-4">
                   <Button variant="danger" className="btn-height">
                     <span className="text-light typography-variant-9">
                       Download Now

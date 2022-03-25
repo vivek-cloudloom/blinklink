@@ -69,23 +69,23 @@ $fontWeights: (
   400,
   400,
   600,
-  400,
+  600,
   700,
   400,
   500,
   600,
-  400,
+  600,
   500,
   500,
   500,
   600,
-  400,
-  400,
-  400,
-  400,
-  400,
-  400,
-  400,
+  600,
+  600,
+  600,
+  600,
+  600,
+  600,
+  600,
   500
 );
 
@@ -112,7 +112,14 @@ $fontWeights: (
 }
 
 @font-face {
-  font-family: "Torus Notched Regular";
+  font-family: "Torus Notched";
+  src: url("../font/Torus/TorusNotched-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Torus Notched";
   src: url("../font/Torus/Torus\ Notched\ Regular.ttf");
   font-weight: normal;
   font-style: normal;

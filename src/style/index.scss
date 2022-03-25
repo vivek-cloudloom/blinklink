@@ -74,7 +74,9 @@
 .w-10 {
   width: 10%;
 }
-
+.w-80 {
+  width: 80%;
+}
 .h-885 {
   height: 884px;
 }
@@ -89,13 +91,18 @@
   }
 }
 
+.fixed-blinklink-header {
+  transition: all 0.3s ease-in-out;
+}
 .floating-header {
   background: white !important;
   border-radius: 96px;
   box-shadow: 0px 1px 24px rgb(0 0 0 / 15%);
-  width: 96%;
-  margin: auto;
-  top: 1%;
+  // width: 96%;
+  // margin: auto;
+  // position: fixed;
+  top: 16px;
+  transition: all 0.3s ease-in-out;
 }
 
 /* NEW STYLES ADDED*/

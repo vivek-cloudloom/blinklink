@@ -5,9 +5,10 @@ import Title from "../common/Title";
 export default function Feature({ features, imageUrl, className }) {
   return (
     <div className={className}>
-      <div className="container align-items-center d-flex justify-content-center flex-column h-100">
-        <div className="container align-items-center d-flex justify-content-between h-100">
-          <div className="w-40">
+      {/* <div className="container align-items-center d-flex justify-content-center flex-column h-100"> */}
+        <div className="align-items-center container d-flex default-page-height justify-content-center">
+          <div className="row align-items-center ">
+            <div className="col-12 col-lg-5 offset-lg-1">
             {features &&
               features.map((feature) => {
                 return (
@@ -17,15 +18,13 @@ export default function Feature({ features, imageUrl, className }) {
                   </div>
                 );
               })}
+            </div>
+            <div className="align-items-center col-12 col-lg-1 d-flex justify-content-center"><ArrowLink label="" /></div>
+            <div className="col-12 col-lg-4"><Image src={imageUrl} alt="social" width={420} height={504} /></div>
           </div>
-          <div className="d-flex justify-content-center w-20">
-            <ArrowLink label="" />
-          </div>
-          <div className="w-40">
-            <Image src={imageUrl} alt="social" width={420} height={504} />
-          </div>
+         
         </div>
-      </div>
+      {/* </div> */}
     </div>
   );
 }
