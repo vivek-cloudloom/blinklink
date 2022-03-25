@@ -98,17 +98,43 @@ $fontWeights: (
 //   font-family: "Torus Notched Regular";
 //   src: url("../font/Torus Notched Regular.ttf");
 // }
+// @font-face {
+//   font-family: "Avenir Next";
+//   src: url("../font/Avenir/AvenirNextLTPro-Bold.otf");
+//   font-weight: bold;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: "Avenir Next";
+//   src: url("../font/Avenir/Avenir\ Next\ 2.ttc");
+//   // font-weight: normal;
+//   // font-style: normal;
+// }
+
 @font-face {
   font-family: "Avenir Next";
-  src: url("../font/Avenir/AvenirNextLTPro-Bold.otf");
-  font-weight: bold;
+  font-weight: 400;
   font-style: normal;
+  src: url("../font/Avenir-Next/AvenirNext-Regular-08.ttf");
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../font/Avenir-Next/AvenirNext-Medium-06.ttf");
 }
 @font-face {
   font-family: "Avenir Next";
-  src: url("../font/Avenir/AvenirNextLTPro-Regular.otf");
-  font-weight: normal;
+  font-weight: 600;
   font-style: normal;
+  src: url("../font/Avenir-Next/AvenirNext-DemiBold-03.ttf");
+}
+@font-face {
+  font-family: "Avenir Next";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../font/Avenir-Next/AvenirNext-Bold-01.ttf");
 }
 
 @font-face {
