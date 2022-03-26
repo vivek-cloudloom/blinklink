@@ -41,7 +41,7 @@ export default function Features() {
             </div>
             <div className="col-12 col-lg-6">
               <Image
-                src="/images/careers/influences.png"
+                src="/images/solutions/future.svg"
                 alt="The power of attention, in the palm of your hand"
                 width={475}
                 height={499}

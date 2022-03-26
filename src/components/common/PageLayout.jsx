@@ -9,12 +9,12 @@ export default function PageLayout({ children }) {
 
   const router = useRouter();
 
-  let logo = "/images/logo.png";
+  let logo = "/images/logo/logo-danger.svg";
   let headerBg = "bg-secondary";
   let width = 214;
   let height=51;
   if(router.pathname === "/enterprise" || router.pathname === "/sales" || router.pathname === "/team"){
-    logo = "/images/logo-blue.png";
+    logo = "/images/logo/logo-info.svg";
     headerBg= "blue-theme-bg";
     width = 199;
     height=38;

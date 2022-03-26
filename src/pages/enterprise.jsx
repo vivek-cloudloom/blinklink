@@ -28,7 +28,7 @@ export default function EnterPrise() {
               </span>
             </Title>
             <Image
-              src="/images/enterprise/marketing.png"
+              src="/images/enterprise/marketing.svg"
               alt="marketing"
               width={256}
               quality={100}
@@ -85,7 +85,7 @@ export default function EnterPrise() {
             <div className="row align-items-center">
               <div className="col-12 col-lg-4">
                 <Image
-                  src="/images/enterprise/future.png"
+                  src="/images/enterprise/future.svg"
                   alt="future"
                   width={451}
                   height={422}

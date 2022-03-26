@@ -37,7 +37,7 @@ export default function Features() {
                 </Paragraph>
 
                 <Image
-                  src="/images/features/social.png"
+                  src="/images/features/social.svg"
                   alt="social"
                   width={637}
                   height={432}
@@ -212,7 +212,7 @@ export default function Features() {
               </div>
               <div className="col-12 col-lg-5 text-center">
                 <Image
-                  src="/images/features/influence.png"
+                  src="/images/logo/logo-danger-icon.svg"
                   alt="influence"
                   width={174}
                   height={200}

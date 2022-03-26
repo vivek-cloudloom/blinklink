@@ -2,7 +2,7 @@ const advisor = {
   name: "Kumar Kushal",
   designation: "ex CTO",
   organizaition: "Reliance Industries",
-  imageUrl: "/images/teams/kumar.png",
+  imageUrl: "/images/teams/kumar.svg",
   bio: `Kushal was the CTO of the largest company in India. He championed its transitioned from an Oil and Retail giant to the tech titan it is today.`,
 };
 

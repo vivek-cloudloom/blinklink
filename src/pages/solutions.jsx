@@ -19,7 +19,7 @@ export default function Solutions() {
             </Title>
 
             <Image
-              src="/images/solutions/platform.png"
+              src="/images/solutions/platform.svg"
               alt="Platform"
               width={257}
               height={244}
@@ -57,7 +57,7 @@ export default function Solutions() {
               <div className="col-12 col-lg-4">
                 {" "}
                 <Image
-                  src="/images/solutions/future.png"
+                  src="/images/solutions/future.svg"
                   alt="future"
                   width={433}
                   height={499}

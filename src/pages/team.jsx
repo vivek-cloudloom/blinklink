@@ -23,7 +23,7 @@ export default function Team() {
               </div>
               <div className="col-12 col-lg-6 text-center">
                 <Image
-                  src="/images/teams/BlinkLink-logo.png"
+                  src="/images/logo/logo-danger-icon.svg"
                   alt="BlinkLink logo"
                   width={356}
                   height={377}

@@ -34,7 +34,7 @@ export default function Footer() {
           <div className="col-12 col-lg-4">
             <div className="mb-4">
               <Image
-                src="/images/BlinkLink-logo.png"
+                src="/images/logo/logo-footer-dark.svg"
                 alt="BlinkLink logo"
                 width={307}
                 height={64}

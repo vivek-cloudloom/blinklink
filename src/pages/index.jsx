@@ -9,7 +9,7 @@ export default function Home() {
     <div className="home-page">
       <div className="home-item">
         <div className="container align-items-center d-flex default-page-height">
-          <div className="row">
+          <div className="row align-items-center">
             <div className="col-12 col-lg-4 offset-lg-1">
               <div className="d-flex flex-column gap-4">
                 <span className="typography-variant-18">
@@ -33,8 +33,8 @@ export default function Home() {
             </div>
             <div className="col-12 col-lg-7">
               <Image
-                src="/images/home.png"
-                alt="The power of attention, in the palm of your hand"
+                src="/images/main/Viral-Marketer.svg"
+                alt="Viral Marketer"
                 width={675}
                 height={448}
                 quality={100}
@@ -45,10 +45,10 @@ export default function Home() {
       </div>
       <div className="home-item">
         <div className="container align-items-center d-flex flex-column h-100 gap-5">
-          <div className="row">
+          <div className="row align-items-center">
             <div className="col-12 col-lg-5 offset-lg-1">
               <Image
-                src="/images/revolution.png"
+                src="/images/main/revolution.svg"
                 alt="Influence"
                 width={465}
                 height={334}
@@ -69,7 +69,7 @@ export default function Home() {
               <ArrowLink label="Play Video" />
             </div>
           </div>
-          <div className="row">
+          <div className="row align-items-center">
             <div className="col-12 col-lg-5 offset-lg-1">
               <Title>A Revolution in Influencer Income.</Title>
               <Paragraph>
@@ -81,8 +81,8 @@ export default function Home() {
             </div>
             <div className="col-12 col-lg-6">
               <Image
-                src="/images/revolution.png"
-                alt="Influence"
+                src="/images/main/revolution.svg"
+                alt="Revolution"
                 width={556}
                 height={453}
                 quality={100}
@@ -97,7 +97,7 @@ export default function Home() {
           <div className="row">
             <div className="col-12 col-lg-6">
               <Image
-                src="/images/idea.png"
+                src="/images/main/idea.svg"
                 alt="Influence"
                 width={703}
                 height={501}
@@ -145,8 +145,8 @@ export default function Home() {
             </div>
             <div className="col-12 col-lg-6">
               <Image
-                src="/images/marketingInfluence.png"
-                alt="Influence"
+                src="/images/main/marketingInfluence.svg"
+                alt="Marketing Influence"
                 width={629}
                 height={634}
                 quality={100}
@@ -182,9 +182,9 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-12 col-lg-5 ps-4">
+            <div className="col-12 col-lg-5 text-center">
               <Image
-                src="/images/career.png"
+                src="/images/main/logo-dark.svg"
                 alt="Influence"
                 width={371}
                 height={393}
