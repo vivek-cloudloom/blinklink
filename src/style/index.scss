@@ -53,6 +53,15 @@
   color: #000000;
 }
 
+.offcanvas .offcanvas-body .nav-link {
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  color: #000000;
+}
+
 .w-40 {
   width: 40%;
 }
@@ -92,16 +101,21 @@
 .fixed-blinklink-header {
   transition: all 0.3s ease-in-out;
 }
-.floating-header {
-  background: white !important;
-  border-radius: 96px;
-  box-shadow: 0px 1px 24px rgb(0 0 0 / 15%);
-  // width: 96%;
-  // margin: auto;
-  // position: fixed;
-  top: 16px;
-  transition: all 0.3s ease-in-out;
+
+@media only screen and (min-width: 992px) {
+  .floating-header {
+    background: white !important;
+    border-radius: 96px;
+    box-shadow: 0px 1px 24px rgb(0 0 0 / 15%);
+    // width: 96%;
+    // margin: auto;
+    // position: fixed;
+    top: 16px;
+    transition: all 0.3s ease-in-out;
+  }
 }
+
+
 
 /* NEW STYLES ADDED*/
 .navbar-light .navbar-nav .nav-link:hover,

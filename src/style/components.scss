@@ -37,10 +37,14 @@
   border-radius: 15px !important;
 }
 
+.offcanvas .offcanvas-body .dropdown-menu {
+  box-shadow: none;
+  border: none !important;
+  background: transparent  !important;
+}
 .range-vertical {
   position: relative;
 
-  
   .line {
     background: $danger;
     width: 6px;
@@ -67,5 +71,4 @@
       background: $info;
     }
   }
-
 }

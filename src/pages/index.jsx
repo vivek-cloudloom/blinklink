@@ -47,13 +47,27 @@ export default function Home() {
         <div className="container d-flex flex-column gap-5 py-5">
           <div className="row align-items-center">
             <div className="col-12 col-lg-5 offset-lg-1">
-              <Image
-                src="/images/main/revolution.svg"
-                alt="Influence"
-                width={465}
-                height={334}
-                quality={100}
-              />
+              <div className="position-relative">
+                <Image
+                  src="/images/main/video.svg"
+                  alt="Influence"
+                  width={361}
+                  height={251}
+                  quality={100}
+                />
+                <div
+                  className="position-absolute"
+                  style={{ left: "152px", top: "93px" }}
+                >
+                  <Image
+                    src="/images/main/play.svg"
+                    alt="Influence"
+                    width={57}
+                    height={65}
+                    quality={100}
+                  />
+                </div>
+              </div>
             </div>
             <div className="col-12 col-lg-5 col-xxl-4">
               <Title>
