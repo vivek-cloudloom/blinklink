@@ -41,7 +41,7 @@ const icons = [
 import Image from "next/image";
 export default function Traction({}) {
   return (
-    <div className="d-flex flex-wrap gap-5 m-3">
+    <div className="d-flex flex-wrap justify-content-center gap-5 m-3">
       {icons.map((icon) => {
         return (
           <Image layout="fixed" key={icon.name} src={icon.image} alt={icon.name} width={36} height={36} quality={100} />

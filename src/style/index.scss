@@ -7,41 +7,13 @@
 // Bootstrap and its default variables
 @import "node_modules/bootstrap/scss/bootstrap";
 
-.gap1 {
-  gap: 1rem;
-}
-.gap2 {
-  gap: 2rem;
-}
+
 
 .navigation-outline {
-  border: 2px solid #2f6eba;
+  border: 2px solid $info;
   border-radius: 10px;
 }
 
-// Solution
-
-.solutions-page {
-  // height: 100vh;
-  // overflow-y: scroll;
-  // scroll-snap-type: y mandatory;
-
-  .solutions-page-item {
-    // height: 100vh;
-    // margin-top: 50px;
-    padding: 3rem 0;
-    background: #f6efe8;
-    // scroll-snap-align: start;
-    // padding-top: 80px;
-  }
-  .solutions-page-item:first-child {
-    padding: 0;
-  }
-
-  .solutions-page-item:nth-child(even) {
-    background: #ffffff;
-  }
-}
 
 .navbar-light .navbar-nav .nav-link {
   font-family: $font-family-avenir;
@@ -90,7 +62,7 @@
 
 .profile-wrapper {
   .profile {
-    background: #f6efe8;
+    background: $body-bg;
   }
 
   .profile:nth-child(even) {

@@ -22,7 +22,7 @@ export default function Solution({
       <div className="align-items-center container d-flex vh-100 scroll-snap-align-start">
         <div className="row align-items-center">
           <div className={`col-12 ${leftClass} offset-lg-1`}>
-            <div className={`d-flex flex-column gap1`}>
+            <div className={`d-flex flex-column gap-3`}>
               <Title>{title}</Title>
               <Paragraph>{description}</Paragraph>
               <ArrowLink label="" type={type} />

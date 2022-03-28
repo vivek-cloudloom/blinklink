@@ -52,7 +52,7 @@ export default function Features() {
               className="justify-content-center d-flex flex-column h-100 position-relative"
               style={{ top: "-160px" }}
             >
-              <div className="d-flex gap1 position-relative w-100">
+              <div className="d-flex gap-3 position-relative w-100">
                 <div className="align-self-end card shadow-sm border-0 p-3 bg-light rounded h-50 w-40">
                   <div className="d-flex">
                     <div className="w-50">
@@ -77,8 +77,8 @@ export default function Features() {
                     </div>
                   </div>
                 </div>
-                <div className="d-flex flex-column gap1 w-60">
-                  <div className="d-flex gap1 w-100">
+                <div className="d-flex flex-column gap-3 w-60">
+                  <div className="d-flex gap-3 w-100">
                     <div className="card shadow-sm border-0 p-3 bg-light rounded w-30">
                       <div className="d-flex">
                         <div className="w-75 mt-5">
@@ -103,7 +103,7 @@ export default function Features() {
                         </div>
                       </div>
                     </div>
-                    <div className="d-flex flex-column gap1 w-70">
+                    <div className="d-flex flex-column gap-3 w-70">
                       <div className="card shadow-sm border-0 p-3 bg-light rounded">
                         <div className="d-flex">
                           <div className="w-75">

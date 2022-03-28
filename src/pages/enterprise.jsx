@@ -19,7 +19,7 @@ export default function EnterPrise() {
     <>
       <div className="home-page blue-theme">
         <div className="home-item">
-          <div className="align-items-center container d-flex flex-column justify-content-center vh-100">
+          <div className="align-items-center container d-flex flex-column justify-content-center vh-100 text-center">
             <span className="typography-variant-28">The Turn-key</span>
             <Title isDefaultFont={true}>
               The Operating System for{" "}
@@ -35,7 +35,7 @@ export default function EnterPrise() {
               height={287}
             />
 
-            <ul className="d-flex gap-5 typography-variant-9 text-info flex-wrap">
+            <ul className="d-flex gap-5 typography-variant-9 text-info flex-wrap justify-content-center">
               {features.map((feature, index) => {
                 return (
                   <li
@@ -48,7 +48,7 @@ export default function EnterPrise() {
               })}
             </ul>
 
-            <ul className="d-flex gap-5 typography-variant-9 flex-wrap">
+            <ul className="d-flex gap-5 typography-variant-9 flex-wrap justify-content-center">
               {subFeatures.map((feature, index) => {
                 return (
                   <li

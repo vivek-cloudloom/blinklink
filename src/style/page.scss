@@ -1,18 +1,9 @@
 .home-page {
-  .home-item {
-    // padding: 3rem 0;
-    //   background: #f6efe8;
-  }
-
   &.blue-theme .home-item {
-    background: #f0faff;
-  }
-
-  .home-item:first-child {
-    // padding: 0;
+    background: $bg-blue;
   }
   .home-item:nth-child(even) {
-    background: #ffffff;
+    background: $light;
   }
 }
 
@@ -21,10 +12,10 @@ footer {
 }
 
 .blue-theme-bg {
-  background-color: #f0faff;
+  background-color: $bg-blue;
 }
 .sales-blue-theme {
-  background: linear-gradient(to bottom, #f0faff 100vh, white 100vh 200vh);
+  background: linear-gradient(to bottom, $bg-blue 100vh, $light 100vh 200vh);
 }
 .sales-wrapper {
   padding-top: 300px;
@@ -41,7 +32,7 @@ footer {
     color: $warning;
   }
 
-  .form-control {
+  .form-control,.form-select {
     font-weight: 500;
     font-size: 24px;
     line-height: 33px;
@@ -49,13 +40,3 @@ footer {
   }
 }
 
-@media only screen and (min-width: 992px) {
-  .sales-form {
-    margin-top: -620px;
-  }
-}
-
-.py-150 {
-  padding-top: 15vh;
-  padding-bottom: 15vh;
-}

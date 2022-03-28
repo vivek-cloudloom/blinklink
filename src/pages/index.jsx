@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="home-page">
       <div className="home-item">
-        <div className="container align-items-center d-flex vh-100">
+        <div className="container d-flex vh-100">
           <div className="row align-items-center">
             <div className="col-12 col-lg-4 offset-lg-1">
               <div className="d-flex flex-column gap-4">

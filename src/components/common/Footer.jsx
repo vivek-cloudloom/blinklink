@@ -29,7 +29,7 @@ export default function Footer() {
   ];
   return (
     <div className={theme}>
-      <div className="container align-items-center d-flex justify-content-between h-100 pt-5 pb-5">
+      <div className="container align-items-center d-flex justify-content-between h-100 py-5">
         <div className="row">
           <div className="col-12 col-lg-4">
             <div className="mb-4">
@@ -76,11 +76,11 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <footer className={`align-items-center d-flex flex-wrap gap2 justify-content-center py-1 ${footerTheme} typography-variant-7 torus-font` }>
+      <footer className={`align-items-center d-flex flex-wrap gap-4 justify-content-center py-1 ${footerTheme} typography-variant-7 torus-font` }>
         <div>
           @BlinkLink 2021. All Rights Reserved
         </div>
-        <ul className="footer-items align-items-center d-flex gap2 flex-wrap  list-unstyled m-0">
+        <ul className="footer-items align-items-center d-flex gap-4 flex-wrap  list-unstyled m-0">
           <li className={`border-2 ${footerBorder} border-start ps-3`}>Privacy Policy</li>
           <li className={`border-2 ${footerBorder} border-start ps-3`}>Terms & Conditions</li>
           <li className={`border-2 ${footerBorder} border-start ps-3`}>Subsciption & Online Policy</li>

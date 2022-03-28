@@ -9,7 +9,7 @@ export default function Solutions() {
     <>
       <div className="home-page">
         <div className="home-item">
-          <div className="align-items-center container d-flex flex-column justify-content-center vh-100">
+          <div className="align-items-center container d-flex flex-column justify-content-center vh-100 text-center">
             <h6 className="typography-variant-28">We Believe</h6>
             <Title isDefaultFont={true}>
               You are the{" "}

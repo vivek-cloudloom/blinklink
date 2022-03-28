@@ -35,7 +35,7 @@ export default function Features() {
                 </span>
               </span>
               <Paragraph className="mt-4">
-                Work alongside the most amazing teammates in <br />a culture
+                Work alongside the most amazing teammates in a culture
                 that is all about rewarding innovation.
               </Paragraph>
             </div>
