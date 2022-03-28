@@ -36,3 +36,36 @@
   background: rgba(246, 239, 232, 0.5) !important;
   border-radius: 15px !important;
 }
+
+.range-vertical {
+  position: relative;
+
+  
+  .line {
+    background: $danger;
+    width: 6px;
+    height: 100vh;
+    position: absolute;
+    // left: 19px;
+  }
+
+  .round {
+    width: 44px;
+    height: 44px;
+    background: $danger;
+    border-radius: 100%;
+    position: absolute;
+    top: 120px;
+    left: -6px;
+    transition: top 0.3s ease-in-out;
+  }
+  &.info {
+    .line {
+      background: $info;
+    }
+    .round {
+      background: $info;
+    }
+  }
+
+}

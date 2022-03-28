@@ -63,7 +63,7 @@ export default function EnterPrise() {
           </div>
         </div>
 
-        {enterprise.map((link) => {
+        {enterprise.map((link,index) => {
           return (
             <Solution
               key={link.title}
@@ -75,7 +75,9 @@ export default function EnterPrise() {
               leftClass={link.leftClass}
               rightClass={link.rightClass}
               type="info"
-              className="home-item default-page-height"
+              className="home-item"
+              total={enterprise.length}
+              current={index}
             />
           );
         })}

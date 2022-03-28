@@ -190,6 +190,8 @@ export default function Features() {
               features={link.items}
               imageUrl={link.imageUrl}
               className="home-item"
+              total={features.length}
+              current={index}
             />
           );
         })}

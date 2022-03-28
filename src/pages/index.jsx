@@ -93,7 +93,7 @@ export default function Home() {
       </div>
 
       <div className="home-item">
-        <div className="align-items-center container d-flex vh-100">
+        <div className="align-items-center container d-flex py-5">
           <div className="align-items-center row">
             <div className="col-12 col-lg-6">
               <Image
@@ -125,7 +125,7 @@ export default function Home() {
       </div>
 
       <div className="home-item">
-        <div className="align-items-center container d-flex vh-100">
+        <div className="align-items-center container d-flex py-5">
           <div className="row align-items-center">
             <div className="col-12 col-lg-5 offset-lg-1">
               <Title isDefaultFont={true}>

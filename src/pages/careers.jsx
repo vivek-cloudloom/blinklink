@@ -53,9 +53,9 @@ export default function Features() {
       </div>
 
       <div className="home-item">
-        <div className="align-items-center container d-flex flex-column justify-content-center py-5">
+        <div className="container d-flex flex-column justify-content-center py-5">
           <div className="row">
-            <div className="col-12 col-lg-5">
+            <div className="col-12 col-lg-4">
               <div className="bg-body d-flex flex-column m-4 p-4">
                 <h3 className="border-bottom border-warning pb-2 text-warning torus-font typography-variant-11">
                   FILTER JOBS
@@ -109,7 +109,7 @@ export default function Features() {
                 </Form>
               </div>
             </div>
-            <div className="col-12 col-lg-7">
+            <div className="col-12 col-lg-8">
               <div className="d-flex flex-column m-4 pt-4">
                 <h3 className="border-bottom border-warning pb-2  text-warning torus-font typography-variant-11">
                   Jobs

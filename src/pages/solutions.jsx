@@ -35,7 +35,7 @@ export default function Solutions() {
           </div>
         </div>
 
-        {solutions.map((link) => {
+        {solutions.map((link , index) => {
           return (
             <Solution
               key={link.title}
@@ -47,6 +47,8 @@ export default function Solutions() {
               leftClass={link.leftClass}
               rightClass={link.rightClass}
               className="home-item"
+              total={solutions.length}
+              current={index}
             />
           );
         })}
