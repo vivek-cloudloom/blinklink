@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function Profile({ data }) {
   return (
-    <div className="p-5 profile">
+    <div className="py-5 profile">
       <div className="container">
         <div className="row">
           <div className="col-12 col-lg-3  offset-lg-1">

@@ -9,7 +9,7 @@ export default function Solutions() {
     <>
       <div className="home-page">
         <div className="home-item">
-          <div className="container align-items-center d-flex justify-content-center flex-column default-page-height">
+          <div className="align-items-center container d-flex flex-column justify-content-center vh-100">
             <h6 className="typography-variant-28">We Believe</h6>
             <Title isDefaultFont={true}>
               You are the{" "}
@@ -52,7 +52,7 @@ export default function Solutions() {
         })}
 
         <div className="home-item">
-          <div className="container d-flex justify-content-center flex-column h-100">
+          <div className="align-items-center container d-flex py-5">
             <div className="row align-items-center">
               <div className="col-12 col-lg-4">
                 {" "}

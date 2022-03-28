@@ -25,7 +25,7 @@ export default function Features() {
   return (
     <div className="home-page">
       <div className="home-item">
-        <div className="container align-items-center d-flex justify-content-between default-page-height">
+        <div className="align-items-center container d-flex flex-column justify-content-center vh-100">
           <div className="row align-items-center">
             <div className="col-12 col-lg-5 offset-lg-1">
               <span className="typography-variant-19">
@@ -53,7 +53,7 @@ export default function Features() {
       </div>
 
       <div className="home-item">
-        <div className="container py-5">
+        <div className="align-items-center container d-flex flex-column justify-content-center py-5">
           <div className="row">
             <div className="col-12 col-lg-5">
               <div className="bg-body d-flex flex-column m-4 p-4">
@@ -127,7 +127,7 @@ export default function Features() {
       </div>
 
       <div className="home-item">
-        <div className="container align-items-center d-flex justify-content-center flex-column h-100 py-150">
+        <div className="align-items-center container d-flex flex-column justify-content-center py-5">
           <div className="row align-items-center">
             <div className="col-12 col-lg-7">
               <Title>Explore the future of your Influence, today!</Title>

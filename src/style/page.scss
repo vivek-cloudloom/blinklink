@@ -1,6 +1,6 @@
 .home-page {
   .home-item {
-    padding: 3rem 0;
+    // padding: 3rem 0;
     //   background: #f6efe8;
   }
 
@@ -9,7 +9,7 @@
   }
 
   .home-item:first-child {
-    padding: 0;
+    // padding: 0;
   }
   .home-item:nth-child(even) {
     background: #ffffff;
@@ -27,14 +27,15 @@ footer {
 .blue-theme-bg {
   background-color: #f0faff;
 }
-
+.sales-blue-theme {
+  background: linear-gradient(to bottom, #f0faff 100vh, white 100vh 200vh);
+}
 .sales-wrapper {
   padding-top: 300px;
+  padding-bottom: 3rem;
 }
 
-
-
-.sales-form {
+.sales-page {
   margin-top: 0;
 
   .form-label {

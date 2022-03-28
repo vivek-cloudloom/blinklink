@@ -11,9 +11,9 @@ export default function Team() {
     <>
       <div className="home-page blue-theme">
         <div className="home-item">
-          <div className="container d-flex default-page-height flex-column justify-content-center">
+          <div className="container d-flex flex-column justify-content-center vh-100">
             <div className="align-items-center row">
-              <div className="col-12 col-lg-5 offset-lg-1">
+              <div className="col-12 col-lg-4 offset-lg-2">
                 <span className="typography-variant-18">
                   The Team behind <br />
                   <span className="typography-variant-27 torus-font text-danger">
@@ -21,7 +21,7 @@ export default function Team() {
                   </span>
                 </span>
               </div>
-              <div className="col-12 col-lg-6 text-center">
+              <div className="col-12 col-lg-4 text-center">
                 <Image
                   src="/images/logo/logo-danger-icon.svg"
                   alt="BlinkLink logo"
@@ -47,7 +47,7 @@ export default function Team() {
         })}
       </div>
 
-      <div className="d-flex flex-column mt-5">
+      <div className="d-flex flex-column py-5">
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-11  offset-lg-1">
@@ -74,7 +74,7 @@ export default function Team() {
           </div>
         </div>
 
-        <div className="p-5 profile">
+        <div className="py-5 profile">
           <div className="container">
             <div className="row">
               <div className="col-12 col-lg-3  offset-lg-1">
@@ -103,7 +103,7 @@ export default function Team() {
 
       <div className="home-page blue-theme">
         <div className="home-item">
-          <div className="container align-items-center d-flex justify-content-center flex-column h-100 py-150">
+          <div className="align-items-center container d-flex py-5">
             <div className="row align-items-center">
               <div className="col-12 col-lg-7">
                 <Title>Explore the future of your Influence, today!</Title>

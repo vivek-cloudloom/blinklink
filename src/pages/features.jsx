@@ -18,7 +18,7 @@ export default function Features() {
     <>
       <div className="home-page">
         <div className="home-item">
-          <div className="container align-items-center d-flex justify-content-center flex-column default-page-height">
+          <div className="container align-items-center d-flex vh-100 justify-content-center flex-column">
             <h4 className="typography-variant-15">The power of attention, </h4>
             <h4 className="typography-variant-25 torus-font text-danger">
               In the palm of your hand
@@ -27,7 +27,7 @@ export default function Features() {
         </div>
 
         <div className="home-item">
-          <div className="container">
+          <div className="container py-5">
             <div className="row">
               <div className="col-12 col-lg-7">
                 <Title>Manage your Social Media</Title>
@@ -195,7 +195,7 @@ export default function Features() {
         })}
 
         <div className="home-item">
-          <div className="container align-items-center d-flex justify-content-center flex-column h-100">
+          <div className="align-items-center container d-flex py-5">
             <div className="row align-items-center">
               <div className="col-12 col-lg-6 offset-lg-1">
                 <Title>

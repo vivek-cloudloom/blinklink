@@ -2,9 +2,8 @@ import { Button, Card, Col, Form, Row } from "react-bootstrap";
 import Paragraph from "../components/common/Paragraph";
 export default function Features() {
   return (
-    <div className="home-page blue-theme">
-      <div className="home-item">
-        <div className="container d-flex default-page-height flex-column sales-wrapper">
+    <div className="sales-page sales-blue-theme">
+      <div className="container d-flex sales-wrapper">
           <div className="row">
             <div className="col-12 col-lg-6">
               <div className="d-flex flex-column">
@@ -21,13 +20,7 @@ export default function Features() {
                 </Paragraph>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div className="home-item">
-        <div className="container sales-form">
-          <div className="row">
-            <div className="col-12 col-lg-6 offset-lg-6">
+            <div className="col-12 col-lg-6">
               <Card className="border-0 shadow-sm w-100">
                 <Card.Body>
                   <Form>
@@ -130,7 +123,6 @@ export default function Features() {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 }

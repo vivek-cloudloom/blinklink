@@ -112,3 +112,22 @@
     color: $light !important;
   }
 }
+
+
+.scroll-snap-align {
+  scroll-snap-align: end;
+}
+
+.scroll-snap-align-start {
+  scroll-snap-align: start;
+}
+
+body {
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  height: 100vh;
+}
+html {
+  height: 100vh;
+  overflow: hidden;
+}

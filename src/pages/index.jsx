@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="home-page">
       <div className="home-item">
-        <div className="container align-items-center d-flex default-page-height">
+        <div className="container align-items-center d-flex vh-100">
           <div className="row align-items-center">
             <div className="col-12 col-lg-4 offset-lg-1">
               <div className="d-flex flex-column gap-4">
@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       </div>
       <div className="home-item">
-        <div className="container align-items-center d-flex flex-column h-100 gap-5">
+        <div className="container d-flex flex-column gap-5 py-5">
           <div className="row align-items-center">
             <div className="col-12 col-lg-5 offset-lg-1">
               <Image
@@ -93,8 +93,8 @@ export default function Home() {
       </div>
 
       <div className="home-item">
-        <div className="container align-items-center d-flex default-page-height">
-          <div className="row">
+        <div className="align-items-center container d-flex vh-100">
+          <div className="align-items-center row">
             <div className="col-12 col-lg-6">
               <Image
                 src="/images/main/idea.svg"
@@ -125,7 +125,7 @@ export default function Home() {
       </div>
 
       <div className="home-item">
-        <div className="container d-flex py-150">
+        <div className="align-items-center container d-flex vh-100">
           <div className="row align-items-center">
             <div className="col-12 col-lg-5 offset-lg-1">
               <Title isDefaultFont={true}>
@@ -157,8 +157,8 @@ export default function Home() {
       </div>
 
       <div className="home-item">
-        <div className="container align-items-center d-flex justify-content-between py-150">
-          <div className="row">
+        <div className="align-items-center container d-flex py-5">
+          <div className="row align-items-center">
             <div className="col-12 col-lg-7">
               <div className="d-flex flex-column gap-4 ps-4">
                 <Title className="text-danger">

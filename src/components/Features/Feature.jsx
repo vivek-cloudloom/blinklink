@@ -6,7 +6,7 @@ export default function Feature({ features, imageUrl, className }) {
   return (
     <div className={className}>
       {/* <div className="container align-items-center d-flex justify-content-center flex-column h-100"> */}
-        <div className="align-items-center container d-flex default-page-height justify-content-center">
+        <div className="align-items-center container d-flex vh-100 scroll-snap-align-start">
           <div className="row align-items-center ">
             <div className="col-12 col-lg-5 offset-lg-1">
             {features &&

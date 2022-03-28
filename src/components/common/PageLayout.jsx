@@ -23,9 +23,8 @@ export default function PageLayout({ children }) {
 
   const [headerClass, toggleClass] = useState("");
 
-  const listenScrollEvent = (e) => {
-    console.log("window.scrollY" , window.scrollY)
-    if (window.scrollY > 100) {
+  const listenScrollEvent = () => {
+    if (document.body.scrollTop > 100) {
       toggleClass("floating-header");
     } else {
       toggleClass("fixed-blinklink-header");
@@ -33,7 +32,7 @@ export default function PageLayout({ children }) {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", listenScrollEvent);
+    document.body.addEventListener("scroll", listenScrollEvent);
   }, []);
   const navItems = [
     {
@@ -43,19 +42,7 @@ export default function PageLayout({ children }) {
         {
           title: "FEATURES",
           link: "/features",
-        },
-        {
-          title: "VALUING INFLUENCE",
-          link: "/submenu2",
-        },
-        {
-          title: "INTEGRATIONS",
-          link: "/submenu3",
-        },
-        {
-          title: "DOWNLOAD THE APP",
-          link: "/submenu3",
-        },
+        }
       ],
     },
     { title: "Solutions", link: "/solutions" },
@@ -82,9 +69,9 @@ export default function PageLayout({ children }) {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
             id="basic-navbar-nav"
-            className="justify-content-between mx-3"
+            className=""
           >
-            <Nav className="mx-auto">
+            <Nav className="d-flex justify-content-around w-100">
               {navItems.map((item) => {
                 return item.children ? (
                   <NavDropdown
@@ -115,8 +102,16 @@ export default function PageLayout({ children }) {
                   </Link>
                 );
               })}
+
+<Nav.Link
+                eventKey={2}
+                href="/sales"
+                className="btn btn-outline-info navigation-outline"
+              >
+                <span className="typography-variant-5 text-info px-xl-4">Enterprise Team</span>
+              </Nav.Link>
             </Nav>
-            <Nav>
+            {/* <Nav>
               <Nav.Link
                 eventKey={2}
                 href="/sales"
@@ -124,7 +119,7 @@ export default function PageLayout({ children }) {
               >
                 <span className="typography-variant-5 text-info px-lg-1 px-xl-4">Enterprise Team</span>
               </Nav.Link>
-            </Nav>
+            </Nav> */}
           </Navbar.Collapse>
         
       </Navbar>
