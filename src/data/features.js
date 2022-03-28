@@ -1,6 +1,8 @@
 const features = [
   {
-    imageUrl: "/images/enterprise/dummy.png",
+    imageUrl: "/images/features/know.svg",
+    width:621,
+    height:469,
     items: [
       {
         title: "Know",
@@ -20,7 +22,9 @@ const features = [
     ],
   },
   {
-    imageUrl: "/images/enterprise/dummy.png",
+    imageUrl: "/images/features/advertize.svg",
+    width:594,
+    height:578,
     items: [
       {
         title: "Advertize",
@@ -38,7 +42,9 @@ const features = [
     ],
   },
   {
-    imageUrl: "/images/enterprise/dummy.png",
+    imageUrl: "/images/features/generate.svg",
+    width:668,
+    height:574,
     items: [
       {
         title: "Generate",
@@ -57,7 +63,9 @@ const features = [
     ],
   },
   {
-    imageUrl: "/images/enterprise/dummy.png",
+    imageUrl: "/images/features/deeplink.svg",
+    width:602,
+    height:577,
     items: [
       {
         title: "DeepLink",

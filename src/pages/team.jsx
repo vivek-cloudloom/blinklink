@@ -41,6 +41,8 @@ export default function Team() {
               title={link.title}
               description={link.description}
               imageUrl={link.imageUrl}
+              width={link.width}
+              height={link.height}
               className="home-item"
             />
           );

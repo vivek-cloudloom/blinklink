@@ -62,13 +62,13 @@ export default function Features() {
                   </Form.Group>
 
                   <Row>
-                    <Col>
+                    <Col xs={12} lg={6}>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Company</Form.Label>
                         <Form.Control type="text" placeholder="Company J.S.C" />
                       </Form.Group>
                     </Col>
-                    <Col>
+                    <Col  xs={12} lg={6}>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>COMPANY SIZE</Form.Label>
                         <Form.Select aria-label="Default select example">
@@ -86,7 +86,7 @@ export default function Features() {
                   </Row>
 
                   <Row>
-                    <Col>
+                    <Col xs={12} lg={6}>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>DEPARTMENT</Form.Label>
                         <Form.Select aria-label="Default select example">
@@ -112,7 +112,7 @@ export default function Features() {
                         </Form.Select>
                       </Form.Group>
                     </Col>
-                    <Col>
+                    <Col xs={12} lg={6}>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>ROLE</Form.Label>
                         <Form.Select>
@@ -130,7 +130,7 @@ export default function Features() {
                   </Row>
 
                   <Row>
-                    <Col>
+                    <Col xs={12} lg={6}>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>PHONE NUMBER</Form.Label>
                         <Form.Control
@@ -139,7 +139,7 @@ export default function Features() {
                         />
                       </Form.Group>
                     </Col>
-                    <Col>
+                    <Col xs={12} lg={6}>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>HOW CAN WE HELP YOU</Form.Label>
                         <Form.Control type="text" placeholder="Select" />

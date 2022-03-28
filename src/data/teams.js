@@ -17,7 +17,9 @@ const teamData = [
         </Paragraph>
       </>
     ),
-    imageUrl: "/images/teams/dummy.png",
+    imageUrl: "/images/teams/about.svg",
+    width:495,
+    height:339
   },
   {
     title: "Our Mission",
@@ -36,7 +38,9 @@ const teamData = [
         </Paragraph>
       </>
     ),
-    imageUrl: "/images/teams/dummy.png",
+    imageUrl: "/images/teams/mission.svg",
+    width:456,
+    height:442
   },
 ];
 

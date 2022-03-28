@@ -78,6 +78,7 @@ export default function Features() {
                           key={location}
                           label={location}
                           name="group1"
+                          id={`location-${location}`}
                           type="checkbox"
                           className="typography-variant-4 text-dark"
                         />
@@ -96,6 +97,7 @@ export default function Features() {
                           label={item}
                           key={item}
                           name="group2"
+                          id={`type-${item}`}
                           type="checkbox"
                           className="typography-variant-4 text-dark"
                         />

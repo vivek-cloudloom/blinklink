@@ -9,6 +9,8 @@ export default function Feature({
   className,
   total,
   current,
+  width,
+  height
 }) {
   return (
     <div className={className}>
@@ -34,8 +36,8 @@ export default function Feature({
             <Image
               src={imageUrl}
               alt="social"
-              width={420}
-              height={504}
+              width={width}
+              height={height}
               quality={100}
             />
           </div>

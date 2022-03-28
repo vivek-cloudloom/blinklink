@@ -23,6 +23,13 @@ export default function Features() {
             <h4 className="typography-variant-25 torus-font text-danger">
               In the palm of your hand
             </h4>
+            <Image
+                src="/images/features/attention.svg"
+                alt="attention"
+                width={305}
+                height={306}
+                quality={100}
+              />
           </div>
         </div>
 
@@ -192,6 +199,8 @@ export default function Features() {
               className="home-item"
               total={features.length}
               current={index}
+              width={link.width}
+              height={link.height}
             />
           );
         })}

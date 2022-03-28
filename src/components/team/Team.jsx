@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Paragraph from "../common/Paragraph";
 import Title from "../common/Title";
-export default function Teams({ title, description, imageUrl, className }) {
+export default function Teams({ title, description, imageUrl, className , width , height }) {
   return (
     <div className={className}>
       <div className="align-items-center container d-flex py-5">
@@ -17,8 +17,8 @@ export default function Teams({ title, description, imageUrl, className }) {
             <Image
               src={imageUrl}
               alt="BlinkLink logo"
-              width={250}
-              height={237}
+              width={width}
+              height={height}
               quality={100}
             />
           </div>
