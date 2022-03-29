@@ -24,12 +24,12 @@ export default function Features() {
               In the palm of your hand
             </h4>
             <Image
-                src="/images/features/attention.svg"
-                alt="attention"
-                width={305}
-                height={306}
-                quality={100}
-              />
+              src="/images/features/attention.svg"
+              alt="attention"
+              width={305}
+              height={306}
+              quality={100}
+            />
           </div>
         </div>
 
@@ -52,141 +52,171 @@ export default function Features() {
                 />
               </div>
             </div>
-            {/* <div className="justify-content-center d-flex flex-column h-100 pt-5 w-60">
-              
-            </div> */}
+
             <div
-              className="justify-content-center d-flex flex-column h-100 position-relative"
-              style={{ top: "-160px" }}
+              className="justify-content-center d-flex flex-column h-100 position-relative feature-social-media"
+              
             >
-              <div className="d-flex gap-3 position-relative w-100">
-                <div className="align-self-end card shadow-sm border-0 p-3 bg-light rounded h-50 w-40">
-                  <div className="d-flex">
-                    <div className="w-50">
-                      <div className="d-flex flex-column align-items-start">
-                        <Image
-                          src={publish}
-                          alt="Publish"
-                          width={26}
-                          height={26}
-                          quality={100}
-                        />
-                        <span className="typography-variant-11 torus-font">
-                          Publish
-                        </span>
-                        <p className="text-dark typography-variant-4 mt-4">
-                          Share and schedule engaging content to your profiles
-                        </p>
-                      </div>
-                    </div>
-                    <div className="d-flex justify-content-end w-50">
-                      <ArrowLink type="dark" label="" />
-                    </div>
-                  </div>
-                </div>
-                <div className="d-flex flex-column gap-3 w-60">
-                  <div className="d-flex gap-3 w-100">
-                    <div className="card shadow-sm border-0 p-3 bg-light rounded w-30">
+              {/* <div className="d-flex gap-3 position-relative w-100"> */}
+                <div className="row">
+                  <div className="col-12 col-lg-4 align-self-end mb-4 mb-lg-0">
+                    <div className="card shadow-sm border-0 p-3 bg-light rounded h-100">
                       <div className="d-flex">
-                        <div className="w-75 mt-5">
+                        <div className="w-75">
                           <div className="d-flex flex-column align-items-start">
                             <Image
-                              src={engage}
-                              alt="Engage"
+                              src={publish}
+                              alt="Publish"
                               width={26}
                               height={26}
                               quality={100}
                             />
                             <span className="typography-variant-11 torus-font">
-                              Engage
+                              Publish
                             </span>
                             <p className="text-dark typography-variant-4 mt-4">
-                              Address incomingmessages and delivertimely replies
+                              Share and schedule engaging content to your
+                              profiles
                             </p>
                           </div>
                         </div>
-                        <div className="w-25">
+                        <div className="d-flex justify-content-end w-25">
                           <ArrowLink type="dark" label="" />
                         </div>
                       </div>
                     </div>
-                    <div className="d-flex flex-column gap-3 w-70">
-                      <div className="card shadow-sm border-0 p-3 bg-light rounded">
-                        <div className="d-flex">
-                          <div className="w-75">
-                            <div className="d-flex flex-column align-items-start">
-                              <Image
-                                src={monitor}
-                                alt="Monitor"
-                                width={26}
-                                height={26}
-                                quality={100}
-                              />
-                              <span className="typography-variant-11 torus-font">
-                                Monitor
-                              </span>
-                              <p className="text-dark typography-variant-4 mt-4">
-                                Stay informed about market trends and
-                                competitors
-                              </p>
+                  </div>
+                  <div className="col-12 col-lg-8">
+                    <div className="row">
+                      <div className="col-12 col-lg-5 mb-4 mb-lg-0">
+                        <div className="card shadow-sm border-0 p-3 bg-light rounded h-100">
+                          <div className="d-flex">
+                            <div className="w-75">
+                              <div className="d-flex flex-column align-items-start">
+                                <Image
+                                  src={engage}
+                                  alt="Engage"
+                                  width={26}
+                                  height={26}
+                                  quality={100}
+                                />
+                                <span className="typography-variant-11 torus-font">
+                                  Engage
+                                </span>
+                                <p className="text-dark typography-variant-4 mt-4">
+                                  Address incomingmessages and delivertimely
+                                  replies
+                                </p>
+                              </div>
                             </div>
-                          </div>
-                          <div className="d-flex justify-content-end w-25">
-                            <ArrowLink type="dark" label="" />
+                            <div className="d-flex justify-content-end w-25">
+                              <ArrowLink type="dark" label="" />
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div className="card shadow-sm border-0 p-3 bg-light rounded">
-                        <div className="d-flex">
-                          <div className="w-75">
-                            <div className="d-flex flex-column align-items-start">
-                              <Image
-                                src={advertise}
-                                alt="Advertise"
-                                width={26}
-                                height={26}
-                                quality={100}
-                              />
-                              <span className="typography-variant-11 torus-font">
-                                Advertise
-                              </span>
-                              <p className="text-dark typography-variant-4 mt-4">
-                                Promote your organic content and manage paid ads
-                              </p>
+
+                      <div className="col-12 col-lg-7">
+                        <div className="row">
+                          <div className="col-12">
+                            <div className="card shadow-sm border-0 p-3 bg-light rounded">
+                              <div className="d-flex">
+                                <div className="w-80">
+                                  <div className="d-flex flex-column align-items-start">
+                                    <Image
+                                      src={monitor}
+                                      alt="Monitor"
+                                      width={26}
+                                      height={26}
+                                      quality={100}
+                                    />
+                                    <span className="typography-variant-11 torus-font">
+                                      Monitor
+                                    </span>
+                                    <p className="text-dark typography-variant-4 mt-1">
+                                      Stay informed about market trends and
+                                      competitors
+                                    </p>
+                                  </div>
+                                </div>
+                                <div className="d-flex justify-content-end w-20">
+                                  <ArrowLink type="dark" label="" />
+                                </div>
+                              </div>
                             </div>
                           </div>
-                          <div className="d-flex justify-content-end w-25">
-                            <ArrowLink type="dark" label="" />
+                        </div>
+                        <div className="row mt-4">
+                          <div className="col-12">
+                            <div className="card shadow-sm border-0 p-3 bg-light rounded">
+                              <div className="d-flex">
+                                <div className="w-80">
+                                  <div className="d-flex flex-column align-items-start">
+                                    <Image
+                                      src={advertise}
+                                      alt="Advertise"
+                                      width={26}
+                                      height={26}
+                                      quality={100}
+                                    />
+                                    <span className="typography-variant-11 torus-font">
+                                      Advertise
+                                    </span>
+                                    <p className="text-dark typography-variant-4 mt-1">
+                                      Promote your organic content and manage
+                                      paid ads
+                                    </p>
+                                  </div>
+                                </div>
+                                <div className="d-flex justify-content-end w-20">
+                                  <ArrowLink type="dark" label="" />
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="card shadow-sm border-0 p-3 bg-light rounded">
-                    <div className="d-flex">
-                      <div className="d-flex flex-column align-items-start w-25">
-                        <Image
-                          src={analyse}
-                          alt="Analyze"
-                          width={26}
-                          height={26}
-                          quality={100}
-                        />
-                        <span className="typography-variant-11 torus-font">
-                          Analyze
-                        </span>
-                      </div>
+                    <div className="row mt-4">
+                      <div className="col-12">
+                        <div className="card shadow-sm border-0 p-3 bg-light rounded">
+                          <div className="d-flex">
+                            <div className="d-flex flex-column align-items-start w-25">
+                              <Image
+                                src={analyse}
+                                alt="Analyze"
+                                width={26}
+                                height={26}
+                                quality={100}
+                              />
+                              <span className="typography-variant-11 torus-font">
+                                Analyze
+                              </span>
+                            </div>
 
-                      <p className="text-dark typography-variant-4 mt-3">
-                        Measure your results across all social networks
-                      </p>
-                      <div className="d-flex justify-content-end w-25">
-                        <ArrowLink type="dark" label="" />
+                            <p className="text-dark typography-variant-4 mt-3">
+                              Measure your results across all social networks
+                            </p>
+                            <div className="d-flex justify-content-end w-25">
+                              <ArrowLink type="dark" label="" />
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+
+                {/* <div className="d-flex flex-column gap-3 w-60">
+                  <div className="d-flex gap-3 w-100">
+                    
+                    <div className="d-flex flex-column gap-3 w-70">
+                     
+                    </div>
+                  </div>
+                 
+                </div> */}
+              {/* </div> */}
             </div>
           </div>
         </div>
