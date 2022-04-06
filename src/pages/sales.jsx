@@ -8,9 +8,9 @@ export default function Features() {
         <div className="row">
           <div className="col-12 col-lg-6">
             <div className="d-flex flex-column">
-              <span className="typography-variant-20">
+              <span className="typography-5-semibold">
                 How can we can <br />
-                <span className="typography-variant-20 torus-font text-info">
+                <span className="typography-5-semibold torus-font text-info">
                   help?
                 </span>
               </span>
@@ -147,13 +147,13 @@ export default function Features() {
                     </Col>
                   </Row>
 
-                  <p className="typography-variant-2 mt-4">
+                  <p className="typography-1-normal mt-4">
                     Filling in optional boxes will allow us to get back to you
                     sooner and with the right team member XD
                   </p>
                   <div className="d-grid gap-2">
                     <Button variant="info" className="btn-height">
-                      <span className="text-light typography-variant-10">
+                      <span className="text-light typography-3-semibold">
                         SEND
                       </span>
                     </Button>

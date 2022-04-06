@@ -19,8 +19,8 @@ export default function PageLayout({ children }) {
 
   let logo = "/images/logo/logo-danger.svg";
   let headerBg = "bg-secondary";
-  let width = 214;
-  let height = 51;
+  let width = 199;
+  let height = 38;
   if (
     router.pathname === "/enterprise" ||
     router.pathname === "/sales" ||
@@ -28,14 +28,12 @@ export default function PageLayout({ children }) {
   ) {
     logo = "/images/logo/logo-info.svg";
     headerBg = "blue-theme-bg";
-    width = 199;
-    height = 38;
   }
 
   const [headerClass, toggleClass] = useState("");
 
   const listenScrollEvent = () => {
-    if (document.body.scrollTop > 100) {
+    if (window.scrollY > 100) {
       toggleClass("floating-header");
     } else {
       toggleClass("fixed-blinklink-header");
@@ -43,7 +41,7 @@ export default function PageLayout({ children }) {
   };
 
   useEffect(() => {
-    document.body.addEventListener("scroll", listenScrollEvent);
+    window.addEventListener("scroll", listenScrollEvent);
   }, []);
   const navItems = [
     {
@@ -51,7 +49,7 @@ export default function PageLayout({ children }) {
       link: "/product",
       children: [
         {
-          title: "FEATURES",
+          title: "Features",
           link: "/features",
         },
       ],
@@ -61,14 +59,16 @@ export default function PageLayout({ children }) {
     { title: "Careers", link: "/careers" },
     { title: "Team", link: "/team" },
   ];
+
+  const [showNavBar, toggleNavBar] = useState(false);
   return (
     // <Container fluid>
     <>
       {/* <Container> */}
       <Navbar
+        collapseOnSelect
         expand="lg"
         fixed="top"
-        collapseOnSelect={true}
         className={`${headerClass} ${headerBg} container-fluid container-xl`}
       >
         <Navbar.Brand href="/">
@@ -81,13 +81,19 @@ export default function PageLayout({ children }) {
             className="mr-3 h-6 sm:h-10"
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="offcanvasNavbar" />
+        <Navbar.Toggle
+          onClick={() => {
+            toggleNavBar(true);
+          }}
+        />
         <Navbar.Offcanvas
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
           placement="end"
+          backdrop={true}
+          show={showNavBar}
         >
-          <Offcanvas.Header closeButton>
+          <Offcanvas.Header closeButton >
             <Offcanvas.Title id="offcanvasNavbarLabel">
               <Image
                 src={logo}
@@ -107,36 +113,97 @@ export default function PageLayout({ children }) {
                     key={item.title}
                     title={item.title}
                     id="basic-nav-dropdown"
+                    className="text-dark typography-1-medium"
                   >
                     {item.children.map((subItem) => {
                       return (
                         <Link key={subItem.title} href={subItem.link}>
-                          <a className="dropdown-item typography-variant-5">{subItem.title}</a>
+                          <a className="dropdown-item typography-1-semibold text-dark"  onClick={()=>{
+                          toggleNavBar(false);
+                        }}>
+                            {subItem.title}
+                          </a>
                         </Link>
                       );
                     })}
                   </NavDropdown>
                 ) : (
-                  <Link key={item.title} href={item.link}>
-                    <a className="nav-link">{item.title}</a>
+                  <Link key={item.title} href={item.link} >
+                    <a className="nav-link text-dark typography-1-medium" onClick={()=>{
+                    toggleNavBar(false);
+                  }}>
+                      {item.title}
+                    </a>
                   </Link>
                 );
               })}
 
-              <Nav.Link
-                eventKey={2}
-                href="/sales"
-                className="btn btn-outline-info navigation-outline"
-              >
-                <span className="typography-variant-5 text-info px-xl-4">
-                  Enterprise Team
-                </span>
-              </Nav.Link>
+              <Link href="/sales">
+                <a className="btn btn-outline-info navigation-outline"  onClick={()=>{
+                          toggleNavBar(false);
+                        }}>
+                  <span className="typography-1-semibold text-info px-xl-4  montserrat-font text-uppercase">
+                    Enterprise Team
+                  </span>
+                </a>
+              </Link>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
         {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
-        <Navbar.Collapse id="basic-navbar-nav" className="d-none d-lg-block">
+        <Navbar.Collapse
+          id="basic-navbar-nav"
+          className="justify-content-between mx-3 d-none d-lg-block"
+        >
+          <Nav>
+            {navItems.map((item) => {
+              return item.children ? (
+                <NavDropdown
+                  key={item.title}
+                  title={item.title}
+                  id="basic-nav-dropdown"
+                  className="text-dark typography-1-medium mx-2"
+                >
+                  {item.children.map((subItem) => {
+                    return (
+                      <Link key={subItem.title} href={subItem.link}>
+                        <a className="dropdown-item typography-1-semibold text-dark">
+                          {subItem.title}
+                        </a>
+                      </Link>
+                      // <NavDropdown.Item
+                      //   href={subItem.link}
+                      //   key={subItem.title}
+                      // >
+                      //   {subItem.title}
+                      // </NavDropdown.Item>
+                    );
+                  })}
+                </NavDropdown>
+              ) : (
+                // <Nav.Link key={item.title} href={item.link}>
+                //   {item.title}
+                // </Nav.Link>
+                <Link key={item.title} href={item.link}>
+                  <a className="nav-link text-dark typography-1-medium mx-2">
+                    {item.title}
+                  </a>
+                </Link>
+              );
+            })}
+          </Nav>
+          <Nav>
+            <Link href="/sales">
+              <a className="btn btn-outline-info navigation-outline">
+                <span className="typography-1-semibold text-info px-lg-1 px-xl-4">
+                  Enterprise Team
+                </span>
+              </a>
+            </Link>
+          </Nav>
+        </Navbar.Collapse>
+
+        {/* <Navbar.Collapse id="basic-navbar-nav" className="d-none d-lg-block">
           <Nav className="d-flex justify-content-around w-100">
             {navItems.map((item) => {
               return item.children ? (
@@ -148,7 +215,7 @@ export default function PageLayout({ children }) {
                   {item.children.map((subItem) => {
                     return (
                       <Link key={subItem.title} href={subItem.link}>
-                        <a className="dropdown-item typography-variant-5">{subItem.title}</a>
+                        <a className="dropdown-item typography-1-semibold">{subItem.title}</a>
                       </Link>
                     );
                   })}
@@ -165,12 +232,12 @@ export default function PageLayout({ children }) {
               href="/sales"
               className="btn btn-outline-info navigation-outline"
             >
-              <span className="typography-variant-5 text-info px-xl-4">
+              <span className="typography-1-semibold text-info px-xl-4  montserrat-font text-uppercase">
                 Enterprise Team
               </span>
             </Nav.Link>
           </Nav>
-        </Navbar.Collapse>
+        </Navbar.Collapse> */}
       </Navbar>
       {/* </Container> */}
       <div>{children}</div>

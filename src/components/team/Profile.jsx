@@ -15,9 +15,9 @@ export default function Profile({ data }) {
           </div>
           <div className="col-12 col-lg-8">
             {" "}
-            <h5 className="typography-variant-13">{data.name}</h5>
-            <h5 className="typography-variant-15">{data.designation}</h5>
-            <p className="typography-variant-1">{data.bio}</p>
+            <h5 className="typography-4-normal">{data.name}</h5>
+            <h5 className="typography-4-semibold">{data.designation}</h5>
+            <p className="typography-1-normal">{data.bio}</p>
           </div>
         </div>
       </div>

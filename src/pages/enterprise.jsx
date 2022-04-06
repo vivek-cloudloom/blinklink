@@ -3,6 +3,7 @@ import enterprise from "../data/enterprise";
 import Image from "next/image";
 import Title from "../components/common/Title";
 import { Button } from "react-bootstrap";
+import React, { useState, useEffect } from 'react'
 export default function EnterPrise() {
   const features = [
     "Deeplinking",
@@ -15,15 +16,21 @@ export default function EnterPrise() {
     "Content Management",
     "Community Level Ads",
   ];
+
+  const [screenSize, setDimention] = useState(0);
+  useEffect(()=>{
+    setDimention(window.screen.width)
+  } , [])
+
   return (
     <>
       <div className="home-page blue-theme">
         <div className="home-item">
           <div className="align-items-center container d-flex flex-column justify-content-center vh-100 text-center">
-            <span className="typography-variant-28">The Turn-key</span>
+            <span className="typography-3-medium">The Turn-key</span>
             <Title isDefaultFont={true}>
               The Operating System for{" "}
-              <span className="typography-variant-22 torus-font text-info">
+              <span className="typography-5-semibold torus-font text-info">
                 Marketing
               </span>
             </Title>
@@ -35,12 +42,12 @@ export default function EnterPrise() {
               height={287}
             />
 
-            <ul className="d-flex gap-5 typography-variant-9 text-info flex-wrap justify-content-center">
+            <ul className="d-flex flex-column flex-lg-row flex-wrap gap-lg-5 justify-content-lg-center text-info typography-3-normal">
               {features.map((feature, index) => {
                 return (
                   <li
                     key={feature}
-                    className={`ps-4${index === 0 ? " list-unstyled" : ""}`}
+                    className={`ps-4${index === 0 && screenSize >= 992 ? " list-unstyled" : ""}`}
                   >
                     {feature}
                   </li>
@@ -48,12 +55,12 @@ export default function EnterPrise() {
               })}
             </ul>
 
-            <ul className="d-flex gap-5 typography-variant-9 flex-wrap justify-content-center">
+            <ul className="d-flex flex-column flex-lg-row flex-wrap gap-lg-5 justify-content-lg-center typography-3-normal">
               {subFeatures.map((feature, index) => {
                 return (
                   <li
                     key={feature}
-                    className={`ps-4${index === 0 ? " list-unstyled" : ""}`}
+                    className={`ps-4${index === 0  && screenSize >= 992 ? " list-unstyled" : ""}`}
                   >
                     {feature}
                   </li>
@@ -76,7 +83,7 @@ export default function EnterPrise() {
               rightClass={link.rightClass}
               type="info"
               className="home-item"
-              total={enterprise.length}
+              total={enterprise}
               current={index}
             />
           );
@@ -98,7 +105,7 @@ export default function EnterPrise() {
                 <Title>Explore the future of your Influence, today!</Title>
                 <div className="mt-4">
                   <Button variant="info" className="btn-height">
-                    <span className="text-light typography-variant-5 montserrat-font">
+                    <span className="text-light typography-1-semibold montserrat-font">
                       ENTERPRISE TEAM
                     </span>
                   </Button>

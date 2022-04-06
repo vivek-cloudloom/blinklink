@@ -15,21 +15,21 @@ export default function JobList({ job }) {
               />
             </div>
             <div>
-              <h6 className="typography-variant-10 mb-0">{job.name}</h6>
-              <ul className="d-flex gap-5 m-0 p-0 typography-variant-4 flex-wrap">
+              <h6 className="typography-3-semibold mb-0">{job.name}</h6>
+              <ul className="d-flex gap-5 m-0 p-0 typography-1-normal flex-wrap">
                 <li className={`list-unstyled`}>{job.location}</li>
                 <li className={`ps-3`}>{job.model}</li>
                 <li className={`ps-3`}>{job.type}</li>
               </ul>
-              {/* <span className="typography-variant-4">{job.location}</span> |{" "}
-          <span className="typography-variant-4">{job.model}</span> |{" "}
-          <span className="typography-variant-4">{job.type}</span> */}
+              {/* <span className="typography-1-normal">{job.location}</span> |{" "}
+          <span className="typography-1-normal">{job.model}</span> |{" "}
+          <span className="typography-1-normal">{job.type}</span> */}
             </div>
           </div>
         </div>
         <div className="col-12 col-lg-4 text-end">
           <Button variant="outline-dark" className="border-2">
-            <span className="typography-variant-3">Apply</span>{" "}
+            <span className="typography-1-semibold">Apply</span>{" "}
           </Button>
         </div>
       </div>

@@ -13,15 +13,15 @@ export default function Team() {
         <div className="home-item">
           <div className="container d-flex flex-column justify-content-center vh-100">
             <div className="align-items-center row">
-              <div className="col-12 col-lg-4 offset-lg-2">
-                <span className="typography-variant-18">
+              <div className="col-12 col-lg-4 offset-lg-2 order-2 order-lg-1">
+                <span className="typography-5-medium">
                   The Team behind <br />
-                  <span className="typography-variant-27 torus-font text-danger">
+                  <span className="typography-7-semibold torus-font text-danger">
                     Influence 2.0
                   </span>
                 </span>
               </div>
-              <div className="col-12 col-lg-4 text-center">
+              <div className="col-12 col-lg-4 text-center order-1 order-lg-2">
                 <Image
                   src="/images/logo/logo-danger-icon.svg"
                   alt="BlinkLink logo"
@@ -53,7 +53,7 @@ export default function Team() {
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-11  offset-lg-1">
-              <h4 className="typography-variant-26 text-danger torus-font">
+              <h4 className="typography-7-semibold text-danger torus-font">
                 Our Team
               </h4>
             </div>
@@ -89,14 +89,14 @@ export default function Team() {
                 />
               </div>
               <div className="col-12 col-lg-8">
-                <h5 className="typography-variant-13">{advisor.name}</h5>
-                <h5 className="typography-variant-9">{advisor.designation}</h5>
+                <h5 className="typography-4-normal">{advisor.name}</h5>
+                <h5 className="typography-3-normal">{advisor.designation}</h5>
                 {advisor.organizaition ? (
-                  <h6 className="typography-variant-10">
+                  <h6 className="typography-3-semibold">
                     {advisor.organizaition}
                   </h6>
                 ) : null}
-                <span className="typography-variant-1">{advisor.bio}</span>
+                <span className="typography-1-normal">{advisor.bio}</span>
               </div>
             </div>
           </div>
@@ -112,7 +112,7 @@ export default function Team() {
               </div>
               <div className="col-12 col-lg-5">
                 <Button variant="info" className="btn-height">
-                  <span className="text-light typography-variant-5 montserrat-font">
+                  <span className="text-light typography-1-semibold montserrat-font">
                     Download Now
                   </span>
                 </Button>

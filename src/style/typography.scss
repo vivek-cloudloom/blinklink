@@ -1,116 +1,3 @@
-$fontSizes: (
-  13,
-  14,
-  18,
-  18,
-  18,
-  19,
-  19,
-  20,
-  24,
-  24,
-  24,
-  25,
-  36,
-  36,
-  36,
-  36,
-  48,
-  48,
-  48,
-  48,
-  48,
-  48,
-  48,
-  52,
-  52,
-  64,
-  64,
-  24
-);
-$lineHeights: (
-  17,
-  19,
-  25,
-  25,
-  22,
-  26,
-  23,
-  27,
-  33,
-  33,
-  29,
-  34,
-  49,
-  49,
-  49,
-  43,
-  66,
-  50,
-  58,
-  58,
-  50,
-  58,
-  66,
-  54,
-  62,
-  77,
-  58,
-  33
-);
-$fontWeights: (
-  400,
-  400,
-  600,
-  400,
-  600,
-  400,
-  400,
-  400,
-  400,
-  600,
-  600,
-  700,
-  400,
-  500,
-  600,
-  600,
-  500,
-  500,
-  500,
-  600,
-  600,
-  600,
-  600,
-  600,
-  600,
-  600,
-  600,
-  500
-);
-
-// @font-face {
-//   font-family: "Avenir Next";
-//   src: url("../font/Avenir Next Font.ttf");
-// }
-
-// @font-face {
-//   font-family: "Torus Notched Regular";
-//   src: url("../font/Torus Notched Regular.ttf");
-// }
-// @font-face {
-//   font-family: "Avenir Next";
-//   src: url("../font/Avenir/AvenirNextLTPro-Bold.otf");
-//   font-weight: bold;
-//   font-style: normal;
-// }
-// @font-face {
-//   font-family: "Avenir Next";
-//   src: url("../font/Avenir/Avenir\ Next\ 2.ttc");
-//   // font-weight: normal;
-//   // font-style: normal;
-// }
-
 @font-face {
   font-family: "Avenir Next";
   font-weight: 400;
@@ -151,19 +38,175 @@ $fontWeights: (
   font-style: normal;
 }
 
-$i: 0;
-@each $display, $size in $fontSizes {
-  $i: $i + 1;
-  .typography-variant-#{$i} {
-    font-size: $display + px;
-    line-height: nth($lineHeights, $i) + px;
-    font-weight: nth($fontWeights, $i);
-  }
-}
-
 .torus-font {
   font-family: $font-family-torus;
 }
 .montserrat-font {
   font-family: $font-family-montserrat;
+}
+
+$font-size: (
+    xs: 14px,
+    sm: 18px,
+    md: 18px,
+    lg: 18px,
+    xl: 18px,
+    xxl: 18px,
+  ),
+  (
+    xs: 15px,
+    sm: 20px,
+    md: 20px,
+    lg: 20px,
+    xl: 20px,
+    xxl: 20px,
+  ),
+  (
+    xs: 18px,
+    sm: 24px,
+    md: 24px,
+    lg: 24px,
+    xl: 24px,
+    xxl: 24px,
+  ),
+  (
+    xs: 27px,
+    sm: 36px,
+    md: 36px,
+    lg: 36px,
+    xl: 36px,
+    xxl: 36px,
+  ),
+  (
+    xs: 36px,
+    sm: 48px,
+    md: 48px,
+    lg: 48px,
+    xl: 48px,
+    xxl: 48px,
+  ),
+  (
+    xs: 39px,
+    sm: 52px,
+    md: 52px,
+    lg: 52px,
+    xl: 52px,
+    xxl: 52px,
+  ),
+  (
+    xs: 48px,
+    sm: 64px,
+    md: 64px,
+    lg: 64px,
+    xl: 64px,
+    xxl: 64px,
+  );
+
+$grid-breakpoints-main: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$font-weights-main: (
+  "normal": 400,
+  "medium": 500,
+  "semibold": 600,
+  "bold": 700,
+);
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints-main) {
+  $max: map-get($breakpoints, $name);
+  @return if($max and $max > 0, $max, null);
+}
+
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints-main) {
+  $max: breakpoint-max($name, $breakpoints);
+  @if $max {
+    @media (min-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@function to-number($value) {
+  @if type-of($value) == "number" {
+    @return $value;
+  } @else if type-of($value) != "string" {
+    @error 'Value for `to-number` should be a number or a string.';
+  }
+
+  $result: 0;
+  $digits: 0;
+  $minus: str-slice($value, 1, 1) == "-";
+  $numbers: (
+    "0": 0,
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9,
+  );
+
+  @for $i from if($minus, 2, 1) through str-length($value) {
+    $character: str-slice($value, $i, $i);
+
+    @if (index(map-keys($numbers), $character) or $character == ".") {
+      @if $character == "." {
+        $digits: 1;
+      } @else if $digits == 0 {
+        $result: $result * 10 + map-get($numbers, $character);
+      } @else {
+        $digits: $digits * 10;
+        $result: $result + map-get($numbers, $character) / $digits;
+      }
+    }
+  }
+
+  @return if($minus, -$result, $result);
+}
+
+@mixin blfs($size, $width) {
+  font-size: map-get($size, $width);
+  @if to-number(map-get($size, $width)) < 32 {
+    line-height: 1.5;
+  } @else {
+    line-height: 1;
+  }
+}
+// @for $i from 1 through 3
+$i: 0;
+@each $size in $font-size {
+  $i: $i + 1;
+
+  @each $fw, $value in $font-weights-main {
+    .typography-#{$i}-#{$fw} {
+      @include blfs($size, "xs");
+      font-weight: $value;
+      // line-height: 1;
+      @include media-breakpoint-down(sm) {
+        @include blfs($size, "sm");
+      }
+      @include media-breakpoint-down(md) {
+        @include blfs($size, "md");
+      }
+      @include media-breakpoint-down(lg) {
+        @include blfs($size, "lg");
+      }
+      @include media-breakpoint-down(xl) {
+        @include blfs($size, "xl");
+      }
+      @include media-breakpoint-down(xxl) {
+        @include blfs($size, "xxl");
+      }
+    }
+  }
 }

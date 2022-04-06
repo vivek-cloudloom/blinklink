@@ -10,10 +10,10 @@ export default function Solutions() {
       <div className="home-page">
         <div className="home-item">
           <div className="align-items-center container d-flex flex-column justify-content-center vh-100 text-center">
-            <h6 className="typography-variant-28">We Believe</h6>
+            <h6 className="typography-3-medium">We Believe</h6>
             <Title isDefaultFont={true}>
               You are the{" "}
-              <span className="typography-variant-22 torus-font text-danger">
+              <span className="typography-5-semibold torus-font text-danger">
                 Platform
               </span>
             </Title>
@@ -26,9 +26,9 @@ export default function Solutions() {
               quality={100}
             />
             <Traction />
-            <h5 className="typography-variant-14">
+            <h5 className="typography-4-medium">
               These are your{" "}
-              <span className="typography-variant-16 torus-font text-danger">
+              <span className="typography-4-semibold torus-font text-danger">
                 Traction Channels
               </span>
             </h5>
@@ -47,7 +47,7 @@ export default function Solutions() {
               leftClass={link.leftClass}
               rightClass={link.rightClass}
               className="home-item"
-              total={solutions.length}
+              total={solutions}
               current={index}
             />
           );
@@ -70,7 +70,7 @@ export default function Solutions() {
                 <Title>Explore the future of your Influence, today!</Title>
                 <div className="mt-4">
                   <Button variant="danger" className="btn-height">
-                    <span className="text-light typography-variant-9">
+                    <span className="text-light typography-3-normal">
                       Download Now
                     </span>
                   </Button>

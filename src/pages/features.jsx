@@ -19,8 +19,8 @@ export default function Features() {
       <div className="home-page">
         <div className="home-item">
           <div className="container align-items-center d-flex vh-100 justify-content-center flex-column">
-            <h4 className="typography-variant-15">The power of attention, </h4>
-            <h4 className="typography-variant-25 torus-font text-danger">
+            <h4 className="typography-4-semibold">The power of attention, </h4>
+            <h4 className="typography-6-semibold torus-font text-danger">
               In the palm of your hand
             </h4>
             <Image
@@ -71,10 +71,10 @@ export default function Features() {
                               height={26}
                               quality={100}
                             />
-                            <span className="typography-variant-11 torus-font">
+                            <span className="typography-3-semibold torus-font">
                               Publish
                             </span>
-                            <p className="text-dark typography-variant-4 mt-4">
+                            <p className="text-dark typography-1-normal mt-4">
                               Share and schedule engaging content to your
                               profiles
                             </p>
@@ -100,10 +100,10 @@ export default function Features() {
                                   height={26}
                                   quality={100}
                                 />
-                                <span className="typography-variant-11 torus-font">
+                                <span className="typography-3-semibold torus-font">
                                   Engage
                                 </span>
-                                <p className="text-dark typography-variant-4 mt-4">
+                                <p className="text-dark typography-1-normal mt-4">
                                   Address incomingmessages and delivertimely
                                   replies
                                 </p>
@@ -130,10 +130,10 @@ export default function Features() {
                                       height={26}
                                       quality={100}
                                     />
-                                    <span className="typography-variant-11 torus-font">
+                                    <span className="typography-3-semibold torus-font">
                                       Monitor
                                     </span>
-                                    <p className="text-dark typography-variant-4 mt-1">
+                                    <p className="text-dark typography-1-normal mt-1">
                                       Stay informed about market trends and
                                       competitors
                                     </p>
@@ -159,10 +159,10 @@ export default function Features() {
                                       height={26}
                                       quality={100}
                                     />
-                                    <span className="typography-variant-11 torus-font">
+                                    <span className="typography-3-semibold torus-font">
                                       Advertise
                                     </span>
-                                    <p className="text-dark typography-variant-4 mt-1">
+                                    <p className="text-dark typography-1-normal mt-1">
                                       Promote your organic content and manage
                                       paid ads
                                     </p>
@@ -189,12 +189,12 @@ export default function Features() {
                                 height={26}
                                 quality={100}
                               />
-                              <span className="typography-variant-11 torus-font">
+                              <span className="typography-3-semibold torus-font">
                                 Analyze
                               </span>
                             </div>
 
-                            <p className="text-dark typography-variant-4 mt-3">
+                            <p className="text-dark typography-1-normal mt-3">
                               Measure your results across all social networks
                             </p>
                             <div className="d-flex justify-content-end w-25">
@@ -227,10 +227,11 @@ export default function Features() {
               features={link.items}
               imageUrl={link.imageUrl}
               className="home-item"
-              total={features.length}
+              total={features}
               current={index}
               width={link.width}
               height={link.height}
+              title={link.title}
             />
           );
         })}
@@ -245,7 +246,7 @@ export default function Features() {
                 </Title>
                 <div className="mt-4">
                   <Button variant="danger" className="btn-height">
-                    <span className="text-light typography-variant-4">
+                    <span className="text-light typography-1-normal">
                       Download Now
                     </span>
                   </Button>

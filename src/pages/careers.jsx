@@ -27,10 +27,10 @@ export default function Features() {
       <div className="home-item">
         <div className="align-items-center container d-flex flex-column justify-content-center vh-100">
           <div className="row align-items-center">
-            <div className="col-12 col-lg-5 offset-lg-1">
-              <span className="typography-variant-19">
+            <div className="col-12 col-lg-5 offset-lg-1 order-2 order-lg-1">
+              <span className="typography-5-medium">
                 Revolutionize how the world{" "}
-                <span className="typography-variant-24 torus-font text-danger">
+                <span className="typography-6-semibold torus-font text-danger">
                   Influences
                 </span>
               </span>
@@ -39,7 +39,7 @@ export default function Features() {
                 that is all about rewarding innovation.
               </Paragraph>
             </div>
-            <div className="col-12 col-lg-6">
+            <div className="col-12 col-lg-6 order-1 order-lg-2">
               <Image
                 src="/images/solutions/future.svg"
                 alt="The power of attention, in the palm of your hand"
@@ -57,7 +57,7 @@ export default function Features() {
           <div className="row">
             <div className="col-12 col-lg-4">
               <div className="bg-body d-flex flex-column m-4 p-4">
-                <h3 className="border-bottom border-warning pb-2 text-warning torus-font typography-variant-11">
+                <h3 className="border-bottom border-warning pb-2 text-warning torus-font typography-3-semibold">
                   FILTER JOBS
                 </h3>
                 <Form>
@@ -80,13 +80,13 @@ export default function Features() {
                           name="group1"
                           id={`location-${location}`}
                           type="checkbox"
-                          className="typography-variant-4 text-dark"
+                          className="typography-1-normal text-dark"
                         />
                       );
                     })}
                   </div>
 
-                  <span className="typography-variant-11 torus-font text-warning my-4">
+                  <span className="typography-3-semibold torus-font text-warning my-4">
                     JOB TYPE
                   </span>
 
@@ -99,7 +99,7 @@ export default function Features() {
                           name="group2"
                           id={`type-${item}`}
                           type="checkbox"
-                          className="typography-variant-4 text-dark"
+                          className="typography-1-normal text-dark"
                         />
                       );
                     })}
@@ -113,7 +113,7 @@ export default function Features() {
             </div>
             <div className="col-12 col-lg-8">
               <div className="d-flex flex-column m-4 pt-4">
-                <h3 className="border-bottom border-warning pb-2  text-warning torus-font typography-variant-11">
+                <h3 className="border-bottom border-warning pb-2  text-warning torus-font typography-3-semibold">
                   Jobs
                 </h3>
 
@@ -136,7 +136,7 @@ export default function Features() {
             </div>
             <div className="col-12 col-lg-5">
             <Button variant="danger" className="btn-height">
-                <span className="text-light typography-variant-5 montserrat-font">
+                <span className="text-light typography-1-semibold montserrat-font">
                   Download Now
                 </span>
               </Button>

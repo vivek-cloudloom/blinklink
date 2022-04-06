@@ -3,6 +3,7 @@ const features = [
     imageUrl: "/images/features/know.svg",
     width:621,
     height:469,
+    title:"know",
     items: [
       {
         title: "Know",
@@ -25,6 +26,7 @@ const features = [
     imageUrl: "/images/features/advertize.svg",
     width:594,
     height:578,
+    title:"Advertize",
     items: [
       {
         title: "Advertize",
@@ -45,6 +47,7 @@ const features = [
     imageUrl: "/images/features/generate.svg",
     width:668,
     height:574,
+    title:"Generate",
     items: [
       {
         title: "Generate",
@@ -66,6 +69,7 @@ const features = [
     imageUrl: "/images/features/deeplink.svg",
     width:602,
     height:577,
+    title:"DeepLink",
     items: [
       {
         title: "DeepLink",

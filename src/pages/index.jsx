@@ -10,28 +10,28 @@ export default function Home() {
       <div className="home-item">
         <div className="container d-flex vh-100">
           <div className="row align-items-center">
-            <div className="col-12 col-lg-4 offset-lg-1">
+            <div className="col-12 col-lg-4 offset-lg-1 order-2 order-lg-1">
               <div className="d-flex flex-column gap-4">
-                <span className="typography-variant-18">
+                <span className="typography-5-medium">
                   Where the future{" "}
-                  <span className="text-danger torus-font typography-variant-27">
+                  <span className="text-danger torus-font typography-7-semibold">
                     Influences
                   </span>
                 </span>
-                <p className="typography-variant-8">
+                <p className="typography-2-normal">
                   The power of attention,
                   <br /> in the palm of your hand
                 </p>
                 <div>
                   <Button variant="danger" className="btn-height">
-                    <span className="text-light typography-variant-4">
+                    <span className="text-light typography-1-normal">
                       Download Now
                     </span>
                   </Button>
                 </div>
               </div>
             </div>
-            <div className="col-12 col-lg-7">
+            <div className="col-12 order-1 col-lg-7 order-1 order-lg-2">
               <Image
                 src="/images/main/Viral-Marketer.svg"
                 alt="Viral Marketer"
@@ -84,7 +84,7 @@ export default function Home() {
             </div>
           </div>
           <div className="row align-items-center">
-            <div className="col-12 col-lg-5 offset-lg-1">
+            <div className="col-12 col-lg-5 offset-lg-1 order-2 order-lg-1">
               <Title>A Revolution in Influencer Income.</Title>
               <Paragraph>
                 Demand the market value of your Audience. Advertise your
@@ -93,7 +93,7 @@ export default function Home() {
               </Paragraph>
               <ArrowLink label="Explore BlinkLink Solutions" />
             </div>
-            <div className="col-12 col-lg-6">
+            <div className="col-12 col-lg-6 order-1 order-lg-2">
               <Image
                 src="/images/main/revolution.svg"
                 alt="Revolution"
@@ -141,10 +141,10 @@ export default function Home() {
       <div className="home-item">
         <div className="align-items-center container d-flex py-5">
           <div className="row align-items-center">
-            <div className="col-12 col-lg-5 offset-lg-1">
+            <div className="col-12 col-lg-5 offset-lg-1 order-2 order-lg-1">
               <Title isDefaultFont={true}>
                 The Operating System for{" "}
-                <span className="typography-variant-22 torus-font text-info">
+                <span className="typography-5-semibold torus-font text-info">
                   Marketing
                 </span>
               </Title>
@@ -157,7 +157,7 @@ export default function Home() {
                 <ArrowLink type="info" label="Talk to the Enterprise Team" />
               </div>
             </div>
-            <div className="col-12 col-lg-6">
+            <div className="col-12 col-lg-6 order-1 order-lg-2">
               <Image
                 src="/images/main/marketingInfluence.svg"
                 alt="Marketing Influence"
@@ -173,7 +173,7 @@ export default function Home() {
       <div className="home-item">
         <div className="align-items-center container d-flex py-5">
           <div className="row align-items-center">
-            <div className="col-12 col-lg-7">
+            <div className="col-12 col-lg-7 order-2 order-lg-1">
               <div className="d-flex flex-column gap-4 ps-4">
                 <Title className="text-danger">
                   Join the Influence Revolution
@@ -189,16 +189,16 @@ export default function Home() {
                 </Paragraph>
                 <div>
                   <Button variant="danger" className="btn-height">
-                    <span className="text-light typography-variant-4">
+                    <span className="text-light typography-1-normal">
                       BlinkLink Careers
                     </span>
                   </Button>
                 </div>
               </div>
             </div>
-            <div className="col-12 col-lg-5 text-center">
+            <div className="col-12 col-lg-5 text-center order-1 order-lg-2">
               <Image
-                src="/images/main/logo-dark.svg"
+                src="/images/logo/logo-dark.svg"
                 alt="Influence"
                 width={371}
                 height={393}

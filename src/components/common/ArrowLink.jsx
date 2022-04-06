@@ -1,6 +1,6 @@
 export default function ArrowLink({ restProps, className, label , type }) {
 
-  const classNames = ["arrow-link d-flex gap-4 text-decoration-none typography-variant-28"];
+  const classNames = ["arrow-link d-flex gap-4 text-decoration-none typography-3-medium"];
   if(type === "info"){
     classNames.push("text-info")
   }else if(type==="dark"){

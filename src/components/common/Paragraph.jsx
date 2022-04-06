@@ -2,13 +2,13 @@ export default function Paragraph({ children , variant , className }) {
 
   const classNames = []
   if(variant === "footer"){
-    classNames.push('typography-variant-8');
+    classNames.push('typography-2-normal');
   }else if(variant = "lg"){
-    classNames.push('typography-variant-9');
+    classNames.push('typography-3-normal');
   }else if(variant = "xl"){
-    classNames.push('typography-variant-8');
+    classNames.push('typography-2-normal');
   }else{
-    classNames.push('typography-variant-9');
+    classNames.push('typography-3-normal');
   }
 
   if(className){

@@ -3,36 +3,37 @@
 @import "./components.scss";
 
 @import "./page.scss";
-
-// Bootstrap and its default variables
 @import "node_modules/bootstrap/scss/bootstrap";
-
-
+// Bootstrap and its default variables
 
 .navigation-outline {
   border: 2px solid $info;
   border-radius: 10px;
 }
 
-
-.navbar-light .navbar-nav .nav-link {
-  font-family: $font-family-avenir;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 33px;
-
-  color: #000000;
+.navbar-light #basic-nav-dropdown,
+.offcanvas-body #basic-nav-dropdown {
+  color: $dark;
 }
 
-.offcanvas .offcanvas-body .nav-link {
-  font-family: "Avenir Next";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 33px;
-  color: #000000;
-}
+// .navbar-light .navbar-nav .nav-link {
+//   font-family: $font-family-avenir;
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 20px;
+//   line-height: 27px;
+
+//   color: #000000;
+// }
+
+// .offcanvas .offcanvas-body .nav-link {
+//   font-family: "Avenir Next";
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 24px;
+//   line-height: 33px;
+//   color: #000000;
+// }
 
 .w-40 {
   width: 40%;
@@ -58,7 +59,6 @@
 .w-80 {
   width: 80%;
 }
-
 
 .profile-wrapper {
   .profile {
@@ -86,17 +86,21 @@
     transition: all 0.3s ease-in-out;
   }
 }
-
-
+@media only screen and (max-width: 768px) {
+  .vh-100 {
+    padding-top: 120px;
+    padding-bottom: 3rem;
+    height: auto !important;
+  }
+}
 
 /* NEW STYLES ADDED*/
-.navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .nav-link:focus {
+.navbar-light .navbar-nav .btn.btn-outline-info:hover,
+.navbar-light .navbar-nav .btn.btn-outline-info:focus {
   span {
     color: $light !important;
   }
 }
-
 
 .scroll-snap-align {
   scroll-snap-align: end;
@@ -107,12 +111,43 @@
 }
 
 body {
-  scroll-snap-type: y proximity;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  height: 100vh;
+  // scroll-snap-type: y proximity;
+  // overflow-y: scroll;
+  // scroll-behavior: smooth;
+  // height: 100vh;
 }
 html {
+  // height: 100vh;
+  // overflow: hidden;
+}
+
+.selectors {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  background: rgba(0, 0, 0, 0.5);
   height: 100vh;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+  .selector {
+    border: 1px solid #fff;
+    background: none;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    margin: 5px 0;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+    &:hover, &.active {
+      background: white;
+      opacity: 0.9;
+  }
+  }
 }
