@@ -1,6 +1,6 @@
-export default function Slider({ total, current }) {
+export default function Slider({ total, current, type }) {
   return (
-    <div className="position-relative d-lg-block d-none">
+    <div className={`position-relative container d-lg-block d-none scroll-indicator ${type}`} style={{top:"2px"}}>
       <div className="selectors">
         {total.map((item, index) => {
           return (

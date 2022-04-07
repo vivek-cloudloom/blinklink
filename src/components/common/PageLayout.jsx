@@ -195,7 +195,7 @@ export default function PageLayout({ children }) {
           <Nav>
             <Link href="/sales">
               <a className="btn btn-outline-info navigation-outline">
-                <span className="typography-1-semibold text-info px-lg-1 px-xl-4">
+                <span className="typography-1-semibold text-info px-lg-1 px-xl-4 text-uppercase">
                   Enterprise Team
                 </span>
               </a>
