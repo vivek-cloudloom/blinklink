@@ -20,11 +20,14 @@ footer {
 .sales-wrapper {
   padding-top: 300px;
   padding-bottom: 3rem;
+
+  @media only screen and (max-width: 768px) {
+    padding-top: 120px;
+  }
 }
 
 .sales-page {
   margin-top: 0;
-
   .form-label {
     font-size: 24px;
     line-height: 33px;
@@ -40,6 +43,24 @@ footer {
     height: 72px;
     color: $warning;
   }
+  @media only screen and (max-width: 768px) {
+    .form-label {
+      font-size: 18px;
+      line-height: 1.5;
+      font-weight: 600;
+      color: $warning;
+    }
+  
+    .form-control,
+    .form-select {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.5;
+      height: 54px;
+      color: $warning;
+    }
+  }
+  
 }
 
 .feature-social-media {

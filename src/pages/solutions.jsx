@@ -48,6 +48,7 @@ export default function Solutions() {
               rightClass={link.rightClass}
               className="home-item"
               total={solutions}
+              linkUrl="/features"
               current={index}
             />
           );

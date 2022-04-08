@@ -91,7 +91,7 @@ export default function Home() {
                 influence across platforms. No more intermediaries between you
                 and marketers.
               </Paragraph>
-              <ArrowLink label="Explore BlinkLink Solutions" />
+              <ArrowLink label="Explore BlinkLink Solutions" link="/solutions" />
             </div>
             <div className="col-12 col-lg-6 order-1 order-lg-2">
               <Image
@@ -130,7 +130,7 @@ export default function Home() {
                   interact with your audience across the platforms you are on.
                 </Paragraph>
                 <div>
-                  <ArrowLink label="Explore BlinkLink Features" />
+                  <ArrowLink label="Explore BlinkLink Features" link="/features" />
                 </div>
               </div>
             </div>
@@ -154,7 +154,7 @@ export default function Home() {
                 streamlined interface.
               </Paragraph>
               <div>
-                <ArrowLink type="info" label="Talk to the Enterprise Team" />
+                <ArrowLink type="info" label="Talk to the Enterprise Team" link="/enterprise" />
               </div>
             </div>
             <div className="col-12 col-lg-6 order-1 order-lg-2">

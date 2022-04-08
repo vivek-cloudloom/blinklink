@@ -14,6 +14,7 @@ const icons = [
   {
     name: "tiktok",
     image: tiktok,
+    size:48
   },
   ,
   {
@@ -31,6 +32,7 @@ const icons = [
   {
     name: "youtube",
     image: youtube,
+    size:48
   },
 
   {
@@ -41,10 +43,10 @@ const icons = [
 import Image from "next/image";
 export default function Traction({}) {
   return (
-    <div className="d-flex flex-wrap justify-content-center gap-5 m-3">
+    <div className="d-flex flex-wrap justify-content-center align-items-center gap-5 m-3">
       {icons.map((icon) => {
         return (
-          <Image layout="fixed" key={icon.name} src={icon.image} alt={icon.name} width={36} height={36} quality={100} />
+          <Image layout="fixed" key={icon.name} src={icon.image} alt={icon.name} width={icon.size? icon.size : 36} height={icon.size? icon.size : 36} quality={100} />
         );
       })}
     </div>

@@ -15,6 +15,7 @@ export default function Solution({
   type = "danger",
   total,
   current,
+  linkUrl
 }) {
   return (
     <div className={className} id={title.replace(/[^a-z0-9]/gi, "")}>
@@ -26,7 +27,7 @@ export default function Solution({
             <div className={`d-flex flex-column gap-3`}>
               <Title>{title}</Title>
               <Paragraph>{description}</Paragraph>
-              <ArrowLink label="" type={type} />
+              <ArrowLink label="" type={type} link={linkUrl} />
             </div>
           </div>
           <div className={`col-12 ${rightClass} order-1 order-lg-2`}>

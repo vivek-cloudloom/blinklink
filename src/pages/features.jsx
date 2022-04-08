@@ -19,7 +19,7 @@ export default function Features() {
       <div className="home-page">
         <div className="home-item">
           <div className="container align-items-center d-flex vh-100 justify-content-center flex-column">
-            <h4 className="typography-4-semibold">The power of attention, </h4>
+            <h4 className="typography-3-medium">The power of attention, </h4>
             <h4 className="typography-6-semibold torus-font text-danger">
               In the palm of your hand
             </h4>
@@ -239,7 +239,7 @@ export default function Features() {
         <div className="home-item">
           <div className="align-items-center container d-flex py-5">
             <div className="row align-items-center">
-              <div className="col-12 col-lg-6 offset-lg-1">
+              <div className="col-12 col-lg-6 offset-lg-1  order-2 order-lg-1">
                 <Title>
                   Lets take your Influence to the next level{" "}
                   <span className="text-danger">♥️</span>
@@ -252,7 +252,7 @@ export default function Features() {
                   </Button>
                 </div>
               </div>
-              <div className="col-12 col-lg-5 text-center">
+              <div className="col-12 col-lg-5 text-center order-1 order-lg-2">
                 <Image
                   src="/images/logo/logo-danger-icon.svg"
                   alt="influence"

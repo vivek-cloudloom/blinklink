@@ -106,7 +106,7 @@ export default function Features() {
                   </div>
 
                   <div className="text-center">
-                    <Button className="bg-dark">Blinklink</Button>
+                    <Button className="bg-dark btn-height px-lg-4">Blinklink</Button>
                   </div>
                 </Form>
               </div>

@@ -3,7 +3,8 @@ import enterprise from "../data/enterprise";
 import Image from "next/image";
 import Title from "../components/common/Title";
 import { Button } from "react-bootstrap";
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
+import ArrowLink from "../components/common/ArrowLink";
 export default function EnterPrise() {
   const features = [
     "Deeplinking",
@@ -18,9 +19,9 @@ export default function EnterPrise() {
   ];
 
   const [screenSize, setDimention] = useState(0);
-  useEffect(()=>{
-    setDimention(window.screen.width)
-  } , [])
+  useEffect(() => {
+    setDimention(window.screen.width);
+  }, []);
 
   return (
     <>
@@ -47,7 +48,9 @@ export default function EnterPrise() {
                 return (
                   <li
                     key={feature}
-                    className={`ps-4${index === 0 && screenSize >= 992 ? " list-unstyled" : ""}`}
+                    className={`ps-4${
+                      index === 0 && screenSize >= 992 ? " list-unstyled" : ""
+                    }`}
                   >
                     {feature}
                   </li>
@@ -60,7 +63,9 @@ export default function EnterPrise() {
                 return (
                   <li
                     key={feature}
-                    className={`ps-4${index === 0  && screenSize >= 992 ? " list-unstyled" : ""}`}
+                    className={`ps-4${
+                      index === 0 && screenSize >= 992 ? " list-unstyled" : ""
+                    }`}
                   >
                     {feature}
                   </li>
@@ -70,7 +75,7 @@ export default function EnterPrise() {
           </div>
         </div>
 
-        {enterprise.map((link,index) => {
+        {enterprise.map((link, index) => {
           return (
             <Solution
               key={link.title}
@@ -84,6 +89,7 @@ export default function EnterPrise() {
               type="info"
               className="home-item"
               total={enterprise}
+              linkUrl="/team"
               current={index}
             />
           );
@@ -104,11 +110,18 @@ export default function EnterPrise() {
               <div className="col-12 col-lg-7 offset-lg-1">
                 <Title>Explore the future of your Influence, today!</Title>
                 <div className="mt-4">
-                  <Button variant="info" className="btn-height">
+                  {/* <Button variant="info" className="btn-height"> */}
+                  <ArrowLink
+                    type="info"
+                    link="/team"
+                    label="ENTERPRISE TEAM"
+                  />
+                  {/* <Link href={link}>
                     <span className="text-light typography-1-semibold montserrat-font">
                       ENTERPRISE TEAM
-                    </span>
-                  </Button>
+                    </span> */}
+
+                  {/* </Button> */}
                 </div>
               </div>
             </div>

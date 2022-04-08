@@ -77,7 +77,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <footer className={`align-items-center bg-danger d-flex flex-wrap gap-lg-4 justify-content-lg-center p-2 py-1 text-light torus-font typography-1-normal ${footerTheme}` }>
+      <footer className={`align-items-lg-center align-items-start bg-danger d-flex flex-column flex-lg-row flex-wrap gap-lg-4 justify-content-lg-center p-2 py-1 text-light torus-font typography-1-normal ${footerTheme}` }>
         <div>
           @BlinkLink 2021. All Rights Reserved
         </div>

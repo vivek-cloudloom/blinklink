@@ -26,13 +26,13 @@ export default function Features() {
               <Card.Body>
                 <Form>
                   <Row>
-                    <Col>
+                    <Col xs={12} lg={6}>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>NAME</Form.Label>
                         <Form.Control type="text" placeholder="Your Name" />
                       </Form.Group>
                     </Col>
-                    <Col>
+                    <Col xs={12} lg={6}>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>SIRNAME</Form.Label>
                         <Form.Control type="text" placeholder="Your Sirname" />
