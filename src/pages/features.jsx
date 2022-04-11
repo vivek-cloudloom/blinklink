@@ -20,7 +20,7 @@ export default function Features() {
         <div className="home-item">
           <div className="container align-items-center d-flex vh-100 justify-content-center flex-column">
             <h4 className="typography-3-medium">The power of attention, </h4>
-            <h4 className="typography-6-semibold torus-font text-danger">
+            <h4 className="typography-6-semibold torus-font text-danger text-center">
               In the palm of your hand
             </h4>
             <Image
@@ -54,7 +54,7 @@ export default function Features() {
             </div>
 
             <div
-              className="justify-content-center d-flex flex-column h-100 position-relative feature-social-media"
+              className="feature-card-wrapper justify-content-center d-flex flex-column h-100 position-relative feature-social-media"
               
             >
               {/* <div className="d-flex gap-3 position-relative w-100"> */}

@@ -30,7 +30,7 @@ export default function Feature({
                 );
               })}
           </div>
-          <div className="align-items-center col-12 col-lg-1 d-flex justify-content-center order-3 order-lg-2">
+          <div className="align-items-center col-12 col-lg-1 d-lg-flex d-none justify-content-center order-3 order-lg-2">
             <ArrowLink label="" />
           </div>
           <div className="col-12 col-lg-4 order-1 order-lg-3">

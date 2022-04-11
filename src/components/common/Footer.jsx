@@ -2,22 +2,26 @@ import { Form } from "react-bootstrap";
 import Image from "next/image";
 import Paragraph from "./Paragraph";
 import { useRouter } from "next/router";
+import Link from "next/link";
+import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
 export default function Footer() {
-
   const router = useRouter();
-
   let theme = "bg-light";
   let footerTheme = "bg-danger text-light";
   let footerBorder = "border-light";
-  if(router.pathname === "/solutions"){
+  if (router.pathname === "/solutions") {
     theme = "bg-danger bg-opacity-10";
     footerTheme = "bg-light text-dark";
-    footerBorder = "border-dark"
-  }else if(router.pathname === "/enterprise" || router.pathname === "/team"  || router.pathname === "/sales"){
+    footerBorder = "border-dark";
+  } else if (
+    router.pathname === "/enterprise" ||
+    router.pathname === "/team" ||
+    router.pathname === "/sales"
+  ) {
     footerTheme = "bg-info text-light";
   }
-
 
   const links = [
     { title: "Home", link: "Home" },
@@ -28,6 +32,18 @@ export default function Footer() {
     { title: "Team", link: "Team" },
     { title: "Enterprise Team", link: "Enterprise Team" },
   ];
+
+  const footerLinks = [
+    { title: "Privacy Policy", link: "/privacyPolicy" },
+    { title: "Terms & Conditions", link: "/terms" },
+    { title: "Subsciption & Online Policy", link: "/subscription" },
+  ];
+
+  const submitEmail = (e) => {
+    if (e.keyCode === 13) {
+      toast.success("Thank you for subscribing");
+    }
+  };
   return (
     <div className={theme}>
       <div className="container align-items-center d-flex justify-content-between h-100 py-5">
@@ -45,7 +61,7 @@ export default function Footer() {
 
             <Paragraph variant="footer">
               At BlinkLink, our mission is to accelerate the advent of the
-              influencer-controlled advertisement economy.
+              influencer-led advertisement economy.
             </Paragraph>
           </div>
           <div className="col-12 col-lg-4">
@@ -71,20 +87,49 @@ export default function Footer() {
                   Enter your email below to learn the latest from us. Get the
                   chance be a part of our Beta team
                 </Form.Label>
-                <Form.Control type="email" placeholder="Enter your email" />
+                <Form.Control
+                  type="email"
+                  placeholder="Enter your email"
+                  onKeyDown={submitEmail}
+                />
               </Form.Group>
+              <ToastContainer
+                position="bottom-right"
+                autoClose={5000}
+                hideProgressBar
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable={false}
+                pauseOnHover
+              />
             </div>
           </div>
         </div>
       </div>
-      <footer className={`align-items-lg-center align-items-start bg-danger d-flex flex-column flex-lg-row flex-wrap gap-lg-4 justify-content-lg-center p-2 py-1 text-light torus-font typography-1-normal ${footerTheme}` }>
-        <div>
-          @BlinkLink 2021. All Rights Reserved
-        </div>
+      <footer
+        className={`align-items-lg-center align-items-start bg-danger d-flex flex-column flex-lg-row flex-wrap gap-lg-4 justify-content-lg-center p-2 py-1 text-light torus-font typography-1-normal ${footerTheme}`}
+      >
+        <div>@BlinkLink 2021. All Rights Reserved</div>
         <ul className="links align-items-lg-center d-flex flex-column flex-lg-row flex-wrap footer-items gap-lg-4 list-unstyled m-0">
-          <li>Privacy Policy</li>
-          <li>Terms & Conditions</li>
-          <li>Subsciption & Online Policy</li>
+          {footerLinks.map((link) => {
+            return (
+              <li key={link.title}>
+                <Link href={link.link}>
+                  <a
+                    className={`text-decoration-none ${
+                      footerTheme.includes("text-light")
+                        ? "text-light"
+                        : "text-dark"
+                    }`}
+                  >
+                    {link.title}
+                  </a>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </footer>
     </div>

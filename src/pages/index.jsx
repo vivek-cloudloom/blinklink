@@ -188,11 +188,13 @@ export default function Home() {
                   lets make a difference
                 </Paragraph>
                 <div>
-                  <Button variant="danger" className="btn-height">
+                <ArrowLink label="BlinkLink Careers" type={'danger'} link="/careers" />
+                
+                  {/* <Button variant="danger" className="btn-height">
                     <span className="text-light typography-1-normal">
                       BlinkLink Careers
                     </span>
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </div>

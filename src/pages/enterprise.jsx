@@ -43,13 +43,13 @@ export default function EnterPrise() {
               height={287}
             />
 
-            <ul className="d-flex flex-column flex-lg-row flex-wrap gap-lg-5 justify-content-lg-center text-info typography-3-normal">
+            <ul className="d-flex flex-column flex-lg-row flex-wrap gap-lg-5 justify-content-lg-center text-info typography-3-normal align-items-baseline w-100">
               {features.map((feature, index) => {
                 return (
                   <li
                     key={feature}
                     className={`ps-4${
-                      index === 0 && screenSize >= 992 ? " list-unstyled" : ""
+                      index === 0 || screenSize <= 992 ? " list-unstyled" : ""
                     }`}
                   >
                     {feature}
@@ -58,13 +58,13 @@ export default function EnterPrise() {
               })}
             </ul>
 
-            <ul className="d-flex flex-column flex-lg-row flex-wrap gap-lg-5 justify-content-lg-center typography-3-normal">
+            <ul className="d-flex flex-column flex-lg-row flex-wrap gap-lg-5 justify-content-lg-center typography-3-normal align-items-baseline w-100">
               {subFeatures.map((feature, index) => {
                 return (
                   <li
                     key={feature}
                     className={`ps-4${
-                      index === 0 && screenSize >= 992 ? " list-unstyled" : ""
+                      index === 0 || screenSize <= 992 ? " list-unstyled" : ""
                     }`}
                   >
                     {feature}
@@ -89,7 +89,7 @@ export default function EnterPrise() {
               type="info"
               className="home-item"
               total={enterprise}
-              linkUrl="/team"
+              linkUrl="/sales"
               current={index}
             />
           );
@@ -113,7 +113,7 @@ export default function EnterPrise() {
                   {/* <Button variant="info" className="btn-height"> */}
                   <ArrowLink
                     type="info"
-                    link="/team"
+                    link="/sales"
                     label="ENTERPRISE TEAM"
                   />
                   {/* <Link href={link}>

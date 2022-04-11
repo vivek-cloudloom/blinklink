@@ -35,8 +35,8 @@ export default function Features() {
                 </span>
               </span>
               <Paragraph className="mt-4">
-                Work alongside the most amazing teammates in a culture
-                that is all about rewarding innovation.
+                Work alongside the most amazing teammates in a culture that is
+                all about rewarding innovation.
               </Paragraph>
             </div>
             <div className="col-12 col-lg-6 order-1 order-lg-2">
@@ -106,7 +106,16 @@ export default function Features() {
                   </div>
 
                   <div className="text-center">
-                    <Button className="bg-dark btn-height px-lg-4">Blinklink</Button>
+                    <Button
+                      className="bg-dark btn-height px-lg-4"
+                      onClick={() => {
+                        window.open(
+                          "https://www.linkedin.com/company/blinklink"
+                        );
+                      }}
+                    >
+                      Blinklink
+                    </Button>
                   </div>
                 </Form>
               </div>
@@ -135,7 +144,7 @@ export default function Features() {
               <Title>Explore the future of your Influence, today!</Title>
             </div>
             <div className="col-12 col-lg-5">
-            <Button variant="danger" className="btn-height">
+              <Button variant="danger" className="btn-height">
                 <span className="text-light typography-1-semibold montserrat-font">
                   Download Now
                 </span>

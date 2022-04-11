@@ -71,7 +71,7 @@ export default function PageLayout({ children }) {
         fixed="top"
         className={`${headerClass} ${headerBg} container-fluid container-xl`}
       >
-        <Navbar.Brand href="/">
+        <Navbar.Brand href="/" className="d-flex">
           <Image
             src={logo}
             alt="Blinklink logo"

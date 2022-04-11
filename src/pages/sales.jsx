@@ -1,6 +1,7 @@
 import { Button, Card, Col, Form, Row } from "react-bootstrap";
 import Paragraph from "../components/common/Paragraph";
 import countries from "../data/countries";
+import { ToastContainer, toast } from "react-toastify";
 export default function Features() {
   return (
     <div className="sales-page sales-blue-theme">
@@ -68,7 +69,7 @@ export default function Features() {
                         <Form.Control type="text" placeholder="Company J.S.C" />
                       </Form.Group>
                     </Col>
-                    <Col  xs={12} lg={6}>
+                    <Col xs={12} lg={6}>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>COMPANY SIZE</Form.Label>
                         <Form.Select aria-label="Default select example">
@@ -152,11 +153,28 @@ export default function Features() {
                     sooner and with the right team member XD
                   </p>
                   <div className="d-grid gap-2">
-                    <Button variant="info" className="btn-height">
+                    <Button
+                      variant="info"
+                      className="btn-height"
+                      onClick={() => {
+                        toast.success("Form Submitted Successfully");
+                      }}
+                    >
                       <span className="text-light typography-3-semibold">
                         SEND
                       </span>
                     </Button>
+                    <ToastContainer
+                      position="bottom-right"
+                      autoClose={5000}
+                      hideProgressBar
+                      newestOnTop={false}
+                      closeOnClick
+                      rtl={false}
+                      pauseOnFocusLoss
+                      draggable={false}
+                      pauseOnHover
+                    />
                   </div>
                 </Form>
               </Card.Body>

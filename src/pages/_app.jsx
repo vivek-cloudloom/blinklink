@@ -1,6 +1,7 @@
 import PageLayout from "../components/common/PageLayout";
 import "../style/index.scss";
-import Head from 'next/head'
+import Head from 'next/head';
+import 'react-toastify/dist/ReactToastify.css';
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
