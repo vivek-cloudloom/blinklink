@@ -1,14 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import {
-  Container,
   Nav,
   Navbar,
   NavDropdown,
-  Offcanvas,
-  Form,
-  FormControl,
-  Button,
+  Offcanvas
 } from "react-bootstrap";
 import Footer from "./Footer";
 import { useRouter } from "next/router";
@@ -93,7 +89,7 @@ export default function PageLayout({ children }) {
           backdrop={true}
           show={showNavBar}
         >
-          <Offcanvas.Header closeButton >
+          <Offcanvas.Header closeButton>
             <Offcanvas.Title id="offcanvasNavbarLabel">
               <Image
                 src={logo}
@@ -118,9 +114,12 @@ export default function PageLayout({ children }) {
                     {item.children.map((subItem) => {
                       return (
                         <Link key={subItem.title} href={subItem.link}>
-                          <a className="dropdown-item typography-1-semibold text-dark"  onClick={()=>{
-                          toggleNavBar(false);
-                        }}>
+                          <a
+                            className="dropdown-item typography-1-semibold text-dark"
+                            onClick={() => {
+                              toggleNavBar(false);
+                            }}
+                          >
                             {subItem.title}
                           </a>
                         </Link>
@@ -128,10 +127,13 @@ export default function PageLayout({ children }) {
                     })}
                   </NavDropdown>
                 ) : (
-                  <Link key={item.title} href={item.link} >
-                    <a className="nav-link text-dark typography-1-medium" onClick={()=>{
-                    toggleNavBar(false);
-                  }}>
+                  <Link key={item.title} href={item.link}>
+                    <a
+                      className="nav-link text-dark typography-1-medium"
+                      onClick={() => {
+                        toggleNavBar(false);
+                      }}
+                    >
                       {item.title}
                     </a>
                   </Link>
@@ -139,9 +141,12 @@ export default function PageLayout({ children }) {
               })}
 
               <Link href="/sales">
-                <a className="btn btn-outline-info navigation-outline"  onClick={()=>{
-                          toggleNavBar(false);
-                        }}>
+                <a
+                  className="btn btn-outline-info navigation-outline mt-2"
+                  onClick={() => {
+                    toggleNavBar(false);
+                  }}
+                >
                   <span className="typography-1-semibold text-info px-xl-4  montserrat-font text-uppercase">
                     Enterprise Team
                   </span>
@@ -195,7 +200,7 @@ export default function PageLayout({ children }) {
           <Nav>
             <Link href="/sales">
               <a className="btn btn-outline-info navigation-outline">
-                <span className="typography-1-semibold text-info px-lg-1 px-xl-4 text-uppercase">
+                <span className="typography-1-semibold text-info px-lg-1 px-xl-4 text-uppercase montserrat-font">
                   Enterprise Team
                 </span>
               </a>

@@ -9,6 +9,7 @@ import jobs from "../data/jobs";
 import JobList from "../components/career/JobList";
 import Paragraph from "../components/common/Paragraph";
 import Title from "../components/common/Title";
+import Link from "next/link";
 export default function Features() {
   const items = [
     "Full stack Developer",
@@ -130,6 +131,9 @@ export default function Features() {
                   {jobs.map((job) => {
                     return <JobList job={job} key={job.id} />;
                   })}
+                  <p className="mt-3 text-end typography-2-normal">
+                    showing {jobs.length} entries
+                  </p>
                 </div>
               </div>
             </div>
@@ -144,11 +148,13 @@ export default function Features() {
               <Title>Explore the future of your Influence, today!</Title>
             </div>
             <div className="col-12 col-lg-5">
-              <Button variant="danger" className="btn-height">
-                <span className="text-light typography-1-semibold montserrat-font">
-                  Download Now
-                </span>
-              </Button>
+              <Link href={"/signup"}>
+                <Button variant="danger" className="btn-height">
+                  <span className="text-light typography-1-semibold montserrat-font">
+                    Download Now
+                  </span>
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

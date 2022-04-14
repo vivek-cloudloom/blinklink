@@ -1,12 +1,14 @@
-import { Form } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import Image from "next/image";
 import Paragraph from "./Paragraph";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import { validateEmail } from "../../util/util";
 
 export default function Footer() {
+  const [email, updateEmail] = useState("");
   const router = useRouter();
   let theme = "bg-light";
   let footerTheme = "bg-danger text-light";
@@ -24,13 +26,13 @@ export default function Footer() {
   }
 
   const links = [
-    { title: "Home", link: "Home" },
-    { title: "Features", link: "Features" },
-    { title: "Solutions", link: "Solutions" },
-    { title: "Enterprise", link: "Enterprise" },
-    { title: "Careers", link: "Careers" },
-    { title: "Team", link: "Team" },
-    { title: "Enterprise Team", link: "Enterprise Team" },
+    { title: "Home", link: "/" },
+    { title: "Features", link: "/features" },
+    { title: "Solutions", link: "/solutions" },
+    { title: "Enterprise", link: "/enterprise" },
+    { title: "Careers", link: "/careers" },
+    { title: "Team", link: "/team" },
+    { title: "Enterprise Team", link: "/sales" },
   ];
 
   const footerLinks = [
@@ -41,7 +43,15 @@ export default function Footer() {
 
   const submitEmail = (e) => {
     if (e.keyCode === 13) {
+      subscribeEmail();
+    }
+  };
+
+  const subscribeEmail = () => {
+    if (validateEmail(email)) {
       toast.success("Thank you for subscribing");
+    } else {
+      toast.error("Please enter valid email");
     }
   };
   return (
@@ -70,8 +80,10 @@ export default function Footer() {
               <ul className="list-unstyled">
                 {links.map((link) => {
                   return (
-                    <li key={link.title} className="typography-2-normal">
-                      {link.title}
+                    <li key={link.title}>
+                      <Link href={link.link}>
+                        <a className={`text-decoration-none typography-2-normal text-dark`}>{link.title}</a>
+                      </Link>
                     </li>
                   );
                 })}
@@ -82,7 +94,7 @@ export default function Footer() {
             <div>
               <span className="typography-3-bold">Subscribe Now</span>
 
-              <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Group className="mb-2" controlId="formBasicEmail">
                 <Form.Label className="typography-1-normal">
                   Enter your email below to learn the latest from us. Get the
                   chance be a part of our Beta team
@@ -91,8 +103,22 @@ export default function Footer() {
                   type="email"
                   placeholder="Enter your email"
                   onKeyDown={submitEmail}
+                  value={email}
+                  onChange={(e) => {
+                    updateEmail(e.target.value);
+                  }}
                 />
               </Form.Group>
+
+              <Button
+                variant="dark"
+                className="btn-height"
+                onClick={subscribeEmail}
+              >
+                <span className="text-light typography-1-normal">
+                  Subscribe
+                </span>
+              </Button>
               <ToastContainer
                 position="bottom-right"
                 autoClose={5000}

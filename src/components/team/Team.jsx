@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Paragraph from "../common/Paragraph";
 import Title from "../common/Title";
 export default function Teams({ title, description, imageUrl, className , width , height }) {
   return (

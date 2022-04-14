@@ -2,7 +2,14 @@ import { Button, Card, Col, Form, Row } from "react-bootstrap";
 import Paragraph from "../components/common/Paragraph";
 import countries from "../data/countries";
 import { ToastContainer, toast } from "react-toastify";
+import { useState } from "react";
+import { validateEmail, validatePhoneNumber } from "../util/util";
 export default function Features() {
+  const [name, setName] = useState("");
+  const [email, updateEmail] = useState("");
+  const [surName, setSurName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+
   return (
     <div className="sales-page sales-blue-theme">
       <div className="container d-flex sales-wrapper">
@@ -30,13 +37,27 @@ export default function Features() {
                     <Col xs={12} lg={6}>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>NAME</Form.Label>
-                        <Form.Control type="text" placeholder="Your Name" />
+                        <Form.Control
+                          type="text"
+                          placeholder="Your Name"
+                          value={name}
+                          onChange={(e) => {
+                            setName(e.target.value);
+                          }}
+                        />
                       </Form.Group>
                     </Col>
                     <Col xs={12} lg={6}>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>SIRNAME</Form.Label>
-                        <Form.Control type="text" placeholder="Your Sirname" />
+                        <Form.Label>SURNAME</Form.Label>
+                        <Form.Control
+                          type="text"
+                          placeholder="Your Surname"
+                          value={surName}
+                          onChange={(e) => {
+                            setSurName(e.target.value);
+                          }}
+                        />
                       </Form.Group>
                     </Col>
                   </Row>
@@ -46,6 +67,10 @@ export default function Features() {
                     <Form.Control
                       type="email"
                       placeholder="example@company.com"
+                      value={email}
+                      onChange={(e) => {
+                        updateEmail(e.target.value);
+                      }}
                     />
                   </Form.Group>
 
@@ -137,13 +162,37 @@ export default function Features() {
                         <Form.Control
                           type="text"
                           placeholder="(555) 555-5555"
+                          value={phoneNumber}
+                          onChange={(e) => {
+                            setPhoneNumber(e.target.value);
+                          }}
                         />
                       </Form.Group>
                     </Col>
                     <Col xs={12} lg={6}>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>HOW CAN WE HELP YOU</Form.Label>
-                        <Form.Control type="text" placeholder="Select" />
+                        <Form.Select>
+                          <option disabled="" selected="" value="">
+                            Please select one
+                          </option>
+                          <option value="I want to evaluate Blinklink for my organization">
+                            I want to evaluate Blinklink for my organisation
+                          </option>
+                          <option value="I want to understand which Blinklink plan is right for me">
+                            I want to understand which Blinklink subscription is
+                            right for me
+                          </option>
+                          <option value="I want to buy licenses or upgrade">
+                            I want to buy licences or upgrade
+                          </option>
+                          <option value="I have a product question">
+                            I have a product question
+                          </option>
+                          <option value="I need a compliance plan">
+                            I need a compliance plan
+                          </option>
+                        </Form.Select>
                       </Form.Group>
                     </Col>
                   </Row>
@@ -157,6 +206,23 @@ export default function Features() {
                       variant="info"
                       className="btn-height"
                       onClick={() => {
+                        if (!name || (name && name.trim() === "")) {
+                          toast.error("Please Enter Name");
+                          return;
+                        }
+                        if (!surName || (surName && surName.trim() === "")) {
+                          toast.error("Please Enter SurName");
+                          return;
+                        }
+
+                        if (!validateEmail(email)) {
+                          toast.error("Please Enter Valid Email");
+                          return;
+                        }
+                        // if (!phoneNumber || phoneNumber && !validatePhoneNumber(phoneNumber)) {
+                        //   toast.error("Please Enter Valid Phone Number");
+                        //   return;
+                        // }
                         toast.success("Form Submitted Successfully");
                       }}
                     >

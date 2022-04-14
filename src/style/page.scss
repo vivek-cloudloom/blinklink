@@ -26,6 +26,15 @@ footer {
   }
 }
 
+.signup-page {
+  .form-control {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    height: 72px;
+    color: $warning;
+  }
+}
 .sales-page {
   margin-top: 0;
   .form-label {
@@ -50,7 +59,7 @@ footer {
       font-weight: 600;
       color: $warning;
     }
-  
+
     .form-control,
     .form-select {
       font-weight: 500;
@@ -60,7 +69,6 @@ footer {
       color: $warning;
     }
   }
-  
 }
 
 .feature-social-media {

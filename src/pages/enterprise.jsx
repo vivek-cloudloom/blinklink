@@ -2,7 +2,6 @@ import Solution from "../components/Solutions/Solution";
 import enterprise from "../data/enterprise";
 import Image from "next/image";
 import Title from "../components/common/Title";
-import { Button } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import ArrowLink from "../components/common/ArrowLink";
 export default function EnterPrise() {
@@ -43,12 +42,12 @@ export default function EnterPrise() {
               height={287}
             />
 
-            <ul className="d-flex flex-column flex-lg-row flex-wrap gap-lg-5 justify-content-lg-center text-info typography-3-normal align-items-baseline w-100">
+            <ul className="d-flex flex-column flex-lg-row flex-wrap gap-lg-5 justify-content-lg-center text-info typography-3-normal w-100 p-lg-3 ps-0">
               {features.map((feature, index) => {
                 return (
                   <li
                     key={feature}
-                    className={`ps-4${
+                    className={`ps-lg-4${
                       index === 0 || screenSize <= 992 ? " list-unstyled" : ""
                     }`}
                   >
@@ -58,7 +57,7 @@ export default function EnterPrise() {
               })}
             </ul>
 
-            <ul className="d-flex flex-column flex-lg-row flex-wrap gap-lg-5 justify-content-lg-center typography-3-normal align-items-baseline w-100">
+            <ul className="d-flex flex-column flex-lg-row flex-wrap gap-lg-5 justify-content-lg-center typography-3-normal w-100 p-lg-3 ps-0">
               {subFeatures.map((feature, index) => {
                 return (
                   <li
@@ -112,6 +111,7 @@ export default function EnterPrise() {
                 <div className="mt-4">
                   {/* <Button variant="info" className="btn-height"> */}
                   <ArrowLink
+                    className="montserrat-font"
                     type="info"
                     link="/sales"
                     label="ENTERPRISE TEAM"

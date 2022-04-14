@@ -4,6 +4,7 @@ import Solution from "../components/Solutions/Solution";
 import solutions from "../data/solutions";
 import Traction from "../components/Solutions/Traction";
 import { Button } from "react-bootstrap";
+import Link from "next/link";
 export default function Solutions() {
   return (
     <>
@@ -70,11 +71,13 @@ export default function Solutions() {
               <div className="col-12 col-lg-7 offset-lg-1">
                 <Title>Explore the future of your Influence, today!</Title>
                 <div className="mt-4">
+                <Link href={'/signup'}>
                   <Button variant="danger" className="btn-height">
                     <span className="text-light typography-3-normal">
                       Download Now
                     </span>
                   </Button>
+                  </Link>
                 </div>
               </div>
             </div>

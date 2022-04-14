@@ -3,7 +3,7 @@ import Image from "next/image";
 import ArrowLink from "../components/common/ArrowLink";
 import Title from "../components/common/Title";
 import Paragraph from "../components/common/Paragraph";
-
+import Link from "next/link";
 export default function Home() {
   return (
     <div className="home-page">
@@ -23,11 +23,13 @@ export default function Home() {
                   <br /> in the palm of your hand
                 </p>
                 <div>
-                  <Button variant="danger" className="btn-height">
-                    <span className="text-light typography-1-normal">
-                      Download Now
-                    </span>
-                  </Button>
+                  <Link href={'/signup'}>
+                    <Button variant="danger" className="btn-height">
+                      <span className="text-light typography-1-normal">
+                        Download Now
+                      </span>
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -91,7 +93,10 @@ export default function Home() {
                 influence across platforms. No more intermediaries between you
                 and marketers.
               </Paragraph>
-              <ArrowLink label="Explore BlinkLink Solutions" link="/solutions" />
+              <ArrowLink
+                label="Explore BlinkLink Solutions"
+                link="/solutions"
+              />
             </div>
             <div className="col-12 col-lg-6 order-1 order-lg-2">
               <Image
@@ -130,7 +135,10 @@ export default function Home() {
                   interact with your audience across the platforms you are on.
                 </Paragraph>
                 <div>
-                  <ArrowLink label="Explore BlinkLink Features" link="/features" />
+                  <ArrowLink
+                    label="Explore BlinkLink Features"
+                    link="/features"
+                  />
                 </div>
               </div>
             </div>
@@ -154,7 +162,11 @@ export default function Home() {
                 streamlined interface.
               </Paragraph>
               <div>
-                <ArrowLink type="info" label="Talk to the Enterprise Team" link="/enterprise" />
+                <ArrowLink
+                  type="info"
+                  label="Talk to the Enterprise Team"
+                  link="/enterprise"
+                />
               </div>
             </div>
             <div className="col-12 col-lg-6 order-1 order-lg-2">
@@ -173,8 +185,8 @@ export default function Home() {
       <div className="home-item">
         <div className="align-items-center container d-flex py-5">
           <div className="row align-items-center">
-            <div className="col-12 col-lg-7 order-2 order-lg-1">
-              <div className="d-flex flex-column gap-4 ps-4">
+            <div className="col-12 col-lg-6  offset-lg-1  order-2 order-lg-1">
+              <div className="d-flex flex-column gap-4">
                 <Title className="text-danger">
                   Join the Influence Revolution
                 </Title>
@@ -188,8 +200,18 @@ export default function Home() {
                   lets make a difference
                 </Paragraph>
                 <div>
-                <ArrowLink label="BlinkLink Careers" type={'danger'} link="/careers" />
-                
+                  <ArrowLink
+                    label="BlinkLink Careers"
+                    type={"danger"}
+                    link="/careers"
+                  />
+                  {/* <Link key={subItem.title} href={subItem.link}>
+                          <a className="dropdown-item typography-1-semibold text-dark"  onClick={()=>{
+                          toggleNavBar(false);
+                        }}>
+                            {subItem.title}
+                          </a>
+                        </Link> */}
                   {/* <Button variant="danger" className="btn-height">
                     <span className="text-light typography-1-normal">
                       BlinkLink Careers

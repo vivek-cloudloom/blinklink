@@ -6,6 +6,7 @@ import Profile from "../components/team/Profile";
 import advisor from "../data/advisors";
 import Title from "../components/common/Title";
 import { Button } from "react-bootstrap";
+import Link from "next/link";
 export default function Team() {
   return (
     <>
@@ -67,7 +68,7 @@ export default function Team() {
         </div>
       </div>
 
-      <div className="d-flex flex-column">
+      {/* <div className="d-flex flex-column">
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-11  offset-lg-1">
@@ -101,7 +102,7 @@ export default function Team() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="home-page blue-theme">
         <div className="home-item">
@@ -111,11 +112,13 @@ export default function Team() {
                 <Title>Explore the future of your Influence, today!</Title>
               </div>
               <div className="col-12 col-lg-5">
+              <Link href={"/signup"}>
                 <Button variant="info" className="btn-height">
                   <span className="text-light typography-1-semibold montserrat-font">
                     Download Now
                   </span>
                 </Button>
+                </Link>
               </div>
             </div>
           </div>
