@@ -11,6 +11,7 @@ import engage from "../../public/images/icons/engage.svg";
 import monitor from "../../public/images/icons/monitor.svg";
 import ArrowLink from "../components/common/ArrowLink";
 import Link from "next/link";
+import Slider from "../components/common/slider";
 export default function Features() {
   return (
     <>
@@ -194,47 +195,38 @@ export default function Features() {
                           <div className="d-flex justify-content-end w-25">
                             <ArrowLink type="dark" label="" />
                           </div>
-                          
                         </div>
                         <p className="text-dark typography-1-normal mt-2 w-75 d-lg-none">
-                            Measure your results across all social networks
-                          </p>
+                          Measure your results across all social networks
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-
-              {/* <div className="d-flex flex-column gap-3 w-60">
-                  <div className="d-flex gap-3 w-100">
-                    
-                    <div className="d-flex flex-column gap-3 w-70">
-                     
-                    </div>
-                  </div>
-                 
-                </div> */}
-              {/* </div> */}
             </div>
           </div>
         </div>
-        {features.map((link, index) => {
-          return (
-            <Feature
-              key={`feature${index}`}
-              features={link.items}
-              imageUrl={link.imageUrl}
-              className="home-item"
-              total={features}
-              current={index}
-              width={link.width}
-              height={link.height}
-              title={link.title}
-            />
-          );
-        })}
+        <div className="position-relative features-page">
+          <Slider total={features} type={"danger"} />
 
-        <div className="home-item">
+          {features.map((link, index) => {
+            return (
+              <Feature
+                key={`feature${index}`}
+                features={link.items}
+                imageUrl={link.imageUrl}
+                className="features-item"
+                total={features}
+                current={index}
+                width={link.width}
+                height={link.height}
+                title={link.title}
+              />
+            );
+          })}
+        </div>
+        <div className="bg-body position-relative">
           <div className="align-items-center container d-flex py-5">
             <div className="row align-items-center">
               <div className="col-12 col-lg-6 offset-lg-1  order-2 order-lg-1">

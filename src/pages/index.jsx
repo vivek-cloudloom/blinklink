@@ -23,7 +23,7 @@ export default function Home() {
                   <br /> in the palm of your hand
                 </p>
                 <div>
-                  <Link href={'/signup'}>
+                  <Link href={"/signup"}>
                     <Button variant="danger" className="btn-height">
                       <span className="text-light typography-1-normal">
                         Download Now
@@ -50,7 +50,11 @@ export default function Home() {
           <div className="row align-items-center">
             <div className="col-12 col-lg-5 offset-lg-1">
               <div className="position-relative">
-                <Image
+                <video className="creator-economy" controls>
+                  <source src="/videos/Teaser_v1.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                {/* <Image
                   src="/images/main/video.svg"
                   alt="Influence"
                   width={361}
@@ -68,7 +72,7 @@ export default function Home() {
                     height={65}
                     quality={100}
                   />
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="col-12 col-lg-5 col-xxl-4">

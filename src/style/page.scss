@@ -7,6 +7,15 @@
   }
 }
 
+.features-page {
+  .features-item:nth-child(odd) {
+    background: $light;
+  }
+  .features-item:nth-child(even) {
+    background: $body-bg;
+  }
+}
+
 footer {
   min-height: 100px;
 }

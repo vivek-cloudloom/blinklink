@@ -4,6 +4,7 @@ import Image from "next/image";
 import Title from "../components/common/Title";
 import React, { useState, useEffect } from "react";
 import ArrowLink from "../components/common/ArrowLink";
+import Slider from "../components/common/slider";
 export default function EnterPrise() {
   const features = [
     "Deeplinking",
@@ -73,28 +74,29 @@ export default function EnterPrise() {
             </ul>
           </div>
         </div>
-
-        {enterprise.map((link, index) => {
-          return (
-            <Solution
-              key={link.title}
-              title={link.title}
-              description={link.description}
-              imageUrl={link.imageUrl}
-              width={link.width}
-              height={link.height}
-              leftClass={link.leftClass}
-              rightClass={link.rightClass}
-              type="info"
-              className="home-item"
-              total={enterprise}
-              linkUrl="/sales"
-              current={index}
-            />
-          );
-        })}
-
-        <div className="home-item">
+        <div className="position-relative">
+          <Slider total={enterprise} type={"info"} />
+          {enterprise.map((link, index) => {
+            return (
+              <Solution
+                key={link.title}
+                title={link.title}
+                description={link.description}
+                imageUrl={link.imageUrl}
+                width={link.width}
+                height={link.height}
+                leftClass={link.leftClass}
+                rightClass={link.rightClass}
+                type="info"
+                className="home-item"
+                total={enterprise}
+                linkUrl="/sales"
+                current={index}
+              />
+            );
+          })}
+        </div>
+        <div className="home-item position-relative">
           <div className="align-items-center container d-flex flex-column justify-content-center py-5">
             <div className="row align-items-center">
               <div className="col-12 col-lg-4">

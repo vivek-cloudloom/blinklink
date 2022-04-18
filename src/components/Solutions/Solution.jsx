@@ -19,7 +19,7 @@ export default function Solution({
 }) {
   return (
     <div className={className} id={title.replace(/[^a-z0-9]/gi, "")}>
-      <Slider total={total} current={current} type={type} />
+      {/* <Slider total={total} current={current} type={type} /> */}
 
       <div className="align-items-center container d-flex vh-100 scroll-snap-align-start">
         <div className="row align-items-center">

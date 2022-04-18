@@ -1,7 +1,6 @@
 import Image from "next/image";
 import ArrowLink from "../common/ArrowLink";
 import Paragraph from "../common/Paragraph";
-import Slider from "../common/slider";
 import Title from "../common/Title";
 export default function Feature({
   features,
@@ -15,7 +14,7 @@ export default function Feature({
 }) {
   return (
     <div className={className} id={title.replace(/[^a-z0-9]/gi, "")}>
-      <Slider total={total} current={current} type={'danger'} />
+      {/* <Slider total={total} current={current} type={'danger'} /> */}
       {/* <div className="container align-items-center d-flex justify-content-center flex-column h-100"> */}
       <div className="align-items-center container d-flex vh-100 scroll-snap-align-start">
         <div className="row align-items-center ">

@@ -88,6 +88,9 @@ export default function PageLayout({ children }) {
           placement="end"
           backdrop={true}
           show={showNavBar}
+          onHide={()=>{
+            toggleNavBar(false);
+          }}
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id="offcanvasNavbarLabel">

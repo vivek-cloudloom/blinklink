@@ -5,6 +5,8 @@ import solutions from "../data/solutions";
 import Traction from "../components/Solutions/Traction";
 import { Button } from "react-bootstrap";
 import Link from "next/link";
+import Slider from "../components/common/slider";
+
 export default function Solutions() {
   return (
     <>
@@ -36,26 +38,29 @@ export default function Solutions() {
           </div>
         </div>
 
-        {solutions.map((link , index) => {
-          return (
-            <Solution
-              key={link.title}
-              title={link.title}
-              description={link.description}
-              imageUrl={link.imageUrl}
-              width={link.width}
-              height={link.height}
-              leftClass={link.leftClass}
-              rightClass={link.rightClass}
-              className="home-item"
-              total={solutions}
-              linkUrl="/features"
-              current={index}
-            />
-          );
-        })}
+        <div className="position-relative">
+          <Slider total={solutions} type={"danger"} />
 
-        <div className="home-item">
+          {solutions.map((link, index) => {
+            return (
+              <Solution
+                key={link.title}
+                title={link.title}
+                description={link.description}
+                imageUrl={link.imageUrl}
+                width={link.width}
+                height={link.height}
+                leftClass={link.leftClass}
+                rightClass={link.rightClass}
+                className="home-item"
+                total={solutions}
+                linkUrl="/features"
+                current={index}
+              />
+            );
+          })}
+        </div>
+        <div className="bg-light home-item position-relative">
           <div className="align-items-center container d-flex py-5">
             <div className="row align-items-center">
               <div className="col-12 col-lg-4">
@@ -71,12 +76,12 @@ export default function Solutions() {
               <div className="col-12 col-lg-7 offset-lg-1">
                 <Title>Explore the future of your Influence, today!</Title>
                 <div className="mt-4">
-                <Link href={'/signup'}>
-                  <Button variant="danger" className="btn-height">
-                    <span className="text-light typography-3-normal">
-                      Download Now
-                    </span>
-                  </Button>
+                  <Link href={"/signup"}>
+                    <Button variant="danger" className="btn-height">
+                      <span className="text-light typography-3-normal">
+                        Download Now
+                      </span>
+                    </Button>
                   </Link>
                 </div>
               </div>
