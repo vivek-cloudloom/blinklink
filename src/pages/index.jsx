@@ -4,7 +4,43 @@ import ArrowLink from "../components/common/ArrowLink";
 import Title from "../components/common/Title";
 import Paragraph from "../components/common/Paragraph";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 export default function Home() {
+  const onFullScreen = (e) => {
+    console.log("ON FULL SCREEN")
+    var isFullscreenNow = document.webkitFullscreenElement !== null;
+    if (isFullscreenNow) {
+      videoRef.current.play();
+      videoRef.current.style.opacity = 1;
+    } else {
+      videoRef.current.load();
+      videoRef.current.style.opacity = .3;
+    }
+  };
+ 
+
+  useEffect(() => {
+    if (videoRef && videoRef.current) {
+      videoRef.current.addEventListener("webkitfullscreenchange", onFullScreen);
+      videoRef.current.addEventListener("mozfullscreenchange", onFullScreen);
+      videoRef.current.addEventListener("fullscreenchange", onFullScreen);
+    }
+
+    return function cleanup() {
+      if (videoRef && videoRef.current) {
+        videoRef.current.removeEventListener(
+          "webkitfullscreenchange",
+          onFullScreen
+        );
+        videoRef.current.removeEventListener(
+          "mozfullscreenchange",
+          onFullScreen
+        );
+        videoRef.current.removeEventListener("fullscreenchange", onFullScreen);
+      }
+    };
+  }, []);
+  const videoRef = useRef();
   return (
     <div className="home-page">
       <div className="home-item">
@@ -48,12 +84,33 @@ export default function Home() {
       <div className="home-item">
         <div className="container d-flex flex-column gap-5 py-5">
           <div className="row align-items-center">
-            <div className="col-12 col-lg-5 offset-lg-1">
+            <div className="col-12 col-lg-4 offset-lg-1">
               <div className="position-relative">
-                <video className="creator-economy" controls>
+                <video className="creator-economy" ref={videoRef}>
                   <source src="/videos/Teaser_v1.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
+                <div
+                  className="d-flex h-100 justify-content-center position-absolute w-100 top-0"
+                  onClick={() => {
+                    if (videoRef.current.requestFullScreen) {
+                      videoRef.current.requestFullScreen();
+                    } else if (videoRef.current.webkitRequestFullScreen) {
+                      videoRef.current.webkitRequestFullScreen();
+                    } else if (videoRef.current.mozRequestFullScreen) {
+                      videoRef.current.mozRequestFullScreen();
+                    }
+                    // videoRef.current.play();
+                  }}
+                >
+                  <Image
+                    src="/images/main/play.svg"
+                    alt="Influence"
+                    width={57}
+                    height={65}
+                    quality={100}
+                  />
+                </div>
                 {/* <Image
                   src="/images/main/video.svg"
                   alt="Influence"
@@ -75,7 +132,7 @@ export default function Home() {
                 </div> */}
               </div>
             </div>
-            <div className="col-12 col-lg-5 col-xxl-4">
+            <div className="col-12  offset-lg-1 col-lg-5 col-xxl-4">
               <Title>
                 Unlocking the{" "}
                 <span className="text-danger">Creator Economy</span> through
