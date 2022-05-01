@@ -53,6 +53,9 @@ export default function Home() {
     console.log("On Exist");
   };
 
+  const playVideo = () => {
+    videoRef.current.play();
+  }
   const loadVideo = async (e) => {
     // if (videoRef.current.requestFullScreen) {
     //   videoRef.current.requestFullScreen();
@@ -130,11 +133,11 @@ export default function Home() {
           <div className="row align-items-center">
             <div className="col-12 col-lg-4 offset-lg-1">
               <div className="position-relative">
-                {/* <video className="creator-economy" ref={videoRef} controls>
+                <video className="creator-economy" ref={videoRef} controls>
                   <source src="/videos/Teaser_v1.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
-                </video> */}
-                <ReactPlayer
+                </video>
+                {/* <ReactPlayer
                   playing={playing}
                   ref={videoRef}
                   className="creator-economy"
@@ -152,7 +155,7 @@ export default function Home() {
                     height={65}
                     quality={100}
                   />
-                </div>
+                </div> */}
                 {/* <Image
                   src="/images/main/video.svg"
                   alt="Influence"
@@ -185,7 +188,7 @@ export default function Home() {
                 We have seen the future of Marketing. Watch this video to learn
                 about how it belongs to you.
               </Paragraph>
-              <ArrowLink label="Play Video" onClick={loadVideo} />
+              <ArrowLink label="Play Video" onClick={playVideo} />
             </div>
           </div>
           <div className="row align-items-center">
