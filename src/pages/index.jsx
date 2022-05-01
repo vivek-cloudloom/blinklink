@@ -4,90 +4,14 @@ import ArrowLink from "../components/common/ArrowLink";
 import Title from "../components/common/Title";
 import Paragraph from "../components/common/Paragraph";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-import ReactPlayer from "react-player";
-import { findDOMNode } from "react-dom";
-// import dynamic from "next/dynamic";
-// const screenfull = dynamic(() => import('screenfull'), {
-//   suspense: false,
-// })
-// import screenfull from 'screenfull';
-// import { findDOMNode } from 'react-dom'
+import { useRef } from "react";
 export default function Home() {
-  // const onFullScreen = (e) => {
-  //   console.log("ON FULL SCREEN")
-  //   var isFullscreenNow = document.webkitFullscreenElement !== null;
-  //   if (isFullscreenNow) {
-  //     videoRef.current.play();
-  //     videoRef.current.style.opacity = 1;
-  //   } else {
-  //     videoRef.current.load();
-  //     videoRef.current.style.opacity = .3;
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   if (videoRef && videoRef.current) {
-  //     videoRef.current.addEventListener("webkitfullscreenchange", onFullScreen);
-  //     videoRef.current.addEventListener("mozfullscreenchange", onFullScreen);
-  //     videoRef.current.addEventListener("fullscreenchange", onFullScreen);
-  //   }
-
-  //   return function cleanup() {
-  //     if (videoRef && videoRef.current) {
-  //       videoRef.current.removeEventListener(
-  //         "webkitfullscreenchange",
-  //         onFullScreen
-  //       );
-  //       videoRef.current.removeEventListener(
-  //         "mozfullscreenchange",
-  //         onFullScreen
-  //       );
-  //       videoRef.current.removeEventListener("fullscreenchange", onFullScreen);
-  //     }
-  //   };
-  // }, []);
+  
   const videoRef = useRef();
-  let screenfull = null;
-  const onExist = () => {
-    console.log("On Exist");
-  };
 
   const playVideo = () => {
     videoRef.current.play();
   }
-  const loadVideo = async (e) => {
-    // if (videoRef.current.requestFullScreen) {
-    //   videoRef.current.requestFullScreen();
-    // } else if (videoRef.current.webkitRequestFullScreen) {
-    //   videoRef.current.webkitRequestFullScreen();
-    // } else if (videoRef.current.mozRequestFullScreen) {
-    //   videoRef.current.mozRequestFullScreen();
-    // }
-    //  videoRef.current.style.opacity = 1;
-    // screenfull.request(findDOMNode(videoRef))
-    if (!screenfull) {
-      screenfull = (await import("screenfull")).default;
-    }
-    screenfull.request(findDOMNode(videoRef.current));
-    const callback = () => {
-      if (!screenfull.isFullscreen) {
-        togglePlaying(false);
-        videoRef.current.seekTo(0);
-        setOpacity(.3)
-        screenfull.off("change", callback);
-      }
-    };
-    screenfull.on("change", callback);
-    // screenfull.exit(togglePlaying(false))
-    setOpacity(1)
-    togglePlaying(true);
-    
-    //videoRef.current.play();
-    // e.target.style.display = "none";
-  };
-  const [playing, togglePlaying] = useState(false);
-  const [opacity , setOpacity] = useState(.3);
   return (
     <div className="home-page">
       <div className="home-item">
