@@ -1,17 +1,22 @@
-import { Button } from "react-bootstrap";
+import { Button, Modal } from "react-bootstrap";
 import Image from "next/image";
 import ArrowLink from "../components/common/ArrowLink";
 import Title from "../components/common/Title";
 import Paragraph from "../components/common/Paragraph";
 import Link from "next/link";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import * as ReactDOM from "react-dom";
 export default function Home() {
-  
   const videoRef = useRef();
 
+  const [fullscreen, setFullscreen] = useState(true);
+  const [show, setShow] = useState(false);
+
   const playVideo = () => {
-    videoRef.current.play();
-  }
+    // videoRef.current.play();
+    setShow(true);
+  };
+
   return (
     <div className="home-page">
       <div className="home-item">
@@ -56,21 +61,36 @@ export default function Home() {
         <div className="container d-flex flex-column gap-5 py-5">
           <div className="row align-items-center">
             <div className="col-12 col-lg-4 offset-lg-1">
+              {/* {show ? <ModalElement /> : null} */}
+
+              <Modal
+                show={show}
+                fullscreen={fullscreen}
+                onHide={() => setShow(false)}
+              >
+                <Button variant="dark" className="end-0 position-absolute" onClick={()=>{
+                  setShow(false)
+                }}>X</Button>
+                {/* <Modal.Header closeButton style={{background: 'transparent'}}></Modal.Header> */}
+                <iframe
+                  src="/videos/Teaser_v1.mp4"
+                  frameBorder="0"
+                  className="video-player"
+                  height="100%"
+                  width="100%"
+                ></iframe>
+              </Modal>
+
               <div className="position-relative">
-                <video className="creator-economy" ref={videoRef} controls>
+                <video className="creator-economy" ref={videoRef} style={{opacity:.3}}>
                   <source src="/videos/Teaser_v1.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-                {/* <ReactPlayer
-                  playing={playing}
-                  ref={videoRef}
-                  className="creator-economy"
-                  url="/videos/Teaser_v1.mp4"
-                  style={{opacity : opacity}}
-                />
                 <div
                   className="d-flex h-100 justify-content-center position-absolute w-100 top-0"
-                  onClick={loadVideo}
+                  onClick={() => {
+                    setShow(true);
+                  }}
                 >
                   <Image
                     src="/images/main/play.svg"
@@ -79,26 +99,7 @@ export default function Home() {
                     height={65}
                     quality={100}
                   />
-                </div> */}
-                {/* <Image
-                  src="/images/main/video.svg"
-                  alt="Influence"
-                  width={361}
-                  height={251}
-                  quality={100}
-                />
-                <div
-                  className="position-absolute"
-                  style={{ left: "152px", top: "93px" }}
-                >
-                  <Image
-                    src="/images/main/play.svg"
-                    alt="Influence"
-                    width={57}
-                    height={65}
-                    quality={100}
-                  />
-                </div> */}
+                </div>
               </div>
             </div>
             <div className="col-12  offset-lg-1 col-lg-5 col-xxl-4">
