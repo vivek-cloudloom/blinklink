@@ -6,8 +6,8 @@ export default function Profile({ data }) {
   return (
     <div className="py-5 profile">
       <div className="container">
-        <div className="row">
-          <div className="col-12 col-lg-3  offset-lg-1">
+        <div className="row g-3 row">
+          <div className="col-12 col-lg-3  offset-lg-1 text-center">
             <Image
               src={data.imageUrl}
               alt="BlinkLink logo"
@@ -16,7 +16,7 @@ export default function Profile({ data }) {
               quality={100}
             />
           </div>
-          <div className="col-12 col-lg-8">
+          <div className="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-center align-items-lg-start">
             {" "}
             <div className="align-items-center d-flex gap-4">
               <h5 className="typography-4-normal">{data.name}</h5>
@@ -24,14 +24,14 @@ export default function Profile({ data }) {
                 <Image
                   src={"/images/logo/linkedin.svg"}
                   alt="linkedin logo"
-                  width={51}
-                  height={13}
+                  width={102}
+                  height={26}
                   quality={100}
                 />
               </TextLink>
             </div>
             <h5 className="typography-4-semibold">{data.designation}</h5>
-            <p
+            {/* <p
               className={`typography-1-normal ${
                 !showmore ? "two-line-ellipsis" : ""
               }`}
@@ -46,7 +46,7 @@ export default function Profile({ data }) {
               className="border-0 text-info p-0"
             >
               {showmore ? "Show Less" : "Show More"}
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
